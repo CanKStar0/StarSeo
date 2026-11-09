@@ -1,5 +1,5 @@
 {
-  "name": "open-seo",
+  "name": "star-seo",
   "private": true,
   "sideEffects": [
     "./src/standalone-server.ts"

@@ -82,7 +82,7 @@ services:
     restart: unless-stopped
   web:
     image: nginx:1.28-alpine@sha256:a8b39bd9cf0f83869a2162827a0caf6137ddf759d50a171451b335cecc87d236
-    ports: ["127.0.0.1:${PORT:-3001}:80"]
+    ports: ["${PORT:-3001}:80"]
     # Written by init from deploy/standalone/nginx.conf in the image. nocopy
     # keeps nginx's own default.conf (root-owned) out of the shared volume.
     volumes:
