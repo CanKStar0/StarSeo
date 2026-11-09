@@ -11,8 +11,8 @@ services:
       - AUTH_MODE=local_noauth
       - OPENSEO_TELEMETRY_DISABLED=true
       - DO_NOT_TRACK=true
-      - ALLOWED_HOST=starseo.dcmonline.nl
-      - BETTER_AUTH_URL=https://starseo.dcmonline.nl
+      - ALLOWED_HOST=starseo.canpolatkaya.com
+      - BETTER_AUTH_URL=https://starseo.canpolatkaya.com
       - OPENROUTER_API_KEY=umay_sk_live_d2b8ca070bc219b94b73ac105b6aecea795e23fe15c7e372
       - OPENROUTER_BASE_URL=https://umayzeka.com/v1
       - OPENROUTER_MODEL=umay-3.5-flash
