@@ -18,6 +18,7 @@ services:
       - OPENROUTER_MODEL=umay-3.5-flash
       - VITE_SHOW_DEVTOOLS=false
       - BETTER_AUTH_SECRET=921hd8912h89sd1h298sdh129921hd8912h89sd1h298sdh129
+      - DATAFORSEO_API_KEY=d3h4Z2dvaHRhN2hoam5wMmdzZjpiYTk4Y2VkNjU2MGE4YTQ4
     ports:
       - "3001:3001"
     volumes:
