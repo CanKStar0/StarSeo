@@ -2,6 +2,9 @@ services:
   open-seo:
     image: ghcr.io/every-app/open-seo:latest
     restart: unless-stopped
+    networks:
+      - dokploy-network
+      - default
     environment:
       - CLOUDFLARE_INCLUDE_PROCESS_ENV=true
       - PORT=3001
@@ -17,5 +20,9 @@ services:
       - "3001:3001"
     volumes:
       - open_seo_data:/app/.wrangler
+
+networks:
+  dokploy-network:
+    external: true
 volumes:
   open_seo_data:
