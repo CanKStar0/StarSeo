@@ -1,7 +1,6 @@
 services:
   open-seo:
     image: ghcr.io/every-app/open-seo:latest
-    container_name: starseo
     restart: unless-stopped
     environment:
       - CLOUDFLARE_INCLUDE_PROCESS_ENV=true
