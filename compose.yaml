@@ -1,6 +1,8 @@
 services:
   open-seo:
-    image: ghcr.io/every-app/open-seo:latest
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile
     restart: unless-stopped
     networks:
       - dokploy-network
