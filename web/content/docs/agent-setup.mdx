@@ -62,7 +62,7 @@ Ask Codex to use SEO Coach. See the [Codex plugin guide](/docs/codex-plugin) for
 Use the setup prompt above to connect MCP. To install SEO Coach through the Hermes skills hub, run in your terminal:
 
 ```bash
-hermes skills install CanKStar0/StarSeo/plugins/openseo/skills/seo-coach
+hermes skills install CanKStar0/StarSeo/plugins/starseo/skills/seo-coach
 ```
 
 Repeat with the names of other [StarSeo skills](/docs/skills) you want. Hub installations retain their source so Hermes can check for updates later. See [Hermes skill management](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills).
@@ -80,7 +80,7 @@ Follow the [MCP connection guide](/docs/mcp), then install skills through your a
 For agents using the skills CLI, choose public StarSeo skills interactively:
 
 ```bash
-npx skills add https://github.com/CanKStar0/StarSeo/tree/main/plugins/openseo/skills
+npx skills add https://github.com/CanKStar0/StarSeo/tree/main/plugins/starseo/skills
 ```
 
 Choose the current agent and your preferred installation scope. Skip this if the StarSeo plugin already supplies your skills. See [manual skill setup](/docs/skills/setup) for other options.
@@ -145,6 +145,6 @@ Use the names you actually installed and choose the same project or global scope
 
 Use the update prompt above. For Grok Bot, open **Marketplace → Your plugins → Manage plugins and skills** to find the installed skill or plugin. Its public documentation does not currently specify an upstream skill-update command, so use the management controls available in your version.
 
-For manually copied skills, compare your installed copies with the [public StarSeo skill folders](https://github.com/CanKStar0/StarSeo/tree/main/plugins/openseo/skills). Preserve personal edits and replace the complete skill folder, including supporting files. Use your agent's skill manager for uploaded skills, such as Claude's **Customize → Skills**.
+For manually copied skills, compare your installed copies with the [public StarSeo skill folders](https://github.com/CanKStar0/StarSeo/tree/main/plugins/starseo/skills). Preserve personal edits and replace the complete skill folder, including supporting files. Use your agent's skill manager for uploaded skills, such as Claude's **Customize → Skills**.
 
 After updating, reload the skills or start a new session if needed. Ask the agent to confirm it can find the updated StarSeo skills before starting your next SEO task.

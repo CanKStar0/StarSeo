@@ -47,7 +47,7 @@ The first answer pulls live search ground truth. The second is an editorial move
 
 Connecting StarSeo to Vellum takes two minutes:
 
-1. In Vellum, add the **StarSeo plugin** from the [plugin catalog](https://www.vellum.ai/plugins/openseo) or [connect via MCP](https://starseo.canpolatkaya.com/docs/mcp).
+1. In Vellum, add the **StarSeo plugin** from the [plugin catalog](https://www.vellum.ai/plugins/starseo) or [connect via MCP](https://starseo.canpolatkaya.com/docs/mcp).
 2. Follow the OAuth prompt to sign in to your StarSeo account and approve the connection.
 3. Your assistant immediately gets access to all StarSeo tools: keyword research, competitor analysis, live SERP lookups, backlink data, and rank tracking.
 

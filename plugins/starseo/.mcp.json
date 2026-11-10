@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "openseo": {
+    "starseo": {
       "type": "http",
       "url": "https://starseo.canpolatkaya.com/mcp"
     }

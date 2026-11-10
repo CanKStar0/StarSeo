@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "openseo",
-      "source": "plugins/openseo",
+      "source": "plugins/starseo",
       "description": "SEO made simple. Research keywords and competitors, audit sites, track rankings, and use Search Console data from your agent."
     }
   ]

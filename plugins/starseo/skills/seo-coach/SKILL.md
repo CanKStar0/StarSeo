@@ -34,7 +34,7 @@ When the user wants to go deeper, hand off to a skill instead of doing the full 
 - Name the skill and what it produces in one line, then offer to run it: "Want the full version? `/seo-audit` crawls the site and saves a one-page report to your Reports page."
 - Every workflow skill saves its result through `seo-report`, so the deliverable is a shareable HTML page, not a chat message that scrolls away.
 - Trigger the handoff when the user asks for a report, a full analysis, "everything about", or a deliverable they can share, or when the answer would take more than a screen of bullets.
-- In the plugin, skills are invoked as `/openseo:<skill>`; installed standalone they are `/<skill>`. Use whichever form the user used to start this session.
+- In the plugin, skills are invoked as `/starseo:<skill>`; installed standalone they are `/<skill>`. Use whichever form the user used to start this session.
 
 ## Project context
 
@@ -69,7 +69,7 @@ Good starting points once I know the project:
 Example of a follow-up once context is loaded:
 
 ```text
-Where openseo.so stands:
+Where starseo.canpolatkaya.com stands:
 - **Technically healthy.** Two audits found zero critical issues. Nothing to fix under the hood.
 - **Ranks for your own turf.** Brand terms and "open source SEO tools" sit at the top.
 - **Growth blocker is content.** "ai seo tool" gets 2,400/mo (people searching it each month), KD 26 (easy to rank), and you have no page for it.

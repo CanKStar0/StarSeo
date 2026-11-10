@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "openseo",
-      "source": "./plugins/openseo",
+      "source": "./plugins/starseo",
       "description": "Without good data, your agent gives generic advice. Keyword research, competitor research, backlinks, and site audits. All for $10/month.",
       "category": "Productivity"
     }

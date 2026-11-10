@@ -1,26 +1,26 @@
 {
-  "name": "openseo",
+  "name": "starseo",
   "displayName": "StarSeo",
   "version": "1.0.26",
   "description": "Research keywords and competitors, audit sites, track rankings and AI visibility, and use connected Search Console data from your AI assistant.",
   "author": {
-    "name": "Every App, Inc",
-    "email": "support@canpolatkaya.com"
+    "name": "StarSeo",
+    "url": "https://starseo.canpolatkaya.com"
   },
   "homepage": "https://starseo.canpolatkaya.com",
+  "privacyPolicyUrl": "https://starseo.canpolatkaya.com/privacy",
+  "icon": "./assets/icon.png",
   "repository": "https://github.com/CanKStar0/StarSeo",
   "license": "MIT",
   "keywords": [
     "seo",
     "keyword-research",
-    "competitor-research",
+    "serp",
     "site-audit",
     "backlinks",
     "search-console",
     "rank-tracking",
-    "local-seo"
-  ],
-  "logo": "assets/icon.png",
-  "skills": "skills",
-  "mcpServers": ".mcp.json"
+    "local-seo",
+    "ai-visibility"
+  ]
 }

@@ -57,7 +57,7 @@ Working with StarSeo:
 - [AI Visibility Audit](https://starseo.canpolatkaya.com/docs/skills/ai-visibility-audit): The user asks why AI answers recommend competitors, or how to show up in them. Recommends one to three changes tied to the pages and answers AI cites.
 - [AI Prompt Research](https://starseo.canpolatkaya.com/docs/skills/ai-prompt-research): The user is choosing which AI prompts to track. Finds questions about their market, ChatGPT's answers, and the sites those answers cite.
 - [SEO Report](https://starseo.canpolatkaya.com/docs/skills/seo-report): A skill finished its research, or the user wants a report, check-in, or summary. Writes and saves one HTML report to the project.
-- [Skill source](https://github.com/CanKStar0/StarSeo/tree/main/plugins/openseo/skills): The SKILL.md files behind each workflow.
+- [Skill source](https://github.com/CanKStar0/StarSeo/tree/main/plugins/starseo/skills): The SKILL.md files behind each workflow.
 
 ## Optional
 

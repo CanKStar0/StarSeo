@@ -22,7 +22,7 @@ Install StarSeo from the Grok Bot or Cursor marketplace. The first time your age
 
 To check the connection without using credits, ask: "Use StarSeo to check my connection and list my projects."
 
-You need an StarSeo account. The plugin package is free and open source. Hosted StarSeo plans and usage credits are described at [openseo.so/pricing](https://starseo.canpolatkaya.com/pricing), and StarSeo can also be [self-hosted](https://github.com/CanKStar0/StarSeo#self-hosting).
+You need an StarSeo account. The plugin package is free and open source. Hosted StarSeo plans and usage credits are described at [starseo.canpolatkaya.com/pricing](https://starseo.canpolatkaya.com/pricing), and StarSeo can also be [self-hosted](https://github.com/CanKStar0/StarSeo#self-hosting).
 
 ## Try it
 

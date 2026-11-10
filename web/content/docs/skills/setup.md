@@ -60,11 +60,11 @@ git clone https://github.com/CanKStar0/StarSeo.git
 
 # Codex
 mkdir -p ~/.codex/skills
-cp -R StarSeo/plugins/openseo/skills/* ~/.codex/skills/
+cp -R StarSeo/plugins/starseo/skills/* ~/.codex/skills/
 
 # Claude Code
 mkdir -p ~/.claude/skills
-cp -R StarSeo/plugins/openseo/skills/* ~/.claude/skills/
+cp -R StarSeo/plugins/starseo/skills/* ~/.claude/skills/
 ```
 
 You can also review the source skills on GitHub:
