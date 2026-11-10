@@ -5,7 +5,7 @@
   // Must live at the repo root: wrangler resolves .env.local / .dev.vars
   // relative to this file's directory, so a nested config would never see
   // local secrets.
-  "name": "StarSeo-audit",
+  "name": "starseo-audit",
   "main": "src/audit-worker.ts",
   // Only cross-script bindings from the app worker reach this worker.
   "workers_dev": false,
@@ -59,7 +59,7 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "StarSeo",
+      "database_name": "starseo",
       "database_id": "37bee90a-e1aa-404f-b01e-b0d1d479bda1",
       "migrations_dir": "drizzle/sqlite",
     },
@@ -76,7 +76,7 @@
   // ],
   "r2_buckets": [
     {
-      "bucket_name": "StarSeo",
+      "bucket_name": "starseo",
       "binding": "R2",
     },
   ],

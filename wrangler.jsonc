@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "StarSeo",
+  "name": "starseo",
   "main": "src/server.ts",
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
@@ -31,7 +31,7 @@
       "name": "site-audit-workflow",
       "binding": "SITE_AUDIT_WORKFLOW",
       "class_name": "SiteAuditWorkflow",
-      "script_name": "StarSeo-audit",
+      "script_name": "starseo-audit",
     },
     {
       "name": "rank-check-workflow",
@@ -131,7 +131,7 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "StarSeo",
+      "database_name": "starseo",
       "database_id": "37bee90a-e1aa-404f-b01e-b0d1d479bda1",
       "migrations_dir": "drizzle/sqlite",
     },
@@ -154,7 +154,7 @@
   // ],
   "r2_buckets": [
     {
-      "bucket_name": "StarSeo",
+      "bucket_name": "starseo",
       "binding": "R2",
     },
   ],
