@@ -1,5 +1,6 @@
 {
   "name": "star-seo",
+  "description": "Independent, Developer-First SEO & GEO Intelligence Platform powered by Umay AI and DataForSEO",
   "private": true,
   "sideEffects": [
     "./src/standalone-server.ts"
