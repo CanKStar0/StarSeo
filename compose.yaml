@@ -5,6 +5,8 @@ services:
     networks:
       - dokploy-network
       - default
+    depends_on:
+      - umay-adapter
     environment:
       - CLOUDFLARE_INCLUDE_PROCESS_ENV=true
       - PORT=3001
@@ -14,7 +16,7 @@ services:
       - ALLOWED_HOST=starseo.canpolatkaya.com
       - BETTER_AUTH_URL=https://starseo.canpolatkaya.com
       - OPENROUTER_API_KEY=umay_sk_live_d2b8ca070bc219b94b73ac105b6aecea795e23fe15c7e372
-      - OPENROUTER_BASE_URL=https://umayzeka.com/v1
+      - OPENROUTER_BASE_URL=http://umay-adapter:4000/v1
       - OPENROUTER_MODEL=umay-akilli
       - VITE_SHOW_DEVTOOLS=false
       - BETTER_AUTH_SECRET=921hd8912h89sd1h298sdh129921hd8912h89sd1h298sdh129
@@ -23,6 +25,16 @@ services:
       - "3001:3001"
     volumes:
       - open_seo_data:/app/.wrangler
+
+  umay-adapter:
+    image: node:22-alpine
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./adapter:/app
+    command: ["node", "index.mjs"]
+    networks:
+      - default
 
 networks:
   dokploy-network:
