@@ -1,3 +1,4 @@
+# StarSeo Prettier Ignore Rules
 **/build
 **/public
 pnpm-lock.yaml
@@ -9,7 +10,7 @@ routeTree.gen.ts
 .agents/skills/
 # real copies synced from .agents/skills/ via `pnpm sync-plugin-skills` — must
 # stay byte-identical to the canonical source, not reformatted
-plugins/openseo/skills/
+plugins/starseo/skills/
 dist/
 # generated migrations; the drizzle-kit configs beside them are still formatted
 drizzle/sqlite/

@@ -1,3 +1,4 @@
+// StarSeo Drizzle SQLite Migration Configuration
 import fs from "node:fs";
 import path from "node:path";
 import { defineConfig } from "drizzle-kit";

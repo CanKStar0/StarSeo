@@ -1,3 +1,4 @@
+# StarSeo Git Ignore Rules
 .codex/
 node_modules
 package-lock.json

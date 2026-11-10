@@ -1,3 +1,4 @@
+// StarSeo Report Widgets TypeScript Configuration
 {
   // The report widget runs in a browser, not the worker: DOM lib only, and
   // none of the worker's ambient types. Checked by `pnpm build:report-widgets`.

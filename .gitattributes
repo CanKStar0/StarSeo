@@ -1,3 +1,4 @@
+# StarSeo Git Attributes
 # Windows clones default to core.autocrlf=true, which checks text files out
 # with CRLF. That breaks SKILL.md frontmatter parsing and makes
 # `prettier --check` (endOfLine: lf) report every file. Keep LF everywhere;

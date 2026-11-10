@@ -1,5 +1,5 @@
 {
-  "name": "openseo-standalone",
+  "name": "starseo-standalone",
   "main": "src/standalone-server.ts",
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat"],
@@ -40,7 +40,7 @@
   "services": [
     {
       "binding": "AUDIT_ENGINE",
-      "service": "openseo-standalone",
+      "service": "starseo-standalone",
       "entrypoint": "AuditEngine"
     }
   ],
@@ -66,7 +66,7 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "openseo-standalone",
+      "database_name": "starseo-standalone",
       "database_id": "standalone-db",
       "migrations_dir": "drizzle"
     }
@@ -74,7 +74,7 @@
   "r2_buckets": [
     {
       "binding": "R2",
-      "bucket_name": "openseo-standalone"
+      "bucket_name": "starseo-standalone"
     }
   ]
 }

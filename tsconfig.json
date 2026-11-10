@@ -1,3 +1,4 @@
+// StarSeo TypeScript Configuration
 {
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["web/**/*", "tests/badseo/**/*", "src/report-widgets/**/*"],

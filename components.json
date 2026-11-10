@@ -1,4 +1,5 @@
 {
+  "//": "StarSeo UI Component Configuration",
   "$schema": "https://ui.shadcn.com/schema.json",
   "style": "base-nova",
   "rsc": false,

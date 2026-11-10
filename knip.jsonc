@@ -1,3 +1,4 @@
+// StarSeo Knip Dead Code & Export Checker
 {
   "entry": [
     // Alchemy deploy stack (run by the alchemy CLI, not imported by the app)

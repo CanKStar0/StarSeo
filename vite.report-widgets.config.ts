@@ -1,3 +1,4 @@
+// StarSeo Report Widget Bundle Configuration
 import { defineConfig } from "vite";
 
 // The report widget bundle: the one script the report sandbox lets run. Built
@@ -11,7 +12,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/report-widgets/rank-grid.ts",
-      name: "OpenSeoReportWidgets",
+      name: "StarSeoReportWidgets",
       formats: ["iife"],
       fileName: () => "v1.js",
     },

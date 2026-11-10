@@ -1,3 +1,4 @@
+// StarSeo Drizzle PostgreSQL Migration Configuration
 import { defineConfig } from "drizzle-kit";
 import { loadLocalEnv } from "../scripts/cli-utils";
 

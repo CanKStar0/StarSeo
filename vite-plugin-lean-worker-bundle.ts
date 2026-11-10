@@ -1,3 +1,4 @@
+// StarSeo Lean Worker Bundle Vite Plugin
 import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
 
