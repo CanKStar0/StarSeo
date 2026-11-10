@@ -15,7 +15,7 @@ services:
       - BETTER_AUTH_URL=https://starseo.canpolatkaya.com
       - OPENROUTER_API_KEY=umay_sk_live_d2b8ca070bc219b94b73ac105b6aecea795e23fe15c7e372
       - OPENROUTER_BASE_URL=https://umayzeka.com/v1
-      - OPENROUTER_MODEL=umay-3.5-flash
+      - OPENROUTER_MODEL=umay-akilli
       - VITE_SHOW_DEVTOOLS=false
       - BETTER_AUTH_SECRET=921hd8912h89sd1h298sdh129921hd8912h89sd1h298sdh129
       - DATAFORSEO_API_KEY=d3h4Z2dvaHRhN2hoam5wMmdzZjpiYTk4Y2VkNjU2MGE4YTQ4
