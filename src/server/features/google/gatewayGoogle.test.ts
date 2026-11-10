@@ -57,7 +57,7 @@ describe("Google through the Every App gateway", () => {
 
     const status = await getGatewayGoogleStatus();
 
-    // The member's own connection to OpenSEO: there is no organization
+    // The member's own connection to StarSeo: there is no organization
     // connection any more.
     expect(mocks.integrationStatus).toHaveBeenCalledWith({
       env: mocks.env,
@@ -148,13 +148,13 @@ describe("Google through the Every App gateway", () => {
     );
 
     const url = await getGatewayGoogleConnectUrl(
-      "https://open-seo.example.com/integrations",
+      "https://StarSeo.example.com/integrations",
     );
 
     expect(mocks.connectUrl).toHaveBeenCalledWith({
       env: mocks.env,
       provider: GATEWAY_GOOGLE_PROVIDER,
-      returnTo: "https://open-seo.example.com/integrations",
+      returnTo: "https://StarSeo.example.com/integrations",
     });
     expect(url).toContain("/connect/google-workspace");
   });

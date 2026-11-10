@@ -101,7 +101,7 @@ export const featurePages = {
       "free keyword research tool",
       "keyword research tools",
     ],
-    imageAlt: "OpenSEO keyword research dashboard",
+    imageAlt: "StarSeo keyword research dashboard",
     imageSrc:
       "https://imagedelivery.net/ysLOa6bzFaM49Jxok-TAlw/d77077d0-cdf4-4523-0c41-56a7b4861300/public",
     workflows: [
@@ -148,7 +148,7 @@ export const featurePages = {
     },
     toolCallout: {
       title: "Start with one topic before you sign up",
-      description: "Two free tools from OpenSEO. No signup required.",
+      description: "Two free tools from StarSeo. No signup required.",
       links: [
         {
           title: "Free keyword generator",
@@ -171,11 +171,11 @@ export const featurePages = {
       },
       {
         title: "How it compares with Google Keyword Planner and free tools",
-        body: "Google Keyword Planner is the free option most guides point to, and it sits inside Google Ads. OpenSEO's free keyword generator is the quick version of this tool: one topic in, up to 20 ideas out, with volume and difficulty and no account. The full tool returns up to 500 ideas per search and adds CPC, search intent and the live results page for each keyword. Full metrics cover 94 countries. Elsewhere the data comes from Google Ads, which has volume and CPC but no difficulty or intent.",
+        body: "Google Keyword Planner is the free option most guides point to, and it sits inside Google Ads. StarSeo's free keyword generator is the quick version of this tool: one topic in, up to 20 ideas out, with volume and difficulty and no account. The full tool returns up to 500 ideas per search and adds CPC, search intent and the live results page for each keyword. Full metrics cover 94 countries. Elsewhere the data comes from Google Ads, which has volume and CPC but no difficulty or intent.",
       },
       {
         title: "Keyword research with ChatGPT or Claude, using real numbers",
-        body: "Ask a chat assistant for search volumes and it will guess. Connect OpenSEO over MCP and the assistant pulls keyword ideas and metrics from the same data this page uses. The keyword research skill gives it an order of work: expand a seed, check who ranks, then save the keepers to your list. You keep the conversation, and every number can be checked.",
+        body: "Ask a chat assistant for search volumes and it will guess. Connect StarSeo over MCP and the assistant pulls keyword ideas and metrics from the same data this page uses. The keyword research skill gives it an order of work: expand a seed, check who ranks, then save the keepers to your list. You keep the conversation, and every number can be checked.",
       },
     ],
     contextImage: {
@@ -197,17 +197,17 @@ export const featurePages = {
     ],
     faqs: [
       {
-        question: "What is OpenSEO keyword research best for?",
+        question: "What is StarSeo keyword research best for?",
         answer:
-          "OpenSEO is best for finding SEO keyword ideas, checking demand and difficulty, and turning those ideas into saved keywords you can revisit.",
+          "StarSeo is best for finding SEO keyword ideas, checking demand and difficulty, and turning those ideas into saved keywords you can revisit.",
       },
       {
-        question: "Can I use OpenSEO as a free keyword research tool?",
+        question: "Can I use StarSeo as a free keyword research tool?",
         answer:
-          "Not unlimited: quality keyword data costs money everywhere, which is why the big SEO suites run $100/month and up. You can start OpenSEO for free; the paid plan is $10/month with usage credits included. It's also open source, so you can self-host with your own DataForSEO account.",
+          "Not unlimited: quality keyword data costs money everywhere, which is why the big SEO suites run $100/month and up. You can start StarSeo for free; the paid plan is $10/month with usage credits included. It's also open source, so you can self-host with your own DataForSEO account.",
       },
       {
-        question: "Does OpenSEO show live search results?",
+        question: "Does StarSeo show live search results?",
         answer:
           "Yes. Keyword research can be paired with SERP inspection so you can see ranking pages alongside the metrics.",
       },
@@ -273,7 +273,7 @@ export const featurePages = {
       "free seo audit tool",
       "seo audit tools",
     ],
-    imageAlt: "OpenSEO site audit report",
+    imageAlt: "StarSeo site audit report",
     imageSrc:
       "https://imagedelivery.net/ysLOa6bzFaM49Jxok-TAlw/53149e87-0027-4fa8-5d13-bcaab60c7100/public",
     workflows: [
@@ -320,7 +320,7 @@ export const featurePages = {
     },
     toolCallout: {
       title: "Fix the title and meta issues the audit finds",
-      description: "A free tool from OpenSEO. No signup required.",
+      description: "A free tool from StarSeo. No signup required.",
       links: [
         {
           title: "Free SERP simulator",
@@ -337,16 +337,16 @@ export const featurePages = {
       },
       {
         title: "Audits that see JavaScript sites",
-        body: "A crawler that reads only raw HTML sees an empty shell on many modern sites. Turn on rendering and OpenSEO loads each page in a browser before checking it, up to your plan's page limit. Pages that come back as a bot challenge get a second try with a different renderer. Rendered audits use credits for the pages they render and stop after 22 hours. When a site rate-limits the crawl, the audit slows down and retries instead of marking every page blocked, and site owners can verify the OpenSEO-Audit crawler before letting it through.",
+        body: "A crawler that reads only raw HTML sees an empty shell on many modern sites. Turn on rendering and StarSeo loads each page in a browser before checking it, up to your plan's page limit. Pages that come back as a bot challenge get a second try with a different renderer. Rendered audits use credits for the pages they render and stop after 22 hours. When a site rate-limits the crawl, the audit slows down and retries instead of marking every page blocked, and site owners can verify the StarSeo-Audit crawler before letting it through.",
       },
       {
         title: "Run an audit from your AI agent",
-        body: "Connect OpenSEO to Claude, Cursor or ChatGPT over MCP and the agent can start an audit, check its progress and read the issues by severity. Ask it which critical issues to fix first, or to draft new titles for every page flagged as too long, and it works from the same report you see in the app.",
+        body: "Connect StarSeo to Claude, Cursor or ChatGPT over MCP and the agent can start an audit, check its progress and read the issues by severity. Ask it which critical issues to fix first, or to draft new titles for every page flagged as too long, and it works from the same report you see in the app.",
       },
     ],
     contextImage: {
       src: "/features/site-audit/openseo-site-audit-issue-types-by-severity.png",
-      alt: "List of the 32 issue types an OpenSEO site audit checks, in three columns: 4 critical (crawler was blocked, server error, broken internal link, missing title tag), 19 warnings and 9 info.",
+      alt: "List of the 32 issue types an StarSeo site audit checks, in three columns: 4 critical (crawler was blocked, server error, broken internal link, missing title tag), 19 warnings and 9 info.",
       caption: "The full check list, grouped the way the report sorts it.",
       width: 1600,
       height: 900,
@@ -359,14 +359,14 @@ export const featurePages = {
     ],
     faqs: [
       {
-        question: "What does the OpenSEO site audit tool check?",
+        question: "What does the StarSeo site audit tool check?",
         answer:
           "32 issue types across every crawled page, including status codes, titles, meta descriptions, headings, canonicals, redirects, internal links, image alt text and response time. Enable Lighthouse and a sample of pages also gets performance, SEO, accessibility and best-practice findings.",
       },
       {
-        question: "Is OpenSEO a free SEO audit tool?",
+        question: "Is StarSeo a free SEO audit tool?",
         answer:
-          "For smaller sites, yes: the free plan includes site audits up to 50 pages per crawl. Larger crawls need a paid plan, starting at $10/month. OpenSEO is also open source and self-hostable.",
+          "For smaller sites, yes: the free plan includes site audits up to 50 pages per crawl. Larger crawls need a paid plan, starting at $10/month. StarSeo is also open source and self-hostable.",
       },
       {
         question: "How many pages can one audit crawl?",
@@ -374,12 +374,12 @@ export const featurePages = {
           "Up to 50 pages per audit on the free plan and up to 10,000 on a paid plan. Rendered audits follow the same page limit and stop after 22 hours.",
       },
       {
-        question: "Can OpenSEO audit a JavaScript site?",
+        question: "Can StarSeo audit a JavaScript site?",
         answer:
-          "Yes. Turn on rendering and OpenSEO loads each page in a browser before checking it. Rendered audits use more credits than a plain crawl.",
+          "Yes. Turn on rendering and StarSeo loads each page in a browser before checking it. Rendered audits use more credits than a plain crawl.",
       },
       {
-        question: "Who should use OpenSEO Site Audit?",
+        question: "Who should use StarSeo Site Audit?",
         answer:
           "Founders, marketers, agencies and developers who need a shared crawl report they can work through and export.",
       },
@@ -429,7 +429,7 @@ export const featurePages = {
       "referring domains",
       "link profile",
     ],
-    imageAlt: "OpenSEO backlinks report",
+    imageAlt: "StarSeo backlinks report",
     imageSrc:
       "https://imagedelivery.net/ysLOa6bzFaM49Jxok-TAlw/d97206ed-bd64-447c-2b9e-1b9f07c5ec00/public",
     workflows: [
@@ -515,7 +515,7 @@ export const featurePages = {
           "Backlink analysis helps you understand which sites link to a domain or page, which links have stronger rank, spam, broken, lost, or nofollow signals, and where competitors are earning authority.",
       },
       {
-        question: "Can I check competitor backlinks in OpenSEO?",
+        question: "Can I check competitor backlinks in StarSeo?",
         answer:
           "Yes. Enter any domain, yours or a competitor's, and pull its backlinks, referring domains, and top linked pages.",
       },
@@ -539,7 +539,7 @@ export const featurePages = {
       "competitor keyword analysis tool",
       "website traffic checker",
     ],
-    imageAlt: "OpenSEO domain overview",
+    imageAlt: "StarSeo domain overview",
     imageSrc:
       "https://imagedelivery.net/ysLOa6bzFaM49Jxok-TAlw/189e22b8-fdf8-46b4-198c-e912beef2300/public",
     workflows: [
@@ -599,10 +599,10 @@ export const featurePages = {
       {
         question: "How does this compare to Semrush Domain Overview?",
         answer:
-          "OpenSEO covers the core of the same report (estimated traffic, organic keywords, top keywords, and top pages) without a triple-digit monthly seat. OpenSEO is open source, so you can self-host it, and the managed app is $10/month and includes usage credits.",
+          "StarSeo covers the core of the same report (estimated traffic, organic keywords, top keywords, and top pages) without a triple-digit monthly seat. StarSeo is open source, so you can self-host it, and the managed app is $10/month and includes usage credits.",
       },
       {
-        question: "Can OpenSEO help with competitor keyword analysis?",
+        question: "Can StarSeo help with competitor keyword analysis?",
         answer:
           "Yes. Enter a competitor's domain and you get the keywords it ranks for and its top organic pages: the raw material for finding topics worth building or defending.",
       },
@@ -663,7 +663,7 @@ export const featurePages = {
       "keyword rank tracker",
       "google rank tracker",
     ],
-    imageAlt: "OpenSEO rank tracking table",
+    imageAlt: "StarSeo rank tracking table",
     imageSrc:
       "https://imagedelivery.net/ysLOa6bzFaM49Jxok-TAlw/4a0f8508-1527-46a8-c91c-086456f21c00/public",
     workflows: [
@@ -698,7 +698,7 @@ export const featurePages = {
     differentiators: [
       "Rank tracking is part of the same workspace as discovery, audit, and competitor research.",
       "Optional desktop and mobile tracking helps teams avoid one-dimensional rank reports.",
-      "OpenSEO can expose ranking data to AI agents through MCP.",
+      "StarSeo can expose ranking data to AI agents through MCP.",
     ],
     headings: {
       workflows: "Set up a tracker, add keywords, read the movement",
@@ -710,7 +710,7 @@ export const featurePages = {
     },
     toolCallout: {
       title: "Pick what to track before you pay to track it",
-      description: "Two free tools from OpenSEO. No signup required.",
+      description: "Two free tools from StarSeo. No signup required.",
       links: [
         {
           title: "Free competitor keyword finder",
@@ -764,7 +764,7 @@ export const featurePages = {
           "A rank tracker monitors where a domain appears for selected keywords over time so you can see whether SEO work is improving visibility.",
       },
       {
-        question: "Does OpenSEO track mobile and desktop rankings?",
+        question: "Does StarSeo track mobile and desktop rankings?",
         answer:
           "Yes: mobile, desktop, or both. Each tracked domain is configured with the devices you want, and enabling both lets you compare them side by side.",
       },
@@ -774,7 +774,7 @@ export const featurePages = {
           "Start with keywords tied to important pages, active content work, and competitor opportunities discovered in keyword research.",
       },
       {
-        question: "How often does OpenSEO check rankings?",
+        question: "How often does StarSeo check rankings?",
         answer:
           "Daily, weekly or monthly, set per tracker, or only when you run a check yourself. Monthly checks run at the end of the month.",
       },
@@ -839,7 +839,7 @@ export const featurePages = {
       "keyword list tool",
       "keyword planning",
     ],
-    imageAlt: "OpenSEO saved keywords list",
+    imageAlt: "StarSeo saved keywords list",
     imageSrc:
       "https://imagedelivery.net/ysLOa6bzFaM49Jxok-TAlw/8938a529-b443-4d4f-9869-c972f3cef900/public",
     workflows: [
@@ -878,7 +878,7 @@ export const featurePages = {
     related: [
       { label: "Keyword Research", href: "/features/keyword-research" },
       { label: "Rank Tracking", href: "/features/rank-tracking" },
-      { label: "OpenSEO MCP", href: "/features/mcp" },
+      { label: "StarSeo MCP", href: "/features/mcp" },
     ],
     faqs: [
       {
@@ -913,7 +913,7 @@ export const featurePages = {
       "ai search visibility",
       "answer engine optimization",
     ],
-    imageAlt: "OpenSEO AI brand visibility report",
+    imageAlt: "StarSeo AI brand visibility report",
     imageSrc:
       "https://imagedelivery.net/ysLOa6bzFaM49Jxok-TAlw/cde3e4f8-079f-4890-cb17-371087107400/public",
     workflows: [
@@ -947,13 +947,13 @@ export const featurePages = {
     differentiators: [
       "AI visibility sits beside classic SEO research instead of replacing it.",
       "The workflow focuses on concrete sources and mentions, not vague AI hype.",
-      "OpenSEO helps teams connect AI mention and citation research to concrete SEO planning.",
+      "StarSeo helps teams connect AI mention and citation research to concrete SEO planning.",
     ],
     related: [
       { label: "AI Visibility Guide", href: "/docs/ai-visibility" },
       { label: "Prompt Explorer", href: "/features/ai-search-prompts" },
       { label: "Domain Overview", href: "/features/domain-overview" },
-      { label: "OpenSEO MCP", href: "/features/mcp" },
+      { label: "StarSeo MCP", href: "/features/mcp" },
     ],
     faqs: [
       {
@@ -964,7 +964,7 @@ export const featurePages = {
       {
         question: "How is AI visibility different from traditional SEO?",
         answer:
-          "Traditional SEO focuses on rankings and pages. OpenSEO's AI visibility workflow looks at mentions, cited pages, related prompts, and platform-level metrics from supported AI-search sources.",
+          "Traditional SEO focuses on rankings and pages. StarSeo's AI visibility workflow looks at mentions, cited pages, related prompts, and platform-level metrics from supported AI-search sources.",
       },
       {
         question: "Should AI visibility replace keyword research?",
@@ -988,7 +988,7 @@ export const featurePages = {
       "ai search prompts",
       "answer engine optimization tool",
     ],
-    imageAlt: "OpenSEO prompt explorer",
+    imageAlt: "StarSeo prompt explorer",
     imageSrc:
       "https://imagedelivery.net/ysLOa6bzFaM49Jxok-TAlw/9f3d38f2-aa97-417c-ca74-ae378654d700/public",
     workflows: [
@@ -1021,13 +1021,13 @@ export const featurePages = {
     ],
     differentiators: [
       "Prompt Explorer lives beside Prompt Research and Prompt Tracking in your project.",
-      "OpenSEO treats AI search as a research layer, not a replacement for SEO fundamentals.",
-      "OpenSEO MCP lets your agent explore prompts and work with saved AI visibility results.",
+      "StarSeo treats AI search as a research layer, not a replacement for SEO fundamentals.",
+      "StarSeo MCP lets your agent explore prompts and work with saved AI visibility results.",
     ],
     related: [
       { label: "AI Visibility", href: "/features/ai-brand-visibility" },
       { label: "Keyword Research", href: "/features/keyword-research" },
-      { label: "OpenSEO MCP", href: "/features/mcp" },
+      { label: "StarSeo MCP", href: "/features/mcp" },
     ],
     faqs: [
       {

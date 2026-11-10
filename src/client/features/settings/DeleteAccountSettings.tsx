@@ -37,7 +37,7 @@ function blockerText(blocker: Status["blockers"][number]) {
     blocker.otherMemberCount === 1
       ? "1 other member"
       : `${blocker.otherMemberCount} other members`;
-  return `You own “${blocker.organizationName}”, which has ${others}. Deleting your account would leave them without an owner. Remove them in Organization settings, or email support@openseo.so to hand the workspace to one of them.`;
+  return `You own “${blocker.organizationName}”, which has ${others}. Deleting your account would leave them without an owner. Remove them in Organization settings, or email support@canpolatkaya.com to hand the workspace to one of them.`;
 }
 
 function billingText(charge: Status["billingToStop"][number]) {

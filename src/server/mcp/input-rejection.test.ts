@@ -26,7 +26,7 @@ async function connectClient() {
       userEmail: "test@example.com",
       organizationId: "org_test",
       role: "owner",
-      baseUrl: "https://open-seo.test",
+      baseUrl: "https://StarSeo.test",
       clientId: "client_test",
       scopes: ["mcp"],
     }),

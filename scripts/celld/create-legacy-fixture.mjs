@@ -11,7 +11,7 @@ const directory = resolve(process.argv[2] ?? "/tmp/openseo-legacy-fixture");
 await mkdir(directory, { mode: 0o700 });
 const mf = new Miniflare(
   convertV4MiniflareOptions({
-    name: "open-seo",
+    name: "StarSeo",
     modules: true,
     compatibilityDate: "2025-09-02",
     script: `import {DurableObject} from 'cloudflare:workers';
@@ -23,12 +23,12 @@ const mf = new Miniflare(
  }
  export default {fetch(){return new Response('fixture')}};`,
     d1Databases: { DB: "37bee90a-e1aa-404f-b01e-b0d1d479bda1" },
-    r2Buckets: { R2: "open-seo" },
+    r2Buckets: { R2: "StarSeo" },
     durableObjects: {
       SAM_CHAT: {
         className: "SamChatAgent",
         useSQLite: true,
-        unsafeUniqueKey: "open-seo-SamChatAgent",
+        unsafeUniqueKey: "StarSeo-SamChatAgent",
       },
     },
     resourcePersistencePath: directory,

@@ -1,17 +1,17 @@
 ---
 title: Partner Terms and Conditions
-description: Terms for the OpenSEO partner (affiliate) program.
+description: Terms for the StarSeo partner (affiliate) program.
 ---
 
 _Last updated: October 28, 2026_
 
-These Partner Terms and Conditions govern participation in the OpenSEO Partner Program operated by Every App, Inc ("OpenSEO", "we", "us", or "our").
+These Partner Terms and Conditions govern participation in the StarSeo Partner Program operated by Every App, Inc ("StarSeo", "we", "us", or "our").
 
-By applying to, joining, or participating in the OpenSEO Partner Program, you agree to these terms.
+By applying to, joining, or participating in the StarSeo Partner Program, you agree to these terms.
 
 ## 1. Program participation
 
-The OpenSEO Partner Program allows approved partners to promote OpenSEO and refer potential customers to our products or services.
+The StarSeo Partner Program allows approved partners to promote StarSeo and refer potential customers to our products or services.
 
 We may approve, reject, suspend, or remove any partner from the program at our discretion. Participation in the program does not guarantee that any referral, sale, reward, commission, or other benefit will be approved or paid.
 
@@ -21,45 +21,45 @@ Partners are responsible for keeping their account information accurate and for 
 
 A referral is only eligible if it is made in accordance with these terms and any program rules we provide.
 
-Partners must use the official referral links, codes, or tracking methods provided by OpenSEO. Referrals that are not properly tracked through our approved systems may not be eligible for credit.
+Partners must use the official referral links, codes, or tracking methods provided by StarSeo. Referrals that are not properly tracked through our approved systems may not be eligible for credit.
 
 Partners may not refer themselves, their own accounts, their own businesses, or accounts they control. Self-referrals, duplicate accounts, and attempts to artificially create referral credit are prohibited.
 
-Referrals for existing customers, prior leads, or people already in an active buying process with OpenSEO may be excluded from eligibility.
+Referrals for existing customers, prior leads, or people already in an active buying process with StarSeo may be excluded from eligibility.
 
 We reserve the right to review, approve, reject, reverse, or adjust any referral that appears fraudulent, abusive, incorrectly tracked, or inconsistent with these terms.
 
 ## 3. Promotion rules
 
-Partners must promote OpenSEO honestly, clearly, and in a way that reflects positively on our brand.
+Partners must promote StarSeo honestly, clearly, and in a way that reflects positively on our brand.
 
-Partners may not use paid advertising to promote OpenSEO without our prior written approval. This includes paid search, paid social, display ads, sponsored placements, native ads, and similar paid traffic sources.
+Partners may not use paid advertising to promote StarSeo without our prior written approval. This includes paid search, paid social, display ads, sponsored placements, native ads, and similar paid traffic sources.
 
-Partners may not bid on, target, or purchase advertisements using OpenSEO's name, product names, trademarks, misspellings, branded keywords, or confusingly similar terms.
+Partners may not bid on, target, or purchase advertisements using StarSeo's name, product names, trademarks, misspellings, branded keywords, or confusingly similar terms.
 
-Partners may not promote OpenSEO through coupon sites, deal sites, cashback sites, loyalty platforms, discount extensions, or similar services without our prior written approval.
+Partners may not promote StarSeo through coupon sites, deal sites, cashback sites, loyalty platforms, discount extensions, or similar services without our prior written approval.
 
-Partners may not use spam, purchased lists, scraped contacts, bots, automated bulk messages, or unsolicited outreach to promote OpenSEO.
+Partners may not use spam, purchased lists, scraped contacts, bots, automated bulk messages, or unsolicited outreach to promote StarSeo.
 
-Partners must clearly disclose their relationship with OpenSEO when promoting us. Any endorsement, review, post, video, email, or other promotional content should make it clear that the partner may receive compensation.
+Partners must clearly disclose their relationship with StarSeo when promoting us. Any endorsement, review, post, video, email, or other promotional content should make it clear that the partner may receive compensation.
 
-Partners may not make false, misleading, exaggerated, or unsupported claims about OpenSEO, our products, pricing, discounts, results, guarantees, or relationship with the partner. Partners may not imply that they are employees, agents, or official representatives of OpenSEO.
+Partners may not make false, misleading, exaggerated, or unsupported claims about StarSeo, our products, pricing, discounts, results, guarantees, or relationship with the partner. Partners may not imply that they are employees, agents, or official representatives of StarSeo.
 
 Partners are responsible for ensuring that their promotional activity complies with applicable laws, advertising rules, privacy requirements, and platform policies.
 
 ## 4. Brand usage
 
-Partners may only use OpenSEO's name, logo, screenshots, trademarks, and other brand assets in connection with approved promotion of the program.
+Partners may only use StarSeo's name, logo, screenshots, trademarks, and other brand assets in connection with approved promotion of the program.
 
-Partners may not register, purchase, or use domains, subdomains, social handles, ads, search keywords, business names, app names, or other identifiers that include OpenSEO's name, trademarks, misspellings, or confusingly similar terms.
+Partners may not register, purchase, or use domains, subdomains, social handles, ads, search keywords, business names, app names, or other identifiers that include StarSeo's name, trademarks, misspellings, or confusingly similar terms.
 
-Partners may not create websites, landing pages, profiles, or materials that appear to be owned, operated, or officially controlled by OpenSEO.
+Partners may not create websites, landing pages, profiles, or materials that appear to be owned, operated, or officially controlled by StarSeo.
 
 We may ask partners to update or remove any content, brand usage, or promotional material that we believe is inaccurate, outdated, misleading, or inconsistent with our brand.
 
 ## 5. Compliance and enforcement
 
-We may monitor partner activity to protect our customers, brand, and program. We may suspend or terminate a partner's participation at any time if we believe the partner has violated these terms, abused the program, or acted in a way that may harm OpenSEO.
+We may monitor partner activity to protect our customers, brand, and program. We may suspend or terminate a partner's participation at any time if we believe the partner has violated these terms, abused the program, or acted in a way that may harm StarSeo.
 
 Prohibited activity includes fraud, fake traffic, cookie stuffing, forced clicks, hidden redirects, attribution manipulation, impersonation, misleading claims, self-referrals, spam and unsolicited outreach, illegal activity, or any other behavior we consider abusive or harmful.
 
@@ -69,7 +69,7 @@ If a partner is suspended or terminated, they must stop using our referral links
 
 ### Confidentiality
 
-Partners may receive non-public information about OpenSEO, our customers, products, offers, roadmap, pricing, program performance, or business operations. Partners must keep this information confidential and may only use it to participate in the program.
+Partners may receive non-public information about StarSeo, our customers, products, offers, roadmap, pricing, program performance, or business operations. Partners must keep this information confidential and may only use it to participate in the program.
 
 ### Independent contractor relationship
 
@@ -109,6 +109,6 @@ We may set maximum limits on the rewards, commissions, bonuses, or other payment
 
 ## 9. Contact
 
-Questions about these terms or the OpenSEO Partner Program can be sent to support@openseo.so.
+Questions about these terms or the StarSeo Partner Program can be sent to support@canpolatkaya.com.
 
-Company website: https://openseo.so
+Company website: https://starseo.canpolatkaya.com

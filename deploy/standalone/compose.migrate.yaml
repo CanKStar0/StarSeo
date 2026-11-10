@@ -1,4 +1,4 @@
-# Moves an installation of the old Docker image (ghcr.io/every-app/open-seo,
+# Moves an installation of the old Docker image (ghcr.io/CanKStar0/StarSeo,
 # Miniflare state in its open_seo_data volume) into this stack. Add this file
 # for one start, with the old installation stopped and LEGACY_VOLUME set to its
 # data volume (docker volume ls):

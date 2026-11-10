@@ -293,11 +293,11 @@ function agentFacingError(
   if (auth.guestClaimToken) {
     return new AppError(
       "INSUFFICIENT_CREDITS",
-      `${detail}This guest OpenSEO account has used its free credits. Retrying won't help. To add credits, the user needs a full OpenSEO account: they can create one, or sign in to an existing one, at ${buildGuestSignUpUrl(auth.baseUrl, BILLING_ROUTE)}. ${GUEST_SIGN_UP_NOTE}`,
+      `${detail}This guest StarSeo account has used its free credits. Retrying won't help. To add credits, the user needs a full StarSeo account: they can create one, or sign in to an existing one, at ${buildGuestSignUpUrl(auth.baseUrl, BILLING_ROUTE)}. ${GUEST_SIGN_UP_NOTE}`,
     );
   }
   return new AppError(
     "INSUFFICIENT_CREDITS",
-    `${detail}This OpenSEO organization doesn't have enough credits for this request. Retrying won't help until the organization has more credits. The organization owner can add credits at ${buildDashboardUrl(auth.baseUrl, BILLING_ROUTE)}`,
+    `${detail}This StarSeo organization doesn't have enough credits for this request. Retrying won't help until the organization has more credits. The organization owner can add credits at ${buildDashboardUrl(auth.baseUrl, BILLING_ROUTE)}`,
   );
 }

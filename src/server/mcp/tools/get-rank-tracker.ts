@@ -86,7 +86,7 @@ const CONFIG_COLUMNS: McpTableColumn<unknown>[] = [
 const SKIP_REASON_TEXT = new Map<string, string>(
   Object.entries({
     plan_required:
-      "Scheduled checks are being skipped because rank checks need a paid OpenSEO plan, and this account doesn't have one.",
+      "Scheduled checks are being skipped because rank checks need a paid StarSeo plan, and this account doesn't have one.",
     insufficient_credits:
       // A refused manual check sets this too, so it can't say "scheduled".
       "Rank checks are being refused because the account ran out of credits; whoami shows the balance.",

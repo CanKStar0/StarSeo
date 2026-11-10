@@ -1,15 +1,15 @@
 # Alchemy preview deployments
 
-OpenSEO preview stages use isolated Cloudflare resources and a shared,
+StarSeo preview stages use isolated Cloudflare resources and a shared,
 Alchemy-managed Cloudflare Access boundary.
 
 ## Security model
 
-- Preview Workers are named `open-seo-<stage>` and served from
-  `open-seo-<stage>.<WORKERS_SUBDOMAIN>`.
+- Preview Workers are named `StarSeo-<stage>` and served from
+  `StarSeo-<stage>.<WORKERS_SUBDOMAIN>`.
 - One persistent Access application protects
-  `open-seo-*.<WORKERS_SUBDOMAIN>` before any preview Worker exists.
-- Production uses the unsuffixed `open-seo` Worker on `app.openseo.so` and
+  `StarSeo-*.<WORKERS_SUBDOMAIN>` before any preview Worker exists.
+- Production uses the unsuffixed `StarSeo` Worker on `app.openseo.so` and
   `www.app.openseo.so`. It does not match the preview wildcard and is not
   placed behind preview Access.
 - A separate persistent Alchemy stack manages the shared Access boundary. A
@@ -54,13 +54,13 @@ The persistent Access stack creates a self-hosted application with this public
 hostname:
 
 ```text
-open-seo-*.your-subdomain.workers.dev
+StarSeo-*.your-subdomain.workers.dev
 ```
 
 Use the account's Workers subdomain shown under **Workers & Pages**, not the
 Zero Trust team domain. Set that full value in `.env.preview` as
 `WORKERS_SUBDOMAIN`. Preview URLs derive from it as
-`https://open-seo-<stage>.<WORKERS_SUBDOMAIN>` — hosted previews use that as
+`https://StarSeo-<stage>.<WORKERS_SUBDOMAIN>` — hosted previews use that as
 `BETTER_AUTH_URL`, and CI's verify step probes it; a wrong value fails the
 check. Previews in `local_noauth` or `cloudflare_access` mode deploy without
 it, since nothing reads `BETTER_AUTH_URL` there; `password` stages read the
@@ -118,7 +118,7 @@ locally with `pnpm destroy:preview --stage pr-<n> --yes`.
 
 ## Public-mirror PRs
 
-External (every-app/open-seo) PRs never deploy from CI — fork code must not
+External (CanKStar0/StarSeo) PRs never deploy from CI — fork code must not
 run with deploy secrets. Preview one locally instead: the fork's code only
 BUILDS, in a detached sibling worktree, and the deploy runs from this trusted
 checkout's alchemy stack against the fork's `dist/`. The fork's own deploy
@@ -129,12 +129,12 @@ building executes the fork's config code on your machine with `.env.preview`
 available.
 
 ```sh
-git fetch https://github.com/every-app/open-seo.git pull/<pr>/head
-git worktree add --detach ../open-seo-pub-<pr> FETCH_HEAD
-cp .env.preview ../open-seo-pub-<pr>/
-(cd ../open-seo-pub-<pr> && pnpm install --frozen-lockfile && pnpm exec vite build --mode preview)
-rm -rf dist && cp -R ../open-seo-pub-<pr>/dist dist
-git worktree remove --force ../open-seo-pub-<pr>
+git fetch https://github.com/CanKStar0/StarSeo.git pull/<pr>/head
+git worktree add --detach ../StarSeo-pub-<pr> FETCH_HEAD
+cp .env.preview ../StarSeo-pub-<pr>/
+(cd ../StarSeo-pub-<pr> && pnpm install --frozen-lockfile && pnpm exec vite build --mode preview)
+rm -rf dist && cp -R ../StarSeo-pub-<pr>/dist dist
+git worktree remove --force ../StarSeo-pub-<pr>
 pnpm alchemy deploy deploy/alchemy/alchemy.run.ts --env-file .env.preview --stage pub-<pr> --yes
 ```
 
@@ -147,7 +147,7 @@ pnpm destroy:preview --stage pub-<pr> --yes
 
 ## Production
 
-OpenSEO's hosted production deploys through the manually dispatched
+StarSeo's hosted production deploys through the manually dispatched
 `Deploy production` GitHub workflow (Alchemy stage `hosted-prod`, secrets held
 in the GitHub `production` environment). See
 [production deployment](production-deployment.md). Local preview deployment commands do
@@ -163,5 +163,5 @@ gating the worker (`AUTH_MODE=cloudflare_access` +
 `ACCESS_ALLOWED_EMAILS`; `resolveSelfHostAccess` in deploy/alchemy/alchemy.run.ts derives
 `TEAM_DOMAIN`/`POLICY_AUD`, or accepts them explicitly for a hand-managed
 application). The preview Access wildcard and PR workflow are
-OpenSEO-specific and not required. The walkthrough lives in
+StarSeo-specific and not required. The walkthrough lives in
 docs/SELF_HOSTING_CLOUDFLARE.md.

@@ -13,12 +13,12 @@ import { getWorkersEnv } from "@/server/lib/runtime-env";
 
 /**
  * Google through the Every App gateway (AUTH_MODE=everyapp): the gateway
- * holds the Google OAuth client and each member's connection to OpenSEO,
+ * holds the Google OAuth client and each member's connection to StarSeo,
  * which the member makes once, here (the Connect button sends them to the
  * gateway's `/connect/google-workspace` and back). The connection is that
- * member's and OpenSEO's alone; another app's Google connection is a
+ * member's and StarSeo's alone; another app's Google connection is a
  * different one. Calls go through `integrationFetch`, which puts the
- * member's token on them; OpenSEO never sees a Google token, client or
+ * member's token on them; StarSeo never sees a Google token, client or
  * secret (docs/design/2026-11-oauth-simplify.md in the Every App repo).
  *
  * The capability is `google-workspace` with Google's own scopes
@@ -26,9 +26,9 @@ import { getWorkersEnv } from "@/server/lib/runtime-env";
  * gateway adds the identity scopes. A project's connection rows keep
  * `connectedByUserId`, the member who picked the property, and every read
  * for that project goes out on that member's connection, whoever is
- * looking, as OpenSEO's own mode reads with that member's Google grant.
- * Where OpenSEO's own mode keeps the Google account id, the rows keep the
- * sentinel {@link GATEWAY_GOOGLE_ACCOUNT_ID}: the gateway, not OpenSEO,
+ * looking, as StarSeo's own mode reads with that member's Google grant.
+ * Where StarSeo's own mode keeps the Google account id, the rows keep the
+ * sentinel {@link GATEWAY_GOOGLE_ACCOUNT_ID}: the gateway, not StarSeo,
  * knows which Google account was connected.
  */
 export const GATEWAY_GOOGLE_PROVIDER = "google-workspace";
@@ -108,7 +108,7 @@ export async function getGatewayGoogleFetch(
 
 /**
  * Where a Connect button sends the member: the gateway's connect page for
- * Google, which comes back to `returnTo` (the OpenSEO page the person was
+ * Google, which comes back to `returnTo` (the StarSeo page the person was
  * on) once Google has answered.
  */
 export async function getGatewayGoogleConnectUrl(

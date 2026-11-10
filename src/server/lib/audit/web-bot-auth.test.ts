@@ -24,7 +24,7 @@ describe("auditRequestHeaders", () => {
     const url = "https://example.com/page";
     const headers = await auditRequestHeaders(url, null);
     const directoryRequest = new Request(
-      "https://app.openseo.so/.well-known/http-message-signatures-directory",
+      "https://starseo.canpolatkaya.com/.well-known/http-message-signatures-directory",
     );
     const directory = await webBotAuthDirectoryResponse(directoryRequest);
     const { keys } = await directory.json<{ keys: JsonWebKey[] }>();
@@ -34,7 +34,7 @@ describe("auditRequestHeaders", () => {
     await expect(
       verify(new Request(url, { headers }), { resolver: () => verifier }),
     ).resolves.toMatchObject({
-      signatureAgent: { uri: "https://app.openseo.so" },
+      signatureAgent: { uri: "https://starseo.canpolatkaya.com" },
     });
     // The directory itself is signed the way Cloudflare's verifier expects.
     await expect(
@@ -71,6 +71,6 @@ describe("auditRequestHeaders", () => {
       expiresAt: null,
     });
 
-    expect(headers).toEqual({ "User-Agent": "OpenSEO-Audit/1.0", ...shopify });
+    expect(headers).toEqual({ "User-Agent": "StarSeo-Audit/1.0", ...shopify });
   });
 });

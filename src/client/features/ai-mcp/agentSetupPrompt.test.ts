@@ -6,8 +6,8 @@ describe("agent setup prompt", () => {
     const prompt = getAgentSetupPrompt("https://seo.example.com");
     expect(prompt).toContain("https://seo.example.com/mcp");
     expect(prompt).toContain("https://seo.example.com/settings");
-    expect(prompt).not.toContain("https://app.openseo.so");
-    expect(prompt).toContain("https://openseo.so/docs/mcp");
+    expect(prompt).not.toContain("https://starseo.canpolatkaya.com");
+    expect(prompt).toContain("https://starseo.canpolatkaya.com/docs/mcp");
     expect(prompt).not.toContain("internal: true");
   });
 });

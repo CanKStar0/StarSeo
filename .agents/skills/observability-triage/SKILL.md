@@ -1,6 +1,6 @@
 ---
 name: observability-triage
-description: Triage OpenSEO production errors in Cloudflare Workers Observability — verified query recipes, counting gotchas, a known-noise filter list applied automatically, and the on-demand CPU/heap profiling recipe. Use when asked to review Cloudflare logs/observability, count OOMs or worker errors, compare error rates between periods, investigate a prod error spike, or find where a worker spends CPU or memory (profiles, flamegraphs).
+description: Triage StarSeo production errors in Cloudflare Workers Observability — verified query recipes, counting gotchas, a known-noise filter list applied automatically, and the on-demand CPU/heap profiling recipe. Use when asked to review Cloudflare logs/observability, count OOMs or worker errors, compare error rates between periods, investigate a prod error spike, or find where a worker spends CPU or memory (profiles, flamegraphs).
 metadata:
   internal: true
 ---
@@ -70,12 +70,12 @@ Cloudflare captures an on-demand CPU or allocation profile from a live productio
 - Capture with the `cf` CLI (`npm i -g cf`, `cf login` once). It writes the pprof protobuf to stdout (the raw API response is gzipped; the reader below accepts both):
 
   ```
-  cf workers versions profile latest --worker-id open-seo --duration-ms 10000 --profile-type cpu > open-seo-cpu.pprof
-  cf workers versions profile latest --worker-id open-seo --duration-ms 15000 --profile-type heap > open-seo-heap.pprof
+  cf workers versions profile latest --worker-id StarSeo --duration-ms 10000 --profile-type cpu > StarSeo-cpu.pprof
+  cf workers versions profile latest --worker-id StarSeo --duration-ms 15000 --profile-type heap > StarSeo-heap.pprof
   ```
 
   API equivalent: `POST /accounts/{account_id}/workers/workers/{worker_id}/versions/latest/profile` with `{ "duration_ms": 10000, "profile_type": "cpu" }` (worker ids from `GET /accounts/{account_id}/workers/workers`). The dashboard shows the same capture as a flamegraph: Worker → Observability → Flamegraph view.
-- Read it without Go: `node .agents/skills/observability-triage/scripts/pprof-top.mjs open-seo-cpu.pprof` prints the hottest self and inclusive frames. Google's `pprof` opens the file too.
+- Read it without Go: `node .agents/skills/observability-triage/scripts/pprof-top.mjs StarSeo-cpu.pprof` prints the hottest self and inclusive frames. Google's `pprof` opens the file too.
 - **It only samples an isolate that is already serving traffic**; nothing is started for you. The app worker always qualifies. The audit worker returns 0 samples unless an audit is running, so start one first. Idle preview and self-host workers fail with "The Worker has no loaded isolate in its recent execution locations" or "No recent executions were found".
 - One capture is one isolate in one colo, chosen among the ones that ran recently, so repeat a capture before trusting a small frame. A 10 s CPU capture under normal load yields ~2,000 samples at 1 ms intervals.
 - Function names are readable without source maps (the Vite build keeps them); file names are chunk hashes like `index-OuwxKDQa.js`. The production deploy uploads its source maps to PostHog error tracking and deletes them before deploying, so Cloudflare never has them and chunk names here stay hashes.

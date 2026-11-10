@@ -43,7 +43,7 @@ function SeoApiStatusBanners({
             </>
           ) : (
             <>
-              Setup needed: add your DataForSEO API key to use OpenSEO features.
+              Setup needed: add your DataForSEO API key to use StarSeo features.
               See the quick steps on the {helpLink}.
             </>
           )}
@@ -61,7 +61,7 @@ function SeoApiStatusBanners({
 }
 
 const DOCKER_MOVE_URL =
-  "https://github.com/every-app/open-seo/blob/main/docs/SELF_HOSTING_DOCKER.md#move-from-the-old-docker-image";
+  "https://github.com/CanKStar0/StarSeo/blob/main/docs/SELF_HOSTING_DOCKER.md#move-from-the-old-docker-image";
 const DOCKER_MOVE_DISMISSED_KEY = "openseo:docker-move-dismissed";
 
 // The old single-container Docker image builds the app at startup with this
@@ -75,7 +75,7 @@ function LegacyDockerBanner() {
   }
   return (
     <AppBanner variant="info" icon={<Info className="size-4 shrink-0" />}>
-      A new OpenSEO Docker setup starts in seconds and supports accounts. This
+      A new StarSeo Docker setup starts in seconds and supports accounts. This
       image keeps getting updates, and moving keeps your data.{" "}
       <a
         href={DOCKER_MOVE_URL}
@@ -125,7 +125,7 @@ function MissingSeoSetupModal({ onClose }: { onClose: () => void }) {
                   setup guide has the steps.
                 </>
               ) : (
-                "Add your DataForSEO API key to start using OpenSEO."
+                "Add your DataForSEO API key to start using StarSeo."
               )}
             </DialogDescription>
           </div>

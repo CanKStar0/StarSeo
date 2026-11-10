@@ -73,7 +73,7 @@ function post(path: string, body: unknown, headers: Record<string, string>) {
   );
 }
 
-describe("OpenSEO's tools on the Every App gateway", () => {
+describe("StarSeo's tools on the Every App gateway", () => {
   it("describes every tool within the gateway's catalog limits", async () => {
     const token = await mintSystemJwt(privateKeyPem, {
       audience: AUDIENCE,
@@ -109,7 +109,7 @@ describe("OpenSEO's tools on the Every App gateway", () => {
     ).toBe("write");
   });
 
-  it("runs a tool for the gateway user, returning OpenSEO's text and its data", async () => {
+  it("runs a tool for the gateway user, returning StarSeo's text and its data", async () => {
     const token = await mintIdentityJwt(privateKeyPem, {
       subject: {
         sub: "user_1",

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/_marketing/features/rank-tracking")({
         "SEO Rank Tracker for Keyword Position Tracking: Daily to Monthly, Desktop and Mobile",
       description: page.seoDescription ?? page.description,
       path: "/features/rank-tracking",
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
       imageAlt: page.imageAlt,
     }),
   component: () => <FeaturePageTemplate page={page} />,

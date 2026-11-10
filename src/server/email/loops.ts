@@ -169,7 +169,7 @@ export async function sendHostedVerificationEmail({
     email,
     transactionalId: config.verificationTemplateId,
     dataVariables: {
-      appName: "OpenSEO",
+      appName: "StarSeo",
       confirmationUrl,
     },
   });
@@ -197,7 +197,7 @@ export async function sendHostedInvitationEmail({
     email,
     transactionalId: templateId,
     dataVariables: {
-      appName: "OpenSEO",
+      appName: "StarSeo",
       inviteUrl,
       organizationName,
       inviterName,
@@ -219,7 +219,7 @@ export async function sendHostedPasswordResetEmail({
     email,
     transactionalId: config.passwordResetTemplateId,
     dataVariables: {
-      appName: "OpenSEO",
+      appName: "StarSeo",
       resetUrl,
     },
   });

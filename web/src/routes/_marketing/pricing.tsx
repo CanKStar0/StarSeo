@@ -10,7 +10,7 @@ export const Route = createFileRoute("/_marketing/pricing")({
       description:
         "Plans from $10/mo, each with usage included every month. Pro and Agency include 20% more usage than you pay for. Estimate what your month would cost.",
       path: "/pricing",
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
     }),
   component: Pricing,
 });
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/_marketing/pricing")({
  *   creditsCharged = ceil(billedUsd * 1000)
  *   1 credit = $0.001  (1,000 credits = $1.00)
  * ------------------------------------------------------------------ */
-const MARKUP = 1.28; // OpenSEO's flat 28% premium over raw DataForSEO cost
+const MARKUP = 1.28; // StarSeo's flat 28% premium over raw DataForSEO cost
 const CREDIT_USD = 0.001; // $ value of a single credit
 const BASE_PRICE_USD = 10; // Base Plan / month
 const BASE_INCLUDED_CREDIT_USD = 10; // $10 of usage credits included, reset monthly
@@ -43,7 +43,7 @@ const RANK_CHECK_LABELS: Record<number, string> = {
 const RANK_MAX_READS_PER_CHECK = 6;
 const RANK_CHECKS_PER_MONTH: Record<number, number> = { 0: 0, 1: 4, 7: 30 };
 
-// Raw DataForSEO per-call cost in USD (NOT including OpenSEO's markup).
+// Raw DataForSEO per-call cost in USD (NOT including StarSeo's markup).
 const RAW_COST_USD = {
   // Rank checks use the queued API. The app defaults to one device and the top
   // 40 results: $0.0006 for page one + $0.00045 per extra page, per read.
@@ -106,7 +106,7 @@ type Plan = {
   featured?: boolean;
 };
 
-const SIGN_UP_URL = "https://app.openseo.so/sign-up";
+const SIGN_UP_URL = "https://starseo.canpolatkaya.com/sign-up";
 
 /**
  * Sign-up that goes straight to this plan on the app's subscribe page. Base
@@ -293,7 +293,7 @@ function Pricing() {
           Starts at $10/month
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[var(--color-brand-muted)]">
-          Other SEO tools are too expensive. OpenSEO grows with you.
+          Other SEO tools are too expensive. StarSeo grows with you.
         </p>
       </div>
 
@@ -543,7 +543,7 @@ function Pricing() {
             </dt>
             <dd className="mt-1.5 text-sm leading-6 text-[var(--color-brand-muted)]">
               Yes. The free trial includes $0.50 of credits so you can test
-              OpenSEO before subscribing.
+              StarSeo before subscribing.
             </dd>
           </div>
           <div className="py-4 first:pt-0 last:pb-0">
@@ -551,7 +551,7 @@ function Pricing() {
               What if I use all my credits for the month?
             </dt>
             <dd className="mt-1.5 text-sm leading-6 text-[var(--color-brand-muted)]">
-              Buy top-up credits at any time, or turn on auto-reload so OpenSEO
+              Buy top-up credits at any time, or turn on auto-reload so StarSeo
               buys them for you when you run low, up to a monthly limit you set.
             </dd>
           </div>
@@ -589,7 +589,7 @@ function Pricing() {
               Do I need a subscription or just usage credits?
             </dt>
             <dd className="mt-1.5 text-sm leading-6 text-[var(--color-brand-muted)]">
-              You can try OpenSEO on the $0.50 of free trial credits. To keep
+              You can try StarSeo on the $0.50 of free trial credits. To keep
               going after that, or to use rank checks and Prompt Research, you
               need an active subscription. Top-up Usage Credits roll over and
               don&apos;t expire, but you can only buy them on a paid plan.

@@ -1,12 +1,12 @@
 #!/bin/sh
-# Checks that the standalone image's celld still behaves the way OpenSEO
+# Checks that the standalone image's celld still behaves the way StarSeo
 # relies on (see worker.js). It runs `celld dev`, not the deployed setup with
 # S3 storage, so it covers runtime behaviour, not storage. About a minute:
 #   sh scripts/celld/conformance/conformance.sh [image]
 # The default image is the published :latest; pass a locally built tag to
 # check a celld bump before it ships.
 set -eu
-image=${1:-ghcr.io/every-app/open-seo-standalone:latest}
+image=${1:-ghcr.io/CanKStar0/StarSeo-standalone:latest}
 here=$(cd "$(dirname "$0")" && pwd)
 work=$(mktemp -d)
 cp "$here/wrangler.jsonc" "$here/worker.js" "$work/"

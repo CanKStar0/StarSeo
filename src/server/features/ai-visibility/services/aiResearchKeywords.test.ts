@@ -41,7 +41,7 @@ vi.mock("@/server/features/projects/repositories/ProjectRepository", () => ({
   ProjectRepository: {
     getProjectForOrganization: async () => ({
       id: "project",
-      name: "OpenSEO",
+      name: "StarSeo",
       domain: "openseo.so",
       locationCode: 2840,
       languageCode: "en",
@@ -81,7 +81,7 @@ describe("runAiResearchSetup", () => {
     listCompetitors.mockResolvedValue([]);
     prepareWebsiteTracking.mockResolvedValue(null);
     research.mockResolvedValue({
-      name: "OpenSEO",
+      name: "StarSeo",
       domain: "openseo.so",
       overview: "SEO tools.",
       competitors: [

@@ -18,7 +18,7 @@ export function DashboardAgentCard({ projectId }: { projectId: string }) {
     <AgentCard
       projectId={projectId}
       icons={ONE_CLICK_INSTALLS.map(({ Icon }) => Icon)}
-      title="Use OpenSEO in ChatGPT or Claude"
+      title="Use StarSeo in ChatGPT or Claude"
       description="Research keywords and audit your site from the chatbot you already use."
     >
       {ONE_CLICK_INSTALLS.map(({ agent, name, href, Icon }) => (
@@ -43,7 +43,7 @@ export function DashboardAgentCard({ projectId }: { projectId: string }) {
   );
 }
 
-// For people whose agent is connected but hasn't used OpenSEO yet: opens a new
+// For people whose agent is connected but hasn't used StarSeo yet: opens a new
 // chat in the app they connected, with a first prompt filled in.
 export function DashboardAgentPromptCard({
   projectId,
@@ -65,7 +65,7 @@ export function DashboardAgentPromptCard({
     ({ agent }) =>
       grants.length === 0 || grants.some((grant) => grant.webChat === agent),
   );
-  const prompt = `Use OpenSEO to audit ${domain ?? "my website"} and tell me the 3 most important next steps.`;
+  const prompt = `Use StarSeo to audit ${domain ?? "my website"} and tell me the 3 most important next steps.`;
 
   return (
     <AgentCard

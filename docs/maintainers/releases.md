@@ -4,7 +4,7 @@ This document covers maintainer-only workflow notes that do not belong in the pu
 
 ## Release updates
 
-GitHub Releases are the main user-facing update channel for OpenSEO.
+GitHub Releases are the main user-facing update channel for StarSeo.
 
 - Ask interested users to watch the repo and enable release notifications.
 - Do not treat stars as a contact list; GitHub does not expose a way to message stargazers directly.
@@ -53,7 +53,7 @@ For now, prefer patch releases while the project is still in rapid early develop
 
 ## Docker edition runtime check
 
-The standalone Docker image runs on celld, which implements only part of the Workers runtime contract. Before a release that changes `deploy/standalone/` or bumps `CELLD_VERSION`, build the image and check that celld still does what OpenSEO relies on (about a minute):
+The standalone Docker image runs on celld, which implements only part of the Workers runtime contract. Before a release that changes `deploy/standalone/` or bumps `CELLD_VERSION`, build the image and check that celld still does what StarSeo relies on (about a minute):
 
 ```sh
 docker build -f deploy/standalone/Dockerfile -t openseo-standalone:check .

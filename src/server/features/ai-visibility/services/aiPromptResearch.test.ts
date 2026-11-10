@@ -88,14 +88,14 @@ describe("researchAiPrompts", () => {
     getCached.mockResolvedValue(null);
     getTracker.mockResolvedValue({
       brands: [
-        { own: true, name: "OpenSEO", domain: "openseo.so", aliases: [] },
+        { own: true, name: "StarSeo", domain: "openseo.so", aliases: [] },
       ],
       prompts: [{ text: "Is Moz a good SEO tool?", archived: false }],
     });
     mentionsSearch.mockResolvedValue([
       {
         question: "what is the most accurate seo tool?",
-        answer: "Ahrefs or OpenSEO.",
+        answer: "Ahrefs or StarSeo.",
         ai_search_volume: 40,
         sources: [
           { domain: "www.openseo.so", url: "https://www.openseo.so/a" },

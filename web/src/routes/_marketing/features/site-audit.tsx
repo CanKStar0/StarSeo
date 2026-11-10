@@ -12,7 +12,7 @@ export const Route = createFileRoute("/_marketing/features/site-audit")({
         "Open Source SEO Audit Tool: Find Technical Issues and Sort Them by Severity",
       description: page.seoDescription ?? page.description,
       path: "/features/site-audit",
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
       imageAlt: page.imageAlt,
     }),
   component: () => <FeaturePageTemplate page={page} />,

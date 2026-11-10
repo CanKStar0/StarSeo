@@ -66,7 +66,7 @@ export default defineConfig(
     // `vite build --mode standalone` produces the Docker edition: one server
     // module for celld (see deploy/standalone/) instead of the Workers pair.
     const standalone = mode === "standalone";
-    // AUTH_MODE=everyapp builds OpenSEO for an Every App gateway, from
+    // AUTH_MODE=everyapp builds StarSeo for an Every App gateway, from
     // cloudflare.config.ts rather than wrangler.jsonc (everyapp.config.ts).
     // The client reads the same AUTH_MODE, so both sides agree.
     const everyApp = env.AUTH_MODE === "everyapp";

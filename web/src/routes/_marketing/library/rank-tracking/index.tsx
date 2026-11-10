@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "Should I track mobile or desktop rankings?",
     answer:
-      "Mobile, unless you know your customers search from desktops. Most queries are mobile-first now and the two result pages differ. OpenSEO defaults to mobile and can track both, which doubles the cost of each check.",
+      "Mobile, unless you know your customers search from desktops. Most queries are mobile-first now and the two result pages differ. StarSeo defaults to mobile and can track both, which doubles the cost of each check.",
   },
   {
     question: "Is Google Search Console a rank tracker?",
@@ -31,7 +31,7 @@ const faqs = [
       "Not quite. It reports an average position per query blended across devices, countries, and dates, for your own site only. Its 24-hour view shows recent preliminary data; finalized reports arrive later. That is enough for a single-location site that wants direction. A tracker adds a precise position per keyword and device, the ranking URL, SERP features, and competitors, and costs money for each check.",
   },
   {
-    question: "How much does rank tracking cost in OpenSEO?",
+    question: "How much does rank tracking cost in StarSeo?",
     answer:
       "It depends on keywords, devices, depth, and schedule, and the app shows the estimate before anything runs. As a reference point, 100 keywords on mobile, checking the top 40 results weekly, can cost up to $6 a month in credits. Rank checks on the hosted app need the $10/month plan, which includes $10 of credits; self-hosted deployments pay their data provider directly.",
   },
@@ -62,9 +62,9 @@ export const Route = createFileRoute("/_marketing/library/rank-tracking/")({
     buildPageSeo({
       title: "Rank Tracking: The Strategy Library",
       description:
-        "Four rank tracking strategies for people who report SEO upward without an SEO budget: pick the keywords, know where Search Console stops, track local positions properly, and write the report that gets read. Each includes a workflow and an OpenSEO MCP prompt.",
+        "Four rank tracking strategies for people who report SEO upward without an SEO budget: pick the keywords, know where Search Console stops, track local positions properly, and write the report that gets read. Each includes a workflow and an StarSeo MCP prompt.",
       path: PATH,
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
     }),
   component: RankTrackingLibraryPage,
 });
@@ -93,7 +93,7 @@ function RankTrackingLibraryPage() {
           month: which keywords to track and how many, where Search
           Console&rsquo;s free data stops, how to track a local business from
           where its customers stand, and how to write the ranking report that
-          gets read. Each one includes a workflow and a copy-paste OpenSEO MCP
+          gets read. Each one includes a workflow and a copy-paste StarSeo MCP
           prompt.
         </p>
       </header>
@@ -162,7 +162,7 @@ function RankTrackingLibraryPage() {
 
       <section className="mt-12">
         <h2 className="text-2xl font-semibold tracking-tight text-neutral-950">
-          What OpenSEO rank tracking checks
+          What StarSeo rank tracking checks
         </h2>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--color-brand-muted)]">
           A tracker is a domain, a location, and a language. You choose the
@@ -202,7 +202,7 @@ function RankTrackingLibraryPage() {
             href="/docs/mcp"
             className="font-medium text-neutral-950 underline decoration-[var(--color-brand-accent)] underline-offset-4"
           >
-            OpenSEO MCP
+            StarSeo MCP
           </a>
           , which exposes the tracker to an AI assistant: create it, estimate
           the cost, add and remove keywords, run a check, and read the latest
@@ -283,15 +283,15 @@ function RankTrackingLibraryPage() {
             Track rankings with your own agent
           </h2>
           <p className="mt-2 max-w-xl text-sm leading-6 text-[var(--color-brand-muted)]">
-            Each strategy ends with a copy-paste MCP prompt. OpenSEO is open
+            Each strategy ends with a copy-paste MCP prompt. StarSeo is open
             source, free to start, and does not require a credit card.
           </p>
         </div>
         <a
-          href="https://app.openseo.so/sign-up"
+          href="https://starseo.canpolatkaya.com/sign-up"
           className="inline-flex h-11 shrink-0 items-center justify-center rounded-lg bg-neutral-950 px-5 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
         >
-          Start with OpenSEO
+          Start with StarSeo
           <span aria-hidden="true" className="ml-2">
             &rarr;
           </span>

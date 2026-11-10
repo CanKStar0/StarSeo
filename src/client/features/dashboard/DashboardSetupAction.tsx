@@ -25,7 +25,7 @@ import { hasOrgPermission } from "@/lib/org-permissions";
 import type { DashboardSetupStep } from "@/types/schemas/dashboard";
 import { parseResearchTarget } from "@/shared/researchScope";
 
-const projectPrompt = `Use OpenSEO to set up a separate project for each website below. List my existing projects first and reuse matches so you don’t create duplicates. Set the country and language for each site, and ask me about anything missing.
+const projectPrompt = `Use StarSeo to set up a separate project for each website below. List my existing projects first and reuse matches so you don’t create duplicates. Set the country and language for each site, and ask me about anything missing.
 
 Replace this list with my websites:
 - Project name — website — country — language`;
@@ -113,7 +113,7 @@ export function DashboardSetupAction({
         <AgentSetupPanel
           prompt={getAgentSetupPrompt(
             typeof window === "undefined"
-              ? "https://app.openseo.so"
+              ? "https://starseo.canpolatkaya.com"
               : window.location.origin,
           )}
           onCopy={() =>

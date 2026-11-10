@@ -1,22 +1,22 @@
 ---
-title: "Install the OpenSEO plugin for Claude Code and Claude Cowork"
-description: "Add OpenSEO MCP and Agent Skills to Claude Code or Claude Cowork with one plugin install."
+title: "Install the StarSeo plugin for Claude Code and Claude Cowork"
+description: "Add StarSeo MCP and Agent Skills to Claude Code or Claude Cowork with one plugin install."
 ---
 
-The OpenSEO plugin bundles OpenSEO MCP and all twelve SEO Agent Skills into one install. This is the preferred way to set up OpenSEO in Claude Code and in Claude Cowork.
+The StarSeo plugin bundles StarSeo MCP and all twelve SEO Agent Skills into one install. This is the preferred way to set up StarSeo in Claude Code and in Claude Cowork.
 
 ## Install in Claude Code
 
 Run these two commands in Claude Code:
 
 ```bash
-/plugin marketplace add every-app/open-seo
+/plugin marketplace add CanKStar0/StarSeo
 /plugin install openseo@openseo
 ```
 
 If the install summary says `Run /reload-plugins to activate.`, run that command.
 
-Claude Code connects OpenSEO MCP at `https://app.openseo.so/mcp` and enables twelve skills:
+Claude Code connects StarSeo MCP at `https://starseo.canpolatkaya.com/mcp` and enables twelve skills:
 
 - SEO Project Setup
 - SEO Coach
@@ -33,7 +33,7 @@ Claude Code connects OpenSEO MCP at `https://app.openseo.so/mcp` and enables twe
 
 ## Finish the login
 
-Claude Code should prompt you to log in to OpenSEO right after install. If it doesn't, run `/mcp` and approve the OpenSEO connection from there.
+Claude Code should prompt you to log in to StarSeo right after install. If it doesn't, run `/mcp` and approve the StarSeo connection from there.
 
 ## Run a skill
 
@@ -60,14 +60,14 @@ Claude Cowork and the Claude desktop app install plugins through the Customize m
 
 1. Open **Customize** in the left sidebar. In Cowork, open the **Cowork** tab first.
 2. Open **Plugins**, click **+** or **Add**, and choose **Add marketplace**.
-3. Choose **Add from a repository** and enter `https://github.com/every-app/open-seo`.
-4. Find **OpenSEO** in the new marketplace and click **Install** or **Add**.
-5. Sign in to OpenSEO and approve the connection when Claude asks.
-6. Start a new task, type `/`, and check that the OpenSEO skills appear. Then try "Use OpenSEO to check my connection and list my projects." This check uses no OpenSEO credits.
+3. Choose **Add from a repository** and enter `https://github.com/CanKStar0/StarSeo`.
+4. Find **StarSeo** in the new marketplace and click **Install** or **Add**.
+5. Sign in to StarSeo and approve the connection when Claude asks.
+6. Start a new task, type `/`, and check that the StarSeo skills appear. Then try "Use StarSeo to check my connection and list my projects." This check uses no StarSeo credits.
 
-If Claude can list your projects but no OpenSEO skills appear under `/`, you have a connector, not the plugin. Install the plugin, then remove the old custom OpenSEO connector under **Customize → Connectors** so you keep one connection.
+If Claude can list your projects but no StarSeo skills appear under `/`, you have a connector, not the plugin. Install the plugin, then remove the old custom StarSeo connector under **Customize → Connectors** so you keep one connection.
 
-Plugins need a paid Claude plan (Pro, Max, Team, or Enterprise). Your organization can limit which marketplaces you can add. On the Free plan or with a self-hosted instance, [add OpenSEO as a custom connector](/docs/mcp#claude-desktop) and upload skills under **Customize → Skills**. The plugin connects only to hosted OpenSEO. See [Anthropic's plugin guide](https://support.claude.com/en/articles/13837440-use-plugins-in-claude).
+Plugins need a paid Claude plan (Pro, Max, Team, or Enterprise). Your organization can limit which marketplaces you can add. On the Free plan or with a self-hosted instance, [add StarSeo as a custom connector](/docs/mcp#claude-desktop) and upload skills under **Customize → Skills**. The plugin connects only to hosted StarSeo. See [Anthropic's plugin guide](https://support.claude.com/en/articles/13837440-use-plugins-in-claude).
 
 ## Update
 
@@ -97,10 +97,10 @@ If `/reload-plugins` reports `0 skills`, that's normal, not a failure — its su
 
 If `/plugin uninstall openseo@openseo` reports "not installed in this project," you likely installed to a different scope than the one being checked (User, Project, or Local). Run `/plugin list` to see the actual scope, or sidestep the picker entirely with the shell form: `claude plugin uninstall openseo@openseo --scope user`.
 
-If plugin skills don't appear, clear the plugin cache with `rm -rf ~/.claude/plugins/cache` — this clears every installed plugin's cache, not just OpenSEO's, so reinstall anything else you have after — then restart Claude Code and reinstall the plugin.
+If plugin skills don't appear, clear the plugin cache with `rm -rf ~/.claude/plugins/cache` — this clears every installed plugin's cache, not just StarSeo's, so reinstall anything else you have after — then restart Claude Code and reinstall the plugin.
 
-If the OpenSEO connection doesn't show as authenticated, run `/mcp`, select OpenSEO, and complete the login.
+If the StarSeo connection doesn't show as authenticated, run `/mcp`, select StarSeo, and complete the login.
 
 ## Other clients
 
-This plugin is for Claude Code and Claude Cowork. For Codex CLI, use the [OpenSEO plugin for Codex](/docs/codex-plugin) instead. For Cursor, Codex Desktop, or an API key setup, see [Set up OpenSEO MCP](/docs/mcp) and [Set up OpenSEO Agent Skills](/docs/skills/setup).
+This plugin is for Claude Code and Claude Cowork. For Codex CLI, use the [StarSeo plugin for Codex](/docs/codex-plugin) instead. For Cursor, Codex Desktop, or an API key setup, see [Set up StarSeo MCP](/docs/mcp) and [Set up StarSeo Agent Skills](/docs/skills/setup).

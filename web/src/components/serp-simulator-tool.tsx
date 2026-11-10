@@ -7,10 +7,10 @@ const DESKTOP_TITLE_WIDTH = 600;
 const TITLE_FONT = "20px Arial, sans-serif";
 
 const EXAMPLE = {
-  title: "Free SERP Simulator: Preview Your Google Snippet - OpenSEO",
+  title: "Free SERP Simulator: Preview Your Google Snippet - StarSeo",
   description:
     "Preview your title and meta description on desktop and mobile. Check how your text fits before publishing. Free, no signup.",
-  url: "https://openseo.so/serp-simulator",
+  url: "https://starseo.canpolatkaya.com/serp-simulator",
 };
 
 export function SerpSimulatorTool() {

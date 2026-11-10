@@ -17,7 +17,7 @@ import {
   workerName,
 } from "./alchemy.access.ts";
 
-// Preview hostnames are `open-seo-<stage>.<WORKERS_SUBDOMAIN>` — the naming
+// Preview hostnames are `StarSeo-<stage>.<WORKERS_SUBDOMAIN>` — the naming
 // lives in alchemy.access.ts, shared with the Access wildcard the security
 // boundary depends on. The shell copy in .github/workflows/pr-preview.yml
 // must be kept in sync by hand.
@@ -64,7 +64,7 @@ const wrangler = z
         binding: z.string(),
         name: z.string(),
         class_name: z.string(),
-        // Set when the workflow class lives in the open-seo-audit aux
+        // Set when the workflow class lives in the StarSeo-audit aux
         // worker; alchemy substitutes the stage-suffixed worker name below.
         script_name: z.string().optional(),
       }),
@@ -75,8 +75,8 @@ const wrangler = z
 // Physical names of the wrangler-era production resources (see git history of
 // wrangler.jsonc). Adoption matches on these exact names/titles.
 const PROD_NAMES = {
-  d1: "open-seo",
-  r2: "open-seo",
+  d1: "StarSeo",
+  r2: "StarSeo",
   kv: "every-super-seo",
   oauthKv: "OAUTH_KV",
 } as const;
@@ -93,7 +93,7 @@ const makeResources = (stage: string, usesD1: boolean) => {
     ...(usesD1
       ? {
           DB: Cloudflare.D1.Database("DB", {
-            name: prod ? PROD_NAMES.d1 : `open-seo-db-${stage}`,
+            name: prod ? PROD_NAMES.d1 : `StarSeo-db-${stage}`,
             // drizzle-generated SQL migrations; tracked in the same
             // wrangler-compatible table prod already uses.
             migrationsDir: "drizzle/sqlite",
@@ -102,7 +102,7 @@ const makeResources = (stage: string, usesD1: boolean) => {
         }
       : {}),
     R2: Cloudflare.R2.Bucket("R2", {
-      name: prod ? PROD_NAMES.r2 : `open-seo-r2-${stage}`,
+      name: prod ? PROD_NAMES.r2 : `StarSeo-r2-${stage}`,
       // Expire cached DataForSEO responses. Prod's lifecycle rules are
       // dashboard-managed; its props stay omitted so alchemy leaves them be.
       ...(prod
@@ -120,10 +120,10 @@ const makeResources = (stage: string, usesD1: boolean) => {
           }),
     }).pipe(keep),
     KV: Cloudflare.KV.Namespace("KV", {
-      title: prod ? PROD_NAMES.kv : `open-seo-kv-${stage}`,
+      title: prod ? PROD_NAMES.kv : `StarSeo-kv-${stage}`,
     }).pipe(keep),
     OAUTH_KV: Cloudflare.KV.Namespace("OAUTH_KV", {
-      title: prod ? PROD_NAMES.oauthKv : `open-seo-oauth-kv-${stage}`,
+      title: prod ? PROD_NAMES.oauthKv : `StarSeo-oauth-kv-${stage}`,
     }).pipe(keep),
     // Feature flags (src/server/lib/featureFlags.ts), app worker and prod
     // only: every other stage, and every self-host, reads them all as off.
@@ -278,8 +278,8 @@ const resolveSelfHostAccess = (
       const application = yield* emailAccessGate({
         policyId: "SelfHostAllowUsers",
         applicationId: "SelfHostAccess",
-        policyName: `open-seo ${stage} self-host users`,
-        applicationName: `open-seo ${stage}`,
+        policyName: `StarSeo ${stage} self-host users`,
+        applicationName: `StarSeo ${stage}`,
         domain: `${workerName(stage)}.${subdomain}`,
         extraDomain: customDomain || undefined,
         emails: allowedEmails,
@@ -345,7 +345,7 @@ const dataEnv = {
 };
 
 export default Alchemy.Stack(
-  "open-seo",
+  "StarSeo",
   {
     providers: Cloudflare.providers(),
     // Durable state in the Cloudflare state store (an `alchemy-state-store`
@@ -384,7 +384,7 @@ export default Alchemy.Stack(
       if (!authUrl) {
         return yield* Effect.die(
           new Error(
-            "Set BETTER_AUTH_URL (https://app.openseo.so) in the production workflow.",
+            "Set BETTER_AUTH_URL (https://starseo.canpolatkaya.com) in the production workflow.",
           ),
         );
       }
@@ -446,7 +446,7 @@ export default Alchemy.Stack(
     // batches) OOMed the app worker's near-limit baseline heap. Deployed
     // BEFORE the app worker so the app's cross-script workflow/DO bindings
     // always have a target. Takes no direct traffic (url off).
-    const auditWorker = yield* Cloudflare.Worker("open-seo-audit", {
+    const auditWorker = yield* Cloudflare.Worker("StarSeo-audit", {
       name: `${workerName(stage)}-audit`,
       main: "./dist/open_seo_audit/index.js",
       bundle: false,
@@ -503,7 +503,7 @@ export default Alchemy.Stack(
       yield* auditWorker.bind("hyperdrive", hyperdriveBinding(hyperdriveId));
     }
 
-    const app = yield* Cloudflare.Worker("open-seo", {
+    const app = yield* Cloudflare.Worker("StarSeo", {
       name: workerName(stage),
       // Prod serves the real domains; the zone is inferred from the hostname.
       domain: prod
@@ -522,7 +522,7 @@ export default Alchemy.Stack(
         date: wrangler.compatibility_date,
         flags: wrangler.compatibility_flags,
       },
-      // Site audits moved to the open-seo-audit worker, but RankCheckWorkflow
+      // Site audits moved to the StarSeo-audit worker, but RankCheckWorkflow
       // still parses SERP batches here — keep the CPU allowance until that
       // workflow's per-tick CPU is measured or it moves too. Configurable CPU
       // limits are a paid-plan feature; self-host deploys get the plan
@@ -588,7 +588,7 @@ export default Alchemy.Stack(
         ),
 
         // Durable Objects (the chat agents; the audit scratchpad lives
-        // privately in the open-seo-audit worker). Alchemy backs new DO
+        // privately in the StarSeo-audit worker). Alchemy backs new DO
         // classes with SQLite storage; wrangler.jsonc's `migrations` only
         // apply to the wrangler/workerd surfaces.
         ...Object.fromEntries(

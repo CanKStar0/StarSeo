@@ -202,7 +202,7 @@ async function buildInventory(userId: string, organizationIds: string[]) {
   ).flatMap((row) => (row.r2Key ? [row.r2Key] : []));
 
   // Google revokes every scope our client holds for a Google account, so a
-  // grant another OpenSEO user also holds is left alone; deleting the
+  // grant another StarSeo user also holds is left alone; deleting the
   // user's row is what stops it working for them.
   const otherGrant = aliasedTable(account, "other_grant");
   const googleAccounts = (

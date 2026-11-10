@@ -62,7 +62,7 @@ export function ApiKeySettings() {
 
   const mcpUrl =
     typeof window === "undefined"
-      ? "https://app.openseo.so/mcp"
+      ? "https://starseo.canpolatkaya.com/mcp"
       : `${window.location.origin}/mcp`;
 
   const apiKeysQuery = useQuery({
@@ -145,7 +145,7 @@ export function ApiKeySettings() {
           <p className="mt-1 text-sm">
             <a
               className="text-primary underline-offset-4 hover:underline"
-              href="https://openseo.so/docs/mcp"
+              href="https://starseo.canpolatkaya.com/docs/mcp"
               target="_blank"
               rel="noreferrer"
             >

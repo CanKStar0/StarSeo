@@ -131,11 +131,11 @@ export function ResultsView({
             to allow the{" "}
             <a
               className="underline underline-offset-4"
-              href="https://openseo.so/docs/crawler"
+              href="https://starseo.canpolatkaya.com/docs/crawler"
               target="_blank"
               rel="noreferrer"
             >
-              OpenSEO-Audit crawler
+              StarSeo-Audit crawler
             </a>
             .
           </AlertDescription>

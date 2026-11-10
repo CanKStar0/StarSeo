@@ -11,7 +11,7 @@ export function makeToolContext(
       role: "owner",
       clientId: "client_123",
       scopes: ["mcp"],
-      baseUrl: "https://open-seo.test",
+      baseUrl: "https://StarSeo.test",
       ...overrides,
     },
   };

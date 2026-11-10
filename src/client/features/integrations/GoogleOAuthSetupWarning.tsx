@@ -19,7 +19,7 @@ export function GoogleOAuthSetupWarning({
 }) {
   if (isEveryAppClientAuthMode()) {
     // Google connects through the gateway, which holds the Google client;
-    // OpenSEO holds none here (server/features/google/googleAccess.ts).
+    // StarSeo holds none here (server/features/google/googleAccess.ts).
     return (
       <Alert variant="info">
         <Info className="size-4" />
@@ -54,7 +54,7 @@ export function GoogleOAuthSetupWarning({
       <AlertTitle>Google OAuth client not configured</AlertTitle>
       <AlertDescription>
         <p>
-          Add your Google client ID and secret to this OpenSEO deployment before
+          Add your Google client ID and secret to this StarSeo deployment before
           connecting {integrationName}.
         </p>
         <SafeExternalLink

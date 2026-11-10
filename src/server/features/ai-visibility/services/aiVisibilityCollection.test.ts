@@ -62,7 +62,7 @@ const pendingTask = {
 } as const;
 const liveAnswer = {
   status: "fulfilled",
-  value: { status: "completed", result: { markdown: "OpenSEO", sources: [] } },
+  value: { status: "completed", result: { markdown: "StarSeo", sources: [] } },
 } as const;
 const providerFailure = {
   status: "failed",
@@ -115,10 +115,10 @@ describe("AI answer collection", () => {
       status: "completed",
       result: {
         markdown:
-          "Try **Ahrefs** or OpenSEO [1](https://openseo.so/pricing?utm_source=chatgpt)",
+          "Try **Ahrefs** or StarSeo [1](https://starseo.canpolatkaya.com/pricing?utm_source=chatgpt)",
         sources: [
           {
-            url: "https://openseo.so/pricing?utm_source=chatgpt",
+            url: "https://starseo.canpolatkaya.com/pricing?utm_source=chatgpt",
             title: "Pricing",
           },
         ],
@@ -133,7 +133,7 @@ describe("AI answer collection", () => {
     });
     const evidence = await repo.getEvidence(["answer-0"]);
     expect(evidence.sources).toMatchObject([
-      { url: "https://openseo.so/pricing", domain: "openseo.so", position: 1 },
+      { url: "https://starseo.canpolatkaya.com/pricing", domain: "openseo.so", position: 1 },
     ]);
     expect(evidence.matches).toEqual(
       expect.arrayContaining([
@@ -257,9 +257,9 @@ describe("AI answer collection", () => {
               type: "message",
               sections: [
                 {
-                  text: "Try OpenSEO.",
+                  text: "Try StarSeo.",
                   annotations: [
-                    { url: "https://openseo.so/", title: "OpenSEO" },
+                    { url: "https://starseo.canpolatkaya.com/", title: "StarSeo" },
                   ],
                 },
               ],
@@ -286,10 +286,10 @@ describe("AI answer collection", () => {
     );
     expect(await repo.getObservation("answer-0")).toMatchObject({
       status: "completed",
-      answerMarkdown: "Try OpenSEO.",
+      answerMarkdown: "Try StarSeo.",
     });
     expect((await repo.getEvidence(["answer-0"])).sources).toMatchObject([
-      { url: "https://openseo.so/", domain: "openseo.so" },
+      { url: "https://starseo.canpolatkaya.com/", domain: "openseo.so" },
     ]);
     expect(await repo.getObservation("answer-1")).toMatchObject({
       status: "failed",

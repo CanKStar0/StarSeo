@@ -20,7 +20,7 @@ import { Spinner } from "@/client/components/Spinner";
 import { Button } from "@/client/components/ui/button";
 import { pageHead } from "@/client/lib/pageHead";
 
-const SUPPORT_EMAIL = "support@openseo.so";
+const SUPPORT_EMAIL = "support@canpolatkaya.com";
 
 // How long the post-portal "checking" screen polls Autumn before telling the
 // user the retry is still pending, and how often it polls.

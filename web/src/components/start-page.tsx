@@ -104,7 +104,7 @@ export function StartLandingPage({ angle }: { angle: StartAngle }) {
   return (
     <div className="itc-start">
       <header className="itc-start-bar">
-        <span className="itc-start-logo">OpenSEO</span>
+        <span className="itc-start-logo">StarSeo</span>
         {/* Most people tapping an ad aren't developers, so the badge says who
             backs us. The open-source ad promises an open-source tool, so its
             page shows the repo's stars instead. */}
@@ -202,7 +202,7 @@ export function StartLandingPage({ angle }: { angle: StartAngle }) {
             </p>
             <div className="itc-start-price-cards">
               <div>
-                <span className="itc-start-price-name">OpenSEO</span>
+                <span className="itc-start-price-name">StarSeo</span>
                 <span className="itc-start-price-amount">
                   $10<span>/mo</span>
                 </span>
@@ -269,7 +269,7 @@ function HeadlineText({ headline }: { headline: Headline }) {
   );
 }
 
-/** What an agent connected to OpenSEO answers, on real data. */
+/** What an agent connected to StarSeo answers, on real data. */
 function ProductCard() {
   return (
     <div className="itc-start-card">

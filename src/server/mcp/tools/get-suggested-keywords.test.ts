@@ -87,7 +87,7 @@ describe("get_suggested_keywords", () => {
     );
 
     expect(textContent(result)).toContain(
-      "Search Console isn't connected; once the user connects it at https://open-seo.test/p/project_1/search-performance",
+      "Search Console isn't connected; once the user connects it at https://StarSeo.test/p/project_1/search-performance",
     );
   });
 });

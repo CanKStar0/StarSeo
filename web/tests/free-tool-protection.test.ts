@@ -12,7 +12,7 @@ import {
 } from "../src/lib/free-tools/server";
 
 const request = (headers: Record<string, string> = {}) =>
-  new Request("https://openseo.so/api/backlink-check", {
+  new Request("https://starseo.canpolatkaya.com/api/backlink-check", {
     method: "POST",
     headers: { "cf-connecting-ip": "203.0.113.1", ...headers },
   });
@@ -103,7 +103,7 @@ describe("public tool verification", () => {
 
 describe("body and budget protections", () => {
   it("rejects oversized streamed JSON without relying on Content-Length", async () => {
-    const req = new Request("https://openseo.so/api/backlink-check", {
+    const req = new Request("https://starseo.canpolatkaya.com/api/backlink-check", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ target: "a".repeat(17000) }),
@@ -112,7 +112,7 @@ describe("body and budget protections", () => {
   });
   it("requires JSON and accepts an ordinary small request", async () => {
     expect(((await readToolBody(request())) as Response).status).toBe(415);
-    const req = new Request("https://openseo.so/api/backlink-check", {
+    const req = new Request("https://starseo.canpolatkaya.com/api/backlink-check", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: '{"target":"openseo.so"}',
@@ -178,7 +178,7 @@ describe("every free API protects cache hits and provider calls", () => {
       vi.stubGlobal("caches", { default: { match } });
       const { Route } = await import(`../src/routes/api/${slug}.ts`);
       const response = await Route.server.handlers.POST({
-        request: new Request(`https://openseo.so/api/${slug}`, {
+        request: new Request(`https://starseo.canpolatkaya.com/api/${slug}`, {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -203,7 +203,7 @@ describe("every free API protects cache hits and provider calls", () => {
       });
       const { Route } = await import(`../src/routes/api/${slug}.ts`);
       const response = await Route.server.handlers.POST({
-        request: new Request(`https://openseo.so/api/${slug}`, {
+        request: new Request(`https://starseo.canpolatkaya.com/api/${slug}`, {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -240,7 +240,7 @@ describe("every free API protects cache hits and provider calls", () => {
       };
     };
     const response = await route.server.handlers.POST({
-      request: new Request("https://openseo.so/api/backlink-check", {
+      request: new Request("https://starseo.canpolatkaya.com/api/backlink-check", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -328,7 +328,7 @@ describe("keyword discovery provider contracts", () => {
         );
       const { Route } = await import(`../src/routes/api/${slug}.ts`);
       const response = await Route.server.handlers.POST({
-        request: new Request(`https://openseo.so/api/${slug}`, {
+        request: new Request(`https://starseo.canpolatkaya.com/api/${slug}`, {
           method: "POST",
           headers: {
             "content-type": "application/json",

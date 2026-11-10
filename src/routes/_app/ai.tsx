@@ -29,9 +29,9 @@ import { CopyButton } from "@/client/components/CopyButton";
 import { AgentList } from "@/client/features/ai-mcp/AgentList";
 import { pageHead } from "@/client/lib/pageHead";
 
-const DOCS_URL = "https://openseo.so/docs/agent-setup";
+const DOCS_URL = "https://starseo.canpolatkaya.com/docs/agent-setup";
 
-const COACH_DOCS_URL = "https://openseo.so/docs/skills/seo-coach";
+const COACH_DOCS_URL = "https://starseo.canpolatkaya.com/docs/skills/seo-coach";
 const LINK_CLASS =
   "text-foreground underline decoration-foreground/25 underline-offset-4 hover:decoration-foreground";
 const MUTED_LINK_CLASS =
@@ -91,7 +91,7 @@ function AiPage() {
       <div className="mx-auto max-w-7xl">
         <PageHeader
           title="Agent setup"
-          description="The most powerful way to use OpenSEO is through the AI agent you already use. Set it up once, then ask it anything."
+          description="The most powerful way to use StarSeo is through the AI agent you already use. Set it up once, then ask it anything."
         />
 
         <Tabs
@@ -121,7 +121,7 @@ function AiPage() {
                       </CardTitle>
                       <CardDescription>
                         Paste the setup prompt into your agent to connect
-                        OpenSEO and install its SEO skills. It will guide you
+                        StarSeo and install its SEO skills. It will guide you
                         through any manual steps.
                       </CardDescription>
                     </CardHeader>
@@ -172,7 +172,7 @@ function AiPage() {
                       </CardTitle>
                       <CardDescription>
                         Already connected? Paste the update prompt into your
-                        agent to get the latest OpenSEO skills while preserving
+                        agent to get the latest StarSeo skills while preserving
                         your connection settings and personal edits.
                       </CardDescription>
                     </CardHeader>
@@ -209,7 +209,7 @@ function AiPage() {
                       If a client gets a login page instead of connecting, check
                       that Managed OAuth is on.{" "}
                       <a
-                        href="https://github.com/every-app/open-seo/blob/main/docs/SELF_HOSTING_CLOUDFLARE_OPERATIONS.md#through-cloudflare-access"
+                        href="https://github.com/CanKStar0/StarSeo/blob/main/docs/SELF_HOSTING_CLOUDFLARE_OPERATIONS.md#through-cloudflare-access"
                         target="_blank"
                         rel="noreferrer"
                         className="font-medium"
@@ -240,7 +240,7 @@ function AiPage() {
             <section className="mt-6">
               <p className="text-sm text-muted-foreground">
                 {everyApp
-                  ? "Install them with npx skills add every-app/open-seo."
+                  ? "Install them with npx skills add CanKStar0/StarSeo."
                   : "The setup prompt installs these."}{" "}
                 Run one by name when you want a full report instead of a quick
                 answer.
@@ -252,7 +252,7 @@ function AiPage() {
                     className="flex flex-col gap-0.5 sm:flex-row sm:gap-3"
                   >
                     <a
-                      href={`https://openseo.so/docs/skills/${name}`}
+                      href={`https://starseo.canpolatkaya.com/docs/skills/${name}`}
                       target="_blank"
                       rel="noreferrer"
                       className={`shrink-0 font-mono text-[13px] sm:w-48 ${LINK_CLASS}`}
@@ -271,11 +271,11 @@ function AiPage() {
   );
 }
 
-const EVERY_APP_SKILLS_COMMAND = "npx skills add every-app/open-seo";
+const EVERY_APP_SKILLS_COMMAND = "npx skills add CanKStar0/StarSeo";
 
 /**
  * Behind Every App the agent connects to the gateway's MCP address, which
- * covers every app on it; OpenSEO serves no MCP of its own here. The skills
+ * covers every app on it; StarSeo serves no MCP of its own here. The skills
  * install on their own.
  */
 function EveryAppAgentSetup() {
@@ -288,7 +288,7 @@ function EveryAppAgentSetup() {
             <h2>Connect your agent to Every App</h2>
           </CardTitle>
           <CardDescription>
-            Every App has one address for your agent, and it covers OpenSEO and
+            Every App has one address for your agent, and it covers StarSeo and
             your other apps. Connect it once.
           </CardDescription>
         </CardHeader>
@@ -309,8 +309,8 @@ function EveryAppAgentSetup() {
             <h2>Install the SEO skills</h2>
           </CardTitle>
           <CardDescription>
-            Run this in a terminal to add OpenSEO's skills to your agent. They
-            use OpenSEO through your Every App connection.
+            Run this in a terminal to add StarSeo's skills to your agent. They
+            use StarSeo through your Every App connection.
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-wrap items-center gap-x-5 gap-y-3">

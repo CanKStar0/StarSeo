@@ -12,7 +12,7 @@ export const Route = createFileRoute("/_marketing/partner-terms")({
       title: partnerTermsFrontmatter.title,
       description: partnerTermsFrontmatter.description,
       path: "/partner-terms",
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
     }),
   component: PartnerTerms,
 });

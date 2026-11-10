@@ -302,7 +302,7 @@ function SubscribePage() {
         <div className="mx-auto max-w-md space-y-2 text-center">
           <img
             src="/transparent-logo.png"
-            alt="OpenSEO"
+            alt="StarSeo"
             className="mx-auto mb-4 size-10 rounded-lg"
           />
           <h1 className="text-2xl font-semibold tracking-tight">
@@ -311,8 +311,8 @@ function SubscribePage() {
               : isUpgradeFlow
                 ? "Upgrade your plan"
                 : firstName
-                  ? `Welcome to OpenSEO, ${firstName}!`
-                  : "Welcome to OpenSEO!"}
+                  ? `Welcome to StarSeo, ${firstName}!`
+                  : "Welcome to StarSeo!"}
           </h1>
           <p className="text-sm text-balance text-muted-foreground">
             SEO on your terms. All your SEO tools in one place at a fair price.
@@ -411,7 +411,7 @@ function SubscribePage() {
         <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-muted-foreground">
           <a
             className={PLAN_FOOTER_LINK_CLASS}
-            href="https://openseo.so/pricing"
+            href="https://starseo.canpolatkaya.com/pricing"
             target="_blank"
             rel="noreferrer"
             onClick={() =>

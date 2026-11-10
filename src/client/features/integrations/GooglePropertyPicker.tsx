@@ -18,7 +18,7 @@ import {
 import { useState, type ReactNode } from "react";
 
 const GSC_SETUP_GUIDE_URL =
-  "https://openseo.so/blogs/google-search-console-setup";
+  "https://starseo.canpolatkaya.com/blogs/google-search-console-setup";
 
 export type GooglePickerSelection = { accountId: string; propertyId: string };
 type Property = {

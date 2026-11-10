@@ -88,7 +88,7 @@ export function DashboardPage({
   const agentConnected =
     activation.mcp.authorizedAt !== null ||
     activation.mcp.firstToolCallAt !== null;
-  // An agent is connected, but no one in the organization has used OpenSEO
+  // An agent is connected, but no one in the organization has used StarSeo
   // from one yet.
   const agentNeverUsed =
     activation.mcp.authorizedAt !== null &&

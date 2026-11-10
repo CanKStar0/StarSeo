@@ -2,7 +2,7 @@ import { z } from "zod";
 
 // - cloudflare_access / local_noauth: self-hosted, identity comes from outside
 //   the app (an Access JWT, or a fixed local admin); no accounts of its own.
-// - hosted: OpenSEO Cloud. Better Auth accounts plus the hosted business
+// - hosted: StarSeo Cloud. Better Auth accounts plus the hosted business
 //   services: billing, transactional email, Turnstile, Google sign-in, telemetry.
 // - password: self-hosted with the app's own accounts (the Docker
 //   standalone edition and the Cloudflare self-host). Better Auth accounts
@@ -48,7 +48,7 @@ export function isHostedAuthMode(value: string | null | undefined) {
 
 // True when the app runs its own accounts (sessions, organizations,
 // invitations, API keys): hosted and password modes. Gate billing, email, and
-// other OpenSEO Cloud services on isHostedAuthMode, never on this.
+// other StarSeo Cloud services on isHostedAuthMode, never on this.
 export function usesBetterAuth(value: string | null | undefined) {
   const mode = getAuthMode(value);
   return mode === "hosted" || mode === "password";

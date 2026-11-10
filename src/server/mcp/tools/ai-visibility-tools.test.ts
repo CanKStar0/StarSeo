@@ -129,7 +129,7 @@ describe("AI visibility assistant tools", () => {
       data: state,
       meta: {
         projectId,
-        url: `https://open-seo.test/p/${projectId}/ai-visibility`,
+        url: `https://StarSeo.test/p/${projectId}/ai-visibility`,
       },
     });
     expect(

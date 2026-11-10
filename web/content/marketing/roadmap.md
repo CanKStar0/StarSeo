@@ -1,6 +1,6 @@
 ---
 title: Roadmap
-description: Features we plan to add to OpenSEO over the next three months.
+description: Features we plan to add to StarSeo over the next three months.
 ---
 
 Have a feature request that belongs here? [Tell us on Discord](https://discord.gg/c9uGs3cFXr).
@@ -18,7 +18,7 @@ Have a feature request that belongs here? [Tell us on Discord](https://discord.g
   - "Advanced" features available in other tools make the tools less approachable to people new to SEO.
   - We'll make a community library for these more advanced workflows.
 - Improve In App Agent
-- Consistent design across OpenSEO, built on a shared component library
+- Consistent design across StarSeo, built on a shared component library
 
 ## Soon
 

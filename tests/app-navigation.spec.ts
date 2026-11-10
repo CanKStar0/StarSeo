@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("Back after the OpenSEO link returns to the previous project page", async ({
+test("Back after the StarSeo link returns to the previous project page", async ({
   page,
 }) => {
   await page.goto("/");
@@ -10,7 +10,7 @@ test("Back after the OpenSEO link returns to the previous project page", async (
   await page.goto(`${dashboardUrl.replace(/\/$/, "")}/keywords`);
   const keywordsUrl = page.url();
 
-  await page.getByRole("link", { name: "OpenSEO", exact: true }).click();
+  await page.getByRole("link", { name: "StarSeo", exact: true }).click();
   await page.waitForURL(dashboardUrl);
 
   await page.goBack();

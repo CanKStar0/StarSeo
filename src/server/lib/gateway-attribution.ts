@@ -3,9 +3,9 @@ import { IDENTITY_HEADER } from "@every-app/sdk/internal";
 import type { EveryAppUser, GatewayCallFor } from "@every-app/sdk/server";
 import { decodeJwt } from "jose";
 
-// Whom OpenSEO's calls through an Every App gateway are for (AUTH_MODE=everyapp).
+// Whom StarSeo's calls through an Every App gateway are for (AUTH_MODE=everyapp).
 // The install is one organization's, so the gateway counts every call
-// against it. While OpenSEO serves a request the gateway forwarded, the
+// against it. While StarSeo serves a request the gateway forwarded, the
 // request's signed identity goes with the call (`for: request`) so the
 // gateway also knows whose it was; work no request started (Workflows,
 // SAM's turns, the cron) is the organization's background work.

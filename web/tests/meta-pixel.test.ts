@@ -12,7 +12,7 @@ const route = Route as unknown as {
 
 async function servesPixel(country: string, headers = {}) {
   const response = route.server.handlers.GET({
-    request: new Request("https://openseo.so/js/meta.js", {
+    request: new Request("https://starseo.canpolatkaya.com/js/meta.js", {
       headers: { "cf-ipcountry": country, ...headers },
     }),
   });

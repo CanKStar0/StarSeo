@@ -140,7 +140,7 @@ export function DomainAgeCheckerTool() {
 
           <UpsellCard tool={TOOL} cta="See ranking keywords">
             Age alone says very little. What matters is whether the domain has
-            earned links and rankings in those years — OpenSEO shows both.
+            earned links and rankings in those years — StarSeo shows both.
           </UpsellCard>
         </div>
       ) : null}

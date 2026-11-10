@@ -17,7 +17,7 @@ declare namespace Cloudflare {
     SAM_CHAT: DurableObjectNamespace;
 
     // Durable Object holding per-audit crawl scratch state (frontier, link
-    // edges, page mirror). Bound ONLY in the open-seo-audit aux worker;
+    // edges, page mirror). Bound ONLY in the StarSeo-audit aux worker;
     // untyped here — getAuditScratchpad narrows the stub.
     AUDIT_SCRATCHPAD: DurableObjectNamespace;
 
@@ -36,7 +36,7 @@ declare namespace Cloudflare {
       | "everyapp";
     BYPASS_EMAIL_VERIFICATION?: string;
 
-    // AUTH_MODE=everyapp: OpenSEO behind an Every App gateway. The deploy
+    // AUTH_MODE=everyapp: StarSeo behind an Every App gateway. The deploy
     // (`everyapp deploy`) sets the identity keys, the app id the tokens
     // must name, and the binding through which the gateway calls DataForSEO
     // and OpenRouter with keys only it holds. `everyapp dev` sets the dev

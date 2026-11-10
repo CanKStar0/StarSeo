@@ -92,7 +92,7 @@ describe("Google connection MCP tools", () => {
     );
 
     expect(textContent(result)).toContain(
-      "https://open-seo.test/p/project_1/search-performance",
+      "https://StarSeo.test/p/project_1/search-performance",
     );
   });
 

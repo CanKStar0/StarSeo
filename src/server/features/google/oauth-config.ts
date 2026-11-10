@@ -10,7 +10,7 @@ type GoogleOAuthClientConfig = {
   clientSecret: string;
 };
 
-// Behind an Every App gateway OpenSEO has no Google client of its own, even
+// Behind an Every App gateway StarSeo has no Google client of its own, even
 // if GOOGLE_CLIENT_ID happens to be set: the gateway holds Google
 // (googleAccess.ts).
 export async function getGoogleOAuthClientConfig(): Promise<GoogleOAuthClientConfig | null> {

@@ -1,5 +1,5 @@
 /**
- * What OpenSEO says when the Every App gateway holds no DataForSEO key: the
+ * What StarSeo says when the Every App gateway holds no DataForSEO key: the
  * server's refusal (which a rank check stores and the MCP tools answer with)
  * and the setup dialog read this one sentence. The client's
  * DATAFORSEO_AUTH_FAILED copy adds "or rejected the key it holds", because

@@ -14,19 +14,19 @@ permissions:
 
 jobs:
   docker:
-    if: github.repository == 'every-app/open-seo'
+    if: github.repository == 'CanKStar0/StarSeo'
     runs-on: ubuntu-latest
     strategy:
       matrix:
         include:
           # The original single-container image. Existing installations
           # auto-update from :latest, so it must stay this image.
-          - image: ghcr.io/every-app/open-seo
+          - image: ghcr.io/CanKStar0/StarSeo
             file: deploy/docker/Dockerfile
           # The standalone edition (deploy/standalone/compose.yaml): a
           # multi-container stack whose data format differs, so it is never
           # published under the name above.
-          - image: ghcr.io/every-app/open-seo-standalone
+          - image: ghcr.io/CanKStar0/StarSeo-standalone
             file: deploy/standalone/Dockerfile
     steps:
       - name: Checkout

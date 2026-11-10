@@ -1,13 +1,13 @@
 ---
-title: "How Importivity Replaced Its $3,000-a-Month SEO Agency With an OpenSEO Fork"
-description: "Importivity's CTO forked OpenSEO and built a content engine on top of it. Organic clicks grew about 7x in six months, and they stopped paying their SEO agency."
+title: "How Importivity Replaced Its $3,000-a-Month SEO Agency With an StarSeo Fork"
+description: "Importivity's CTO forked StarSeo and built a content engine on top of it. Organic clicks grew about 7x in six months, and they stopped paying their SEO agency."
 author: "Ben Senescu"
 date: "2026-10-15"
 ---
 
-[Importivity](https://importivity.com) helps US companies move their supply chains to China, Vietnam and Mexico. [Moazzan Ishfaq](https://moazzanishfaq.com) runs all of the tech there as CTO, including SEO. Six months ago he forked OpenSEO and built a content engine on top of it. Organic clicks have grown about 7x since then, and Importivity stopped paying the SEO agency that had been costing it $3,000 a month.
+[Importivity](https://importivity.com) helps US companies move their supply chains to China, Vietnam and Mexico. [Moazzan Ishfaq](https://moazzanishfaq.com) runs all of the tech there as CTO, including SEO. Six months ago he forked StarSeo and built a content engine on top of it. Organic clicks have grown about 7x since then, and Importivity stopped paying the SEO agency that had been costing it $3,000 a month.
 
-If you're technical, you may have considered building your own SEO workflow on top of an SEO data API like DataForSEO. Here's why Moazzan forked OpenSEO instead, how he uses it, and what he built on his fork.
+If you're technical, you may have considered building your own SEO workflow on top of an SEO data API like DataForSEO. Here's why Moazzan forked StarSeo instead, how he uses it, and what he built on his fork.
 
 ## From agency web developer to CTO
 
@@ -17,11 +17,11 @@ In late 2023 the agency had paying SEO clients, so it tried to build its own SEO
 
 The founders later sold the agency and started Importivity, where Moazzan took over the tech.
 
-## Why he forked OpenSEO instead of building on Semrush
+## Why he forked StarSeo instead of building on Semrush
 
 At Importivity the team used Semrush in the browser. Semrush had the data, but there was no way to add features or build workflows on top of it.
 
-OpenSEO already had the parts every SEO team needs: keyword and ranking data, rank tracking and the Search Console connection. Those are the parts his old agency spent three months trying to build. Forking it meant Moazzan could spend his time only on what was specific to Importivity.
+StarSeo already had the parts every SEO team needs: keyword and ranking data, rank tracking and the Search Console connection. Those are the parts his old agency spent three months trying to build. Forking it meant Moazzan could spend his time only on what was specific to Importivity.
 
 He hasn't pulled our updates since he forked. Whenever he needed something, he built it himself.
 
@@ -60,19 +60,19 @@ He got that idea from a video of someone beating Super Mario with a genetic algo
 - Publishing went from three people to one person approving drafts.
 - Weekly agent runs stopped re-editing the same pages.
 
-## Building a similar system with hosted OpenSEO
+## Building a similar system with hosted StarSeo
 
-You don't need a fork to do most of this. OpenSEO doesn't natively edit your site or publish posts yet (it's planned), but you can connect your agent to your CMS alongside OpenSEO, for example with the [WordPress MCP adapter](https://github.com/WordPress/mcp-adapter) or the [Shopify AI Toolkit](https://github.com/Shopify/shopify-ai-toolkit). Then have your agent follow the same rules:
+You don't need a fork to do most of this. StarSeo doesn't natively edit your site or publish posts yet (it's planned), but you can connect your agent to your CMS alongside StarSeo, for example with the [WordPress MCP adapter](https://github.com/WordPress/mcp-adapter) or the [Shopify AI Toolkit](https://github.com/Shopify/shopify-ai-toolkit). Then have your agent follow the same rules:
 
 - Before your agent proposes a new post, have it check Search Console for pages that already get impressions for the topic.
 - Ask for two opportunity lists: keywords you rank for in positions 11 to 50, and keywords competitors rank for that you don't. Keep your competitors in [project context](/docs/skills/seo-project-setup) so every session uses the same list.
 - Have your agent save a [report](/docs/skills/seo-report) every time it edits a page, with the page's numbers before the edit, and read those reports before the next run. [Stop your SEO agent from undoing its own work](/blogs/seo-agent-change-log) has the prompts.
 
-To try it, connect [OpenSEO MCP](/docs/mcp) to Claude Code or Codex. Hosted OpenSEO is $10 a month with $10 of usage included ([pricing](/pricing)).
+To try it, connect [StarSeo MCP](/docs/mcp) to Claude Code or Codex. Hosted StarSeo is $10 a month with $10 of usage included ([pricing](/pricing)).
 
 ## Takeaways
 
-- You don't have to build the generic SEO parts yourself. Keyword data, rankings and Search Console already exist in OpenSEO, so Moazzan spent his time on the workflow specific to Importivity.
+- You don't have to build the generic SEO parts yourself. Keyword data, rankings and Search Console already exist in StarSeo, so Moazzan spent his time on the workflow specific to Importivity.
 - Give an AI content system current facts before it writes. That's what makes the posts worth reading in a fast-changing topic.
 - Give your agent a memory. Reports on every change, a 30-day lock and scoring at 7, 14 and 30 days stopped it from undoing its own work.
 - Start with the data you already have: what you rank weakly for, and what competitors rank for that you don't.

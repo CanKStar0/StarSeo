@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: How OpenSEO collects, uses, and stores personal data.
+description: How StarSeo collects, uses, and stores personal data.
 ---
 
 _Last updated: October 25, 2026_
@@ -11,14 +11,14 @@ Every App, Inc (the “Company”) is committed to maintaining robust privacy pr
 
 For purposes of this Privacy Policy,
 
-- “Site” refers to the Company’s website, which can be accessed at https://openseo.so/.
-- “Service” refers to the Company’s hosted OpenSEO product accessed via the Site.
+- “Site” refers to the Company’s website, which can be accessed at https://starseo.canpolatkaya.com/.
+- “Service” refers to the Company’s hosted StarSeo product accessed via the Site.
 - The terms “we,” “us,” and “our” refer to the Company.
 - “You” refers to you, as a user of our Site or our Service.
 
-This Privacy Policy describes how Every App, Inc handles personal information in connection with the OpenSEO website and hosted service. We obtain consent separately where required for particular processing. The [Terms and Conditions](/terms-and-conditions) govern use of the hosted service.
+This Privacy Policy describes how Every App, Inc handles personal information in connection with the StarSeo website and hosted service. We obtain consent separately where required for particular processing. The [Terms and Conditions](/terms-and-conditions) govern use of the hosted service.
 
-If you operate or use a self-hosted deployment of OpenSEO that is not run by Every App, Inc, the operator of that deployment controls the information processed there. This Privacy Policy applies to information collected by Every App, Inc through the Site and Every App-operated hosted services.
+If you operate or use a self-hosted deployment of StarSeo that is not run by Every App, Inc, the operator of that deployment controls the information processed there. This Privacy Policy applies to information collected by Every App, Inc through the Site and Every App-operated hosted services.
 
 If you are a business customer and you submit personal information about your personnel, clients, or other individuals, you are the controller of that information and we process it as your processor, solely on your instructions and subject to any processing agreement required by applicable law. This Privacy Policy does not replace a required data-processing agreement. We are the controller of account, billing, security, Site analytics, and our own marketing data. Information about our own website visitors, account administration, billing, security, and marketing is processed for our own purposes as described below.
 
@@ -46,7 +46,7 @@ The Site and the Service are not directed to anyone under the age of 13. As stat
 
 ### 4. _Partner program_
 
-If you apply to or join the OpenSEO partner (affiliate) program, we and Dub, which runs the program for us, collect the information you provide in your application and partner profile, such as your name, email address, country, company, website and social media profiles, and your answers to application questions. We also receive the clicks, sign-ups, purchases, and commissions attributed to your partner links. Payouts, tax forms, and optional identity verification are handled by Dub and its payment and verification providers. We use this information to review applications, prevent fraud and self-referrals, calculate and pay commissions, keep tax and accounting records, and communicate with you about the program. Dub may screen applications automatically to reject spam or applications that clearly don’t meet the program criteria; you can ask for a person to review a rejected application by emailing privacy@openseo.so. Your Dub partner account is also subject to Dub’s own terms and privacy policy.
+If you apply to or join the StarSeo partner (affiliate) program, we and Dub, which runs the program for us, collect the information you provide in your application and partner profile, such as your name, email address, country, company, website and social media profiles, and your answers to application questions. We also receive the clicks, sign-ups, purchases, and commissions attributed to your partner links. Payouts, tax forms, and optional identity verification are handled by Dub and its payment and verification providers. We use this information to review applications, prevent fraud and self-referrals, calculate and pay commissions, keep tax and accounting records, and communicate with you about the program. Dub may screen applications automatically to reject spam or applications that clearly don’t meet the program criteria; you can ask for a person to review a rejected application by emailing privacy@openseo.so. Your Dub partner account is also subject to Dub’s own terms and privacy policy.
 
 ## II. HOW WE USE AND SHARE INFORMATION
 
@@ -70,7 +70,7 @@ In the event we undergo a business transaction such as a merger, acquisition by 
 
 ## III. GOOGLE USER DATA
 
-You may choose to connect Google services, such as Google Search Console and Google Analytics, to the hosted Service, or to sign in with your Google account. When you do, the Service accesses Google user data through Google's APIs with your authorization. This section describes how we handle that data, in addition to the other terms of this Privacy Policy. Self-hosted deployments of OpenSEO connect to Google using the operator's own credentials, and this section does not apply to them.
+You may choose to connect Google services, such as Google Search Console and Google Analytics, to the hosted Service, or to sign in with your Google account. When you do, the Service accesses Google user data through Google's APIs with your authorization. This section describes how we handle that data, in addition to the other terms of this Privacy Policy. Self-hosted deployments of StarSeo connect to Google using the operator's own credentials, and this section does not apply to them.
 
 **What Google user data we access.** If you sign in with Google, we receive your basic account information (name, email address, and profile picture) to create and authenticate your account. If you connect Google Search Console, we access search performance data for the sites you authorize, such as queries, pages, clicks, impressions, and average positions, as well as URL inspection results. If you connect Google Analytics, we access report data for the property you select, such as traffic and acquisition metrics, landing page and page performance, key events, ecommerce outcomes, site search terms, and audience breakdowns by device and country, along with property configuration details such as your list of properties, data streams, and measurement settings. We also receive the email address of the connected Google account so we can show you which account is linked. All Google API scopes we request for these integrations are read-only; we cannot modify data in your Google account.
 
@@ -80,13 +80,13 @@ You may choose to connect Google services, such as Google Search Console and Goo
 
 **How we protect it.** The OAuth tokens that grant access to your Google account are stored encrypted at rest, and all data is transferred over encrypted connections (TLS). We retrieve authorized Google report data to provide the features you request. Report data may also be included in and retained with in-app agent chat sessions. Related reports, prompts, and generated outputs may be retained where the hosted service saves them. We do not use Google user data for advertising or to train generalized AI models. OpenRouter and OpenAI process relevant in-product prompts using the no-training settings we have enabled; other transfers occur only as described here and subject to applicable Google API requirements.
 
-**Retention and deletion.** Google report data retained in chat histories or Organization & Project data is kept until deletion or account closure, then removed from active systems within 30 days, subject to lawful retention exceptions and backup overwriting within 35 days. Disconnecting an integration does not by itself delete previously retained chat or report content. While an integration is connected, we retain the OAuth tokens and connection details (such as the selected site or property and the connected account email). Disconnecting an integration in your settings removes that connection and its details immediately, and the stored tokens for the Google account are deleted once none of your projects use it. You can also revoke OpenSEO's access at any time from your Google account's security settings at https://myaccount.google.com/permissions. Deleting your OpenSEO account disables its Google connections and initiates deletion of associated data from active systems, subject to lawful retention obligations and backup processes described below.
+**Retention and deletion.** Google report data retained in chat histories or Organization & Project data is kept until deletion or account closure, then removed from active systems within 30 days, subject to lawful retention exceptions and backup overwriting within 35 days. Disconnecting an integration does not by itself delete previously retained chat or report content. While an integration is connected, we retain the OAuth tokens and connection details (such as the selected site or property and the connected account email). Disconnecting an integration in your settings removes that connection and its details immediately, and the stored tokens for the Google account are deleted once none of your projects use it. You can also revoke StarSeo's access at any time from your Google account's security settings at https://myaccount.google.com/permissions. Deleting your StarSeo account disables its Google connections and initiates deletion of associated data from active systems, subject to lawful retention obligations and backup processes described below.
 
-**Limited Use.** OpenSEO's use and transfer to any other app of information received from Google APIs will adhere to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
+**Limited Use.** StarSeo's use and transfer to any other app of information received from Google APIs will adhere to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
 
 ## IV. HOW WE PROTECT INFORMATION
 
-We implement security measures designed to protect your information from unauthorized access. Your account is protected by your account password, and we urge you to take steps to keep your personal information safe by not disclosing your password and by logging out of your account after each use. We use administrative, technical, and organizational safeguards designed for the nature of the information and associated risks, including appropriate access restrictions and encryption where deployed. No method of transmission or storage is completely secure. If you operate a self-hosted deployment of OpenSEO, you are responsible for the security measures and privacy practices of that deployment.
+We implement security measures designed to protect your information from unauthorized access. Your account is protected by your account password, and we urge you to take steps to keep your personal information safe by not disclosing your password and by logging out of your account after each use. We use administrative, technical, and organizational safeguards designed for the nature of the information and associated risks, including appropriate access restrictions and encryption where deployed. No method of transmission or storage is completely secure. If you operate a self-hosted deployment of StarSeo, you are responsible for the security measures and privacy practices of that deployment.
 
 **Retention.** We retain information as reasonably needed to provide the requested Service, maintain accounts and saved work, respond to support requests, prevent fraud, meet legal and accounting duties, and address disputes. Retention criteria differ for account and billing records, saved organization & project data, support communications, session replay, security logs, connection details, and backups. Following account deletion or a valid deletion request, we remove information from active systems subject to applicable exceptions; backup copies may persist temporarily until their normal deletion cycle and will be protected against ordinary use. This general statement does not override the specific Google-data commitments above.
 
@@ -98,7 +98,7 @@ You may also manage available cookie choices through our preference center where
 
 ## VI. U.S. PRIVACY RIGHTS AND DISCLOSURES
 
-This section applies when a U.S. privacy law grants you a right with respect to our processing. Rights, exceptions, thresholds, and response periods depend on the applicable law and on whether we process information for our own purposes or for a business customer. This section does not represent that every state privacy law applies to every OpenSEO activity.
+This section applies when a U.S. privacy law grants you a right with respect to our processing. Rights, exceptions, thresholds, and response periods depend on the applicable law and on whether we process information for our own purposes or for a business customer. This section does not represent that every state privacy law applies to every StarSeo activity.
 
 **Categories, sources, purposes, and recipients.** The table describes categories we may process when the relevant features are used. It is not a statement that every category is collected about every person. The purposes, providers, and retention criteria in Sections I–IV also apply.
 
@@ -152,4 +152,4 @@ The Company reserves the right to change this policy and our Terms of Service at
 
 ## X. CONTACT US
 
-Privacy requests and appeals: privacy@openseo.so. Other questions: support@openseo.so. Mail: Every App, Inc, 34 Harding Street, Cambridge, Massachusetts 02141.
+Privacy requests and appeals: privacy@openseo.so. Other questions: support@canpolatkaya.com. Mail: Every App, Inc, 34 Harding Street, Cambridge, Massachusetts 02141.

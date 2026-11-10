@@ -14,7 +14,7 @@ export const Route = createFileRoute(
         "AI Visibility Tool for ChatGPT and AI Overviews: Brand Mentions, Citations and Competitors",
       description: page.seoDescription ?? page.description,
       path: "/features/ai-brand-visibility",
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
       imageAlt: page.imageAlt,
     }),
   component: () => <FeaturePageTemplate page={page} />,

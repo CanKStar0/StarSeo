@@ -107,7 +107,7 @@ export function createGscClient(opts: {
   /**
    * The fetch and the headers that reach Google authenticated: behind the
    * gateway, the gateway's fetch puts the member's token on the call
-   * (gatewayGoogle.ts); otherwise OpenSEO's own grant mints one.
+   * (gatewayGoogle.ts); otherwise StarSeo's own grant mints one.
    */
   async function authenticated(): Promise<{
     fetch: typeof fetch;

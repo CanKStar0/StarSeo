@@ -7,10 +7,10 @@ describe("DataForSEO answer evidence", () => {
       {
         datetime: "2026-09-30 18:41:09 +00:00",
         markdown:
-          "- **OpenSEO** is open source. [openseo.so](https://openseo.so/blog?utm_source=chatgpt.com) See [SerpBear on GitHub](https://github.com/towfiqi/serpbear).",
+          "- **StarSeo** is open source. [openseo.so](https://starseo.canpolatkaya.com/blog?utm_source=chatgpt.com) See [SerpBear on GitHub](https://github.com/towfiqi/serpbear).",
         sources: [
           {
-            url: "https://openseo.so/blog?utm_source=chatgpt.com",
+            url: "https://starseo.canpolatkaya.com/blog?utm_source=chatgpt.com",
             title: "Blog",
           },
           { url: "javascript:alert(1)" },
@@ -20,10 +20,10 @@ describe("DataForSEO answer evidence", () => {
       "chatgpt",
     );
     expect(result).toMatchObject({
-      answerText: "OpenSEO is open source.  See SerpBear on GitHub.",
+      answerText: "StarSeo is open source.  See SerpBear on GitHub.",
       citations: [
         {
-          url: "https://openseo.so/blog",
+          url: "https://starseo.canpolatkaya.com/blog",
           domain: "openseo.so",
           title: "Blog",
           position: 1,
@@ -37,13 +37,13 @@ describe("DataForSEO answer evidence", () => {
     const result = parseDataforseoAnswer(
       {
         markdown: "Open\0SEO",
-        sources: [{ url: "https://openseo.so/", title: "Open\0SEO" }],
+        sources: [{ url: "https://starseo.canpolatkaya.com/", title: "Open\0SEO" }],
       },
       "chatgpt",
     );
     expect(result).toMatchObject({
-      answerMarkdown: "OpenSEO",
-      citations: [{ title: "OpenSEO" }],
+      answerMarkdown: "StarSeo",
+      citations: [{ title: "StarSeo" }],
     });
   });
 
@@ -76,7 +76,7 @@ describe("DataForSEO answer evidence", () => {
   it("treats a results page without an AI Overview as no answer", () => {
     expect(
       parseDataforseoAnswer(
-        { items: [{ type: "organic", url: "https://openseo.so/" }] },
+        { items: [{ type: "organic", url: "https://starseo.canpolatkaya.com/" }] },
         "google_ai_overview",
       ),
     ).toMatchObject({ answerMarkdown: null, citations: [] });

@@ -147,7 +147,7 @@ function fetch(
   );
 }
 
-// AUTH_MODE=everyapp: OpenSEO is private behind an Every App gateway, which
+// AUTH_MODE=everyapp: StarSeo is private behind an Every App gateway, which
 // signs the person's identity onto every request it forwards. Fail closed on
 // anything else before routing, then resolve users per request as the other
 // modes do. Gateway calls made while serving the request forward its
@@ -243,7 +243,7 @@ async function handleAppRequest(
 }
 
 // Export Workflow classes as named exports. SiteAuditWorkflow and the
-// AuditScratchpad DO live in the open-seo-audit aux worker
+// AuditScratchpad DO live in the StarSeo-audit aux worker
 // (src/audit-worker.ts); this worker reaches them via cross-script bindings.
 export { RankCheckWorkflow } from "./server/workflows/RankCheckWorkflow";
 export { AiVisibilityWorkflow } from "./server/workflows/AiVisibilityWorkflow";

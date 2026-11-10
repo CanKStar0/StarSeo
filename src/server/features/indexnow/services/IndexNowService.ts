@@ -83,7 +83,7 @@ async function checkKeyFile(host: string, key: string): Promise<KeyFileStatus> {
     // publicFetch, not fetch: the standalone edition's gateway pins the
     // address it checked, so a domain can't rebind to an internal host.
     response = await publicFetch(await normalizeAndValidateStartUrl(url), {
-      headers: { "user-agent": "OpenSEO-IndexNow/1.0 (+https://openseo.so)" },
+      headers: { "user-agent": "StarSeo-IndexNow/1.0 (+https://starseo.canpolatkaya.com)" },
       redirect: "manual",
       signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
     });

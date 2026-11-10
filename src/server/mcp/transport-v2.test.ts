@@ -7,7 +7,7 @@ import { handleAuthenticatedOpenSeoMcpRequest } from "@/server/mcp/transport";
 
 vi.mock("cloudflare:workers", () => ({ env: {} }));
 vi.mock("@/lib/auth", () => ({
-  getHostedBaseUrl: () => "https://open-seo.test",
+  getHostedBaseUrl: () => "https://StarSeo.test",
 }));
 
 // The hosted transport re-checks membership per request; mocking the
@@ -51,10 +51,10 @@ function request(
   body?: unknown,
   headers?: Record<string, string>,
 ) {
-  return new Request("https://open-seo.test/mcp", {
+  return new Request("https://StarSeo.test/mcp", {
     method,
     headers: {
-      Host: "open-seo.test",
+      Host: "StarSeo.test",
       Accept: "application/json, text/event-stream",
       "Content-Type": "application/json",
       ...headers,
@@ -74,7 +74,7 @@ describe("Agents SDK v2 MCP transport", () => {
         token: "access-token",
         clientId: "client-1",
         scopes: ["mcp"],
-        resource: "https://open-seo.test/mcp",
+        resource: "https://StarSeo.test/mcp",
         props,
       },
     } as ExecutionContext;
@@ -125,7 +125,7 @@ describe("Agents SDK v2 MCP transport", () => {
       userId: "user-1",
       userEmail: "user@example.com",
       organizationId: "org-1",
-      baseUrl: "https://open-seo.test",
+      baseUrl: "https://StarSeo.test",
       clientId: "client-1",
       scopes: ["mcp"],
     });
@@ -155,7 +155,7 @@ describe("Agents SDK v2 MCP transport", () => {
     await expect(
       call("chrome-extension://pghallcbnfabbgfijhbcldaapmgidnaa"),
     ).resolves.toMatchObject({ status: 200 });
-    await expect(call("https://open-seo.test")).resolves.toMatchObject({
+    await expect(call("https://StarSeo.test")).resolves.toMatchObject({
       status: 200,
     });
     await expect(call()).resolves.toMatchObject({ status: 200 });

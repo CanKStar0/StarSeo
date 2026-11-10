@@ -71,7 +71,7 @@ describe("published MCP output schemas", () => {
         userId: "user_test",
         userEmail: "test@example.com",
         organizationId: "org_test",
-        baseUrl: "https://open-seo.test",
+        baseUrl: "https://StarSeo.test",
         clientId: "client_test",
         scopes: ["mcp"],
       }),

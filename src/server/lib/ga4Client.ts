@@ -162,7 +162,7 @@ type Authenticated = { fetch: typeof fetch; headers: Record<string, string> };
 /**
  * The fetch and headers that reach Google Analytics authenticated, resolved
  * once per client: behind the gateway, the gateway's fetch with the
- * member's token on it (gatewayGoogle.ts); otherwise OpenSEO's own grant.
+ * member's token on it (gatewayGoogle.ts); otherwise StarSeo's own grant.
  */
 async function authenticateGa4(opts: {
   userId: string;

@@ -1,10 +1,10 @@
 # Guest accounts for MCP connections
 
-When someone adds OpenSEO to an AI app (Claude, ChatGPT, Claude Code, Cursor) and the browser that opens has no OpenSEO session, they get a guest account instead of a sign-up form. The window closes on its own and the agent can use OpenSEO right away. The person creates a real account only when they want something a guest can't have.
+When someone adds StarSeo to an AI app (Claude, ChatGPT, Claude Code, Cursor) and the browser that opens has no StarSeo session, they get a guest account instead of a sign-up form. The window closes on its own and the agent can use StarSeo right away. The person creates a real account only when they want something a guest can't have.
 
 ## How it works
 
-The MCP authorize step checks whether the browser qualifies for a guest. If it does, the browser goes to a short "Connecting OpenSEO" page instead of the sign-in page. That page passes Cloudflare Turnstile and asks the server for a guest. The server runs every check again, creates the guest, approves the connection, and sends the browser back to the AI app. When a check fails, the person lands on the normal sign-in page. A browser that already has an OpenSEO session still sees the consent screen, because approving a real account without a click would let any app take it over silently.
+The MCP authorize step checks whether the browser qualifies for a guest. If it does, the browser goes to a short "Connecting StarSeo" page instead of the sign-in page. That page passes Cloudflare Turnstile and asks the server for a guest. The server runs every check again, creates the guest, approves the connection, and sends the browser back to the AI app. When a check fails, the person lands on the normal sign-in page. A browser that already has an StarSeo session still sees the consent screen, because approving a real account without a click would let any app take it over silently.
 
 A guest is a user with a placeholder email on a reserved domain that can never receive mail, plus its own organization. The organization starts on the free plan like any new account, so a guest has the same free credits. Email sends skip the placeholder address.
 
@@ -18,7 +18,7 @@ A browser qualifies when:
 
 ## Becoming a real account
 
-A guest can't add credits, connect Google Search Console or Google Analytics, or use the web app. When the agent hits one of those (the out-of-credits error, `whoami`, a Search Console connect link), the response gives a sign-up link and says to open it in the browser that connected OpenSEO. The server instructions also tell the agent it's working with a guest.
+A guest can't add credits, connect Google Search Console or Google Analytics, or use the web app. When the agent hits one of those (the out-of-credits error, `whoami`, a Search Console connect link), the response gives a sign-up link and says to open it in the browser that connected StarSeo. The server instructions also tell the agent it's working with a guest.
 
 The connecting page leaves a claim cookie in the browser, holding a random token that names the guest. At the next sign-up or sign-in from that browser, before the default organization would be created, the guest's organization moves to the signing-in user, the claim is recorded, and the guest user is deleted. A new user ends up with exactly the guest's organization, projects and remaining credits, not a second empty one with fresh free credits. An existing user gains it as another organization but stays in their own, which holds their plan; a new user opens the guest's. A link into the guest's organization, such as an audit the agent ran, opens that organization, as any link to a project in another of the user's organizations does. The billing customer's email switches to the real account's address.
 

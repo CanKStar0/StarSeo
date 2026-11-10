@@ -1,9 +1,9 @@
 # Self-hosted Google Search Console
 
-Connecting Google Search Console (GSC) lets OpenSEO pull your real clicks,
+Connecting Google Search Console (GSC) lets StarSeo pull your real clicks,
 impressions, positions, and URL inspection data, straight from Google.
 
-It's **optional**: OpenSEO runs fine without it, just without Search Console data.
+It's **optional**: StarSeo runs fine without it, just without Search Console data.
 
 ## What you'll need
 
@@ -54,7 +54,7 @@ Under **APIs & Services → Credentials → Create credentials → OAuth client 
 
 ## 4) Set environment variables
 
-Set these three values, then restart OpenSEO:
+Set these three values, then restart StarSeo:
 
 | Variable               | Value                                                                   |
 | ---------------------- | ----------------------------------------------------------------------- |
@@ -81,14 +81,14 @@ Where to set them:
 
 ## 5) Restart and connect
 
-Restart OpenSEO so it picks up the new variables. For Docker, changing `.env`
+Restart StarSeo so it picks up the new variables. For Docker, changing `.env`
 means Compose has to recreate the containers to reapply it:
 
 ```bash
 docker compose up -d --force-recreate init web crawl-gateway
 ```
 
-On the older Docker image, run `docker compose up -d --force-recreate open-seo`
+On the older Docker image, run `docker compose up -d --force-recreate StarSeo`
 instead.
 
 Then open **Integrations**, click **Connect with Google**, authorize the Google
@@ -97,12 +97,12 @@ project.
 
 ## How it works
 
-- OpenSEO uses your Google client to run the OAuth flow and stores the resulting
+- StarSeo uses your Google client to run the OAuth flow and stores the resulting
   grant in its database, with the access and refresh tokens **encrypted at rest**
   (keyed by `BETTER_AUTH_SECRET`).
 - Access tokens are minted and refreshed on demand, so once your app is published
   to production you only authorize once.
-- Search Console data comes from your own Google account, so OpenSEO never meters credits for it.
+- Search Console data comes from your own Google account, so StarSeo never meters credits for it.
 
 ## Troubleshooting
 

@@ -13,7 +13,7 @@ import {
   getWorkersEnv,
 } from "@/server/lib/runtime-env";
 
-// How OpenSEO reaches the APIs it calls with a key (DataForSEO, Context.dev).
+// How StarSeo reaches the APIs it calls with a key (DataForSEO, Context.dev).
 // Every mode but one holds the keys itself. Behind an Every App gateway
 // (AUTH_MODE=everyapp) the gateway holds them: calls go over the gateway's
 // binding, which puts the key on them, so the deployment needs no key of its
@@ -37,7 +37,7 @@ function withAuthorization(authorization: string): typeof fetch {
   };
 }
 
-/** The gateway capabilities OpenSEO calls through its fetch: its two API-key providers. */
+/** The gateway capabilities StarSeo calls through its fetch: its two API-key providers. */
 type OpenSeoProvider = "dataforseo" | "context";
 
 /**

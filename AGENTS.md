@@ -17,11 +17,11 @@
 
 ## Every App
 
-OpenSEO also runs behind an Every App Gateway (`AUTH_MODE=everyapp`; how it works is in `docs/maintainers/every-app.md`).
+StarSeo also runs behind an Every App Gateway (`AUTH_MODE=everyapp`; how it works is in `docs/maintainers/every-app.md`).
 
 - Before running everyapp, read the everyapp skill. It lives in the platform checkout beside this repository, `../private-every-app/packages/cli/skills/everyapp/SKILL.md`; `everyapp create` copies it into new apps, and this port reads it from there.
 - Run the app with `pnpm dev:everyapp` (everyapp dev): both Workers behind a local gateway with a seeded dev user. The keys it needs locally go in `.dev.vars`, written by hand.
-- Deploy only through the Every App CLI: `pnpm everyapp install https://github.com/every-app/open-seo` from an Every App checkout (the npm CLI installed here cannot deploy). Never run `cf deploy` or `wrangler deploy` for this mode. `deploy:selfhost` is the other self-hosting path (`pnpm deploy` is the plain `wrangler deploy` of `wrangler.jsonc`) and `deploy:postgres` is app.openseo.so's production deploy; none of them is this one.
+- Deploy only through the Every App CLI: `pnpm everyapp install https://github.com/CanKStar0/StarSeo` from an Every App checkout (the npm CLI installed here cannot deploy). Never run `cf deploy` or `wrangler deploy` for this mode. `deploy:selfhost` is the other self-hosting path (`pnpm deploy` is the plain `wrangler deploy` of `wrangler.jsonc`) and `deploy:postgres` is StarSeo's production deploy; none of them is this one.
 - Declare resources (D1, KV, Durable Objects, Workflows, the audit Worker) and settings (`providers`, `capabilities`, `secrets`, each with its need and `why`) in `everyapp.config.ts`; `cloudflare.config.ts` builds the Workers from it.
 - The Gateway signs people in: read identity only through the SDK (`src/middleware/ensure-user/everyApp.ts`), never from a client-supplied header or cookie, and treat every route listed under `public` in `everyapp.config.ts` as open to the internet.
 
@@ -42,7 +42,7 @@ OpenSEO also runs behind an Every App Gateway (`AUTH_MODE=everyapp`; how it work
 
 ## Plugin versions
 
-- Bump the OpenSEO plugin version when a PR adds a new MCP tool, adds a new shipped skill, or substantially changes a shipped skill's workflow or instructions. Substantial skill changes include changing its required steps, tool choices, or expected output.
+- Bump the StarSeo plugin version when a PR adds a new MCP tool, adds a new shipped skill, or substantially changes a shipped skill's workflow or instructions. Substantial skill changes include changing its required steps, tool choices, or expected output.
 - Routine fixes, refactors, and changes to existing tools' implementation, behavior, schemas, or descriptions do not require a bump. Neither do minor skill edits, internal-only skills, tests, website or app changes, or routine plugin configuration edits. Use judgment for other major plugin changes; do not bump merely because a plugin-related file changed.
 - The plugin points at the hosted MCP server, so server changes reach users on deploy without a plugin version bump. When a fix applies to both the app and an MCP tool, ship it to both.
 - When a bump is warranted, keep `plugins/openseo/.codex-plugin/plugin.json`, `plugins/openseo/.claude-plugin/plugin.json`, and `plugins/openseo/.cursor-plugin/plugin.json` on the same version. Default to a patch bump unless the maintainer requests a minor or major bump.

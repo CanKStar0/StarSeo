@@ -38,7 +38,7 @@ function requireTurnstileSiteKey(siteKey: string | undefined): Plugin {
 
 // Vite checks both the file path and its raw-import ID against the allowlist.
 const publicPromptFiles = [
-  "../.agents/skills/setup-openseo/SKILL.md",
+  "../.agents/skills/setup-starseo/SKILL.md",
   "../src/client/features/ai-mcp/agentUpdatePrompt.md",
 ].flatMap((relativePath) => {
   const file = fileURLToPath(new URL(relativePath, import.meta.url));

@@ -2,7 +2,7 @@
  * Web Bot Auth signing for the site audit crawler.
  *
  * Site owners behind Cloudflare (and other gatekeepers) can verify that a
- * request really came from OpenSEO instead of trusting the spoofable
+ * request really came from StarSeo instead of trusting the spoofable
  * User-Agent. Every crawler request carries an RFC 9421 signature made with our
  * Ed25519 key, and the public half is served from the key directory on the app
  * origin. Unset WEB_BOT_AUTH_JWK (self-hosting) sends unsigned requests.
@@ -14,10 +14,10 @@ import { z } from "zod";
 import { getOptionalEnvValue } from "@/server/lib/runtime-env";
 import { crawlerHeadersFor, type CrawlerAccess } from "@/shared/crawler-access";
 
-export const CRAWL_USER_AGENT = "OpenSEO-Audit/1.0";
+export const CRAWL_USER_AGENT = "StarSeo-Audit/1.0";
 
 /** Where verifiers fetch our public key: `<origin>/.well-known/http-message-signatures-directory`. */
-const SIGNATURE_AGENT_ORIGIN = "https://app.openseo.so";
+const SIGNATURE_AGENT_ORIGIN = "https://starseo.canpolatkaya.com";
 
 const SIGNATURE_LIFETIME_MS = 60_000;
 

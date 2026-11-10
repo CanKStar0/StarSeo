@@ -44,7 +44,7 @@ const args = [
   "create",
   tag,
   "--repo",
-  "every-app/open-seo",
+  "CanKStar0/StarSeo",
   "--title",
   tag,
   "--notes-file",

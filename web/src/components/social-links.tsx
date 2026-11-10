@@ -8,7 +8,7 @@ const socialLinks = [
 export function SocialLinks() {
   return (
     <nav
-      aria-label="OpenSEO social media"
+      aria-label="StarSeo social media"
       className="flex flex-wrap gap-x-5 gap-y-1"
     >
       {socialLinks.map((link) => (

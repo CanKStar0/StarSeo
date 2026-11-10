@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "open-seo-landing",
+  "name": "StarSeo-landing",
   "compatibility_date": "2026-02-19",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./src/worker.ts",
@@ -46,7 +46,7 @@
   "env": {
     // Bindings are not inherited by named envs; keep preview's copies in sync.
     "preview": {
-      "name": "open-seo-landing-preview",
+      "name": "StarSeo-landing-preview",
       "workers_dev": true,
       "preview_urls": true,
       "routes": [],

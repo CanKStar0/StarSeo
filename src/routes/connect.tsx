@@ -25,7 +25,7 @@ const guestResponseSchema = z.object({ redirectTo: z.string() });
 const GIVE_UP_AFTER_MS = 20_000;
 
 /**
- * Where an AI app's sign-in window lands when the browser has no OpenSEO
+ * Where an AI app's sign-in window lands when the browser has no StarSeo
  * session (src/server/mcp/oauth-provider.ts). It passes Turnstile and asks the
  * server for a guest account, which answers with where to go next: back to
  * the AI app, or the normal sign-in page when it won't make a guest. Anything
@@ -68,11 +68,11 @@ function ConnectPage() {
   return (
     <AuthPageShell>
       <AuthPageCard
-        title="Connecting OpenSEO"
+        title="Connecting StarSeo"
         helperText="This takes a few seconds. You'll go back to your AI app when it's done."
         footer={
           <p className="text-center text-sm text-muted-foreground">
-            Already have an OpenSEO account?{" "}
+            Already have an StarSeo account?{" "}
             <a href={signInHref} className="underline">
               Sign in
             </a>

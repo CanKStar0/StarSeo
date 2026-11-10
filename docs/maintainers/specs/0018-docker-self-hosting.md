@@ -1,10 +1,10 @@
 # Docker self-hosting
 
-OpenSEO is written for Cloudflare Workers: D1, KV, R2, Durable Objects, Workflows and cron. Docker self-hosting runs that same code, unchanged, on a prebuilt image instead of rebuilding the app and running Cloudflare's local development server inside a container.
+StarSeo is written for Cloudflare Workers: D1, KV, R2, Durable Objects, Workflows and cron. Docker self-hosting runs that same code, unchanged, on a prebuilt image instead of rebuilding the app and running Cloudflare's local development server inside a container.
 
 ## How it works
 
-The image (`deploy/standalone/Dockerfile`, published as `ghcr.io/every-app/open-seo-standalone`) contains the compiled app and [celld](https://github.com/denoland/celld), an open-source runtime for Workers code. celld provides D1 and Durable Objects on SQLite, KV, R2, Workflows and cron, and keeps their state in an S3-compatible bucket. `vite build --mode standalone` produces a single server module, because celld loads one module per deployment, and `scripts/celld/package.mjs` packages it with its assets and migrations.
+The image (`deploy/standalone/Dockerfile`, published as `ghcr.io/CanKStar0/StarSeo-standalone`) contains the compiled app and [celld](https://github.com/denoland/celld), an open-source runtime for Workers code. celld provides D1 and Durable Objects on SQLite, KV, R2, Workflows and cron, and keeps their state in an S3-compatible bucket. `vite build --mode standalone` produces a single server module, because celld loads one module per deployment, and `scripts/celld/package.mjs` packages it with its assets and migrations.
 
 The Compose stack (`deploy/standalone/compose.yaml`) runs:
 
@@ -18,7 +18,7 @@ The Compose file reads nothing else from the repository, so Compose-based platfo
 
 Sign-in is chosen at the first start with `AUTH_MODE`. `password` gives Better Auth accounts with none of the hosted service's billing, email or telemetry. Registration is open only for the first account and for addresses with a pending invitation. `local_noauth` runs without sign-in as one admin, as the original Docker image did. The server tells the client which mode is running, so one image serves both. Operator commands (create a user, reset a password, claim the old admin) go through an endpoint that requires a secret generated at the first start.
 
-The original single-container image (`deploy/docker/`, `ghcr.io/every-app/open-seo`) keeps being published from the same workflow. Existing installations auto-update from its `:latest` tag and could not run a multi-container stack or read its storage, so the new image never takes that name. That image shows a notice that links to the migration. The `migrate` service in `compose.migrate.yaml` reads the old volume with Miniflare and imports it once into an unused database. It carries projects, keywords, rank history, audits, reports and SAM conversations, and leaves out sessions, API keys, OAuth grants, Google connections and caches.
+The original single-container image (`deploy/docker/`, `ghcr.io/CanKStar0/StarSeo`) keeps being published from the same workflow. Existing installations auto-update from its `:latest` tag and could not run a multi-container stack or read its storage, so the new image never takes that name. That image shows a notice that links to the migration. The `migrate` service in `compose.migrate.yaml` reads the old volume with Miniflare and imports it once into an unused database. It carries projects, keywords, rank history, audits, reports and SAM conversations, and leaves out sessions, API keys, OAuth grants, Google connections and caches.
 
 ## Alternatives
 

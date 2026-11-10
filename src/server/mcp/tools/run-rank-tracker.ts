@@ -58,7 +58,7 @@ export const runRankTrackerTool = {
       if (error instanceof AppError && error.code === "PAYMENT_REQUIRED")
         throw new AppError(
           "PAYMENT_REQUIRED",
-          "Rank checks need a paid OpenSEO plan, and this account doesn't have one. If Search Console is connected, get_search_console_performance shows the site's average positions for free; get_serp_results checks one keyword's live results for credits.",
+          "Rank checks need a paid StarSeo plan, and this account doesn't have one. If Search Console is connected, get_search_console_performance shows the site's average positions for free; get_serp_results checks one keyword's live results for credits.",
         );
       throw error;
     });

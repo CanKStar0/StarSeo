@@ -13,7 +13,7 @@ export const Route = createFileRoute("/_campaign/start/$angle")({
     if (!angle) return {};
     const { lead, underlined } = START_HEADLINES[angle];
     return buildPageSeo({
-      title: `${lead} ${underlined.replace(/\.$/, "")} - OpenSEO`,
+      title: `${lead} ${underlined.replace(/\.$/, "")} - StarSeo`,
       description:
         "Keyword research, rank tracking, site audits and Search Console data, with Claude or in the web app. Open source, from $10 a month.",
       path: `/start/${angle}`,

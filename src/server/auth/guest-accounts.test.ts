@@ -101,7 +101,7 @@ beforeEach(async () => {
 const CLAUDE_CALLBACK = "https://claude.ai/api/mcp/auth_callback";
 
 function connectRequest(ip: string, asn = 7922, cookie = "") {
-  const request = new Request("https://app.openseo.so/api/oauth/guest", {
+  const request = new Request("https://starseo.canpolatkaya.com/api/oauth/guest", {
     headers: { "cf-connecting-ip": ip, cookie },
   });
   Object.defineProperty(request, "cf", { value: { asn } });

@@ -109,7 +109,7 @@ describe("run_site_audit page budget", () => {
     expect(textContent(result)).toContain(
       "Free plan audits are limited to 50 pages",
     );
-    expect(textContent(result)).toContain("https://open-seo.test/billing");
+    expect(textContent(result)).toContain("https://StarSeo.test/billing");
     expect(captureEventMock.mock.calls[0][0].properties).toMatchObject({
       max_pages: 50,
       requested_max_pages: 500,

@@ -17,7 +17,7 @@ import { getClientAuthMode, usesBetterAuthClient } from "@/lib/auth-mode";
 import { getSignInHref, getSignInHrefForLocation } from "@/lib/auth-redirect";
 
 const CLOUDFLARE_SETUP_GUIDE_URL =
-  "https://github.com/every-app/open-seo/blob/main/docs/SELF_HOSTING_CLOUDFLARE.md#2-configure-authentication-and-secrets";
+  "https://github.com/CanKStar0/StarSeo/blob/main/docs/SELF_HOSTING_CLOUDFLARE.md#2-configure-authentication-and-secrets";
 
 type CardProps = {
   message: string;
@@ -86,7 +86,7 @@ function AuthConfigErrorCard({ message, onRetry }: CardProps) {
         ) : null}
         {clientAuthMode === "everyapp" ? (
           <p className="text-muted-foreground">
-            OpenSEO runs behind an Every App gateway, which signs people in.
+            StarSeo runs behind an Every App gateway, which signs people in.
             Install it with <code className="mx-1">pnpm everyapp install</code>{" "}
             so it gets the gateway&apos;s identity keys, and open it through the
             gateway.

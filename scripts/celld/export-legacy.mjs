@@ -22,7 +22,7 @@ await mkdir(output, { mode: 0o700 });
 const scratch = await mkdtemp(join(tmpdir(), "openseo-export-"));
 const manifest = {
   format: 1,
-  source: "OpenSEO Miniflare state/v3",
+  source: "StarSeo Miniflare state/v3",
   createdAt: new Date().toISOString(),
   tables: [],
   sam: [],
@@ -44,7 +44,7 @@ try {
   // with d1/, r2/ and do/ beneath it.
   mf = new Miniflare(
     convertV4MiniflareOptions({
-      name: "open-seo",
+      name: "StarSeo",
       modules: true,
       compatibilityDate: "2025-09-02",
       script: `import { DurableObject } from 'cloudflare:workers';
@@ -57,12 +57,12 @@ try {
       d1Databases: {
         DB: process.env.LEGACY_D1_ID ?? "37bee90a-e1aa-404f-b01e-b0d1d479bda1",
       },
-      r2Buckets: { R2: "open-seo" },
+      r2Buckets: { R2: "StarSeo" },
       durableObjects: {
         SAM_CHAT: {
           className: "SamChatAgent",
           useSQLite: true,
-          unsafeUniqueKey: "open-seo-SamChatAgent",
+          unsafeUniqueKey: "StarSeo-SamChatAgent",
         },
       },
       resourcePersistencePath: scratch,
@@ -78,7 +78,7 @@ try {
   ).results.map((r) => r.name);
   if (!all.includes("projects") || !all.includes("user"))
     throw new Error(
-      "OpenSEO database not found. Check state/v3 path and LEGACY_D1_ID.",
+      "StarSeo database not found. Check state/v3 path and LEGACY_D1_ID.",
     );
   for (const table of ["audits", "rank_check_runs"])
     if (all.includes(table)) {

@@ -131,7 +131,7 @@ export function KeywordDiscoveryTool({
             </p>
           )}
           <UpsellCard tool={tool} cta="Continue keyword research">
-            Explore more keywords and save the ones worth pursuing in OpenSEO.
+            Explore more keywords and save the ones worth pursuing in StarSeo.
           </UpsellCard>
         </section>
       ) : null}

@@ -49,7 +49,7 @@ passed, oldest first, for up to five minutes a day. For each one, in order:
 
 Every step is safe to repeat, and the database goes last, so a failed run is
 finished by a later one. A failed account's date moves one day later, which
-puts it behind the rest of the queue. A Google account another OpenSEO user
+puts it behind the rest of the queue. A Google account another StarSeo user
 has also connected isn't revoked, since revoking it would end their grant
 too. A failure is reported to PostHog error tracking
 (`source: account_deletion`); a request still waiting three days after its
@@ -90,7 +90,7 @@ the `production` environment of the repository.
 1. In Loops, create a transactional email for the confirmation. It receives
    one data variable, `deletionDate` (already formatted, e.g. "November 16,
    2026"), and should say the account is deleted on that date and to email
-   support@openseo.so to keep it. Publish it and copy its ID.
+   support@canpolatkaya.com to keep it. Publish it and copy its ID.
 2. In PostHog, open **Settings → Personal API keys → Create key**. Choose
    **Projects: production project**, scopes `person:read` and `person:write`,
    and copy the key. The project ID is the number in the project's URL.
@@ -108,8 +108,8 @@ the `production` environment of the repository.
    the 14-day wait ends. Run with a wrangler login on the production account:
 
    ```sh
-   wrangler r2 bucket lifecycle list open-seo
-   wrangler r2 bucket lifecycle add open-seo prompt-cache-expiry \
+   wrangler r2 bucket lifecycle list StarSeo
+   wrangler r2 bucket lifecycle add StarSeo prompt-cache-expiry \
      "dataforseo-cache/ai-search:prompt-response:" --expire-days 7
    ```
 

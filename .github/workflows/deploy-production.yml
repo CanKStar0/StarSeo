@@ -18,19 +18,19 @@ jobs:
     # The public mirror must not deploy production. Only dispatches on main
     # may use the production environment's credentials.
     if: >-
-      (github.repository == 'bensenescu/open-seo' ||
-      github.repository == 'every-app/private-open-seo') &&
+      (github.repository == 'CanKStar0/StarSeo' ||
+      github.repository == 'every-app/private-StarSeo') &&
       github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     environment:
       name: production
-      url: https://app.openseo.so
+      url: https://starseo.canpolatkaya.com
     env:
       # Shared by Vite's client build and Alchemy's runtime configuration.
       AUTH_MODE: hosted
       DATABASE_PROVIDER: postgres
-      BETTER_AUTH_URL: https://app.openseo.so
+      BETTER_AUTH_URL: https://starseo.canpolatkaya.com
       BYPASS_EMAIL_VERIFICATION: "false"
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
       HYPERDRIVE_ID: ${{ vars.HYPERDRIVE_ID }}

@@ -72,7 +72,7 @@ describe("create_project MCP tool", () => {
       domain: "acme.com",
       locationCode: 2840,
       languageCode: "en",
-      url: "https://open-seo.test/p/project_new",
+      url: "https://StarSeo.test/p/project_new",
     });
     // The agent did the wizard's main job, so the app skips onboarding.
     expect(mocks.markOnboardingCompleted).toHaveBeenCalledWith(
@@ -154,7 +154,7 @@ describe("create_project MCP tool", () => {
 
       expect(
         textContent(result).includes(
-          "https://open-seo.test/p/project_new/search-performance",
+          "https://StarSeo.test/p/project_new/search-performance",
         ),
       ).toBe(offered);
     },

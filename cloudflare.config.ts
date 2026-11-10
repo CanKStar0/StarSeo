@@ -12,7 +12,7 @@ import config from "./everyapp.config.ts";
 const manifest = config as Omit<typeof config, "features"> &
   Pick<EveryAppWorkerManifest, "features">;
 
-// OpenSEO on an Every App gateway (AUTH_MODE=everyapp), as
+// StarSeo on an Every App gateway (AUTH_MODE=everyapp), as
 // `everyapp install` and `pnpm dev:everyapp` build it: the app's Worker
 // here, and the site-audit engine as its helper Worker
 // (vite-plugin-every-app.ts). Hosted, the other self-host modes and Docker
@@ -20,7 +20,7 @@ const manifest = config as Omit<typeof config, "features"> &
 // imported here: in dev the Cloudflare Vite plugin hides this file's
 // imports from the Workers.
 
-/** What both of OpenSEO's Workers add to the SDK's definitions. */
+/** What both of StarSeo's Workers add to the SDK's definitions. */
 export function withOpenSeoRuntime<
   W extends { compatibilityFlags: string[]; env: object },
 >(worker: W, appWorkerName: string) {

@@ -1,8 +1,8 @@
 # Cloudflare Self-Hosting
 
-Host OpenSEO on Cloudflare for internet-facing self-hosting across multiple devices or with your team. One deploy command provisions everything. Works on Cloudflare's free plan, with [limits](#workers-free-plan-limits): site audits stop at about 40 pages.
+Host StarSeo on Cloudflare for internet-facing self-hosting across multiple devices or with your team. One deploy command provisions everything. Works on Cloudflare's free plan, with [limits](#workers-free-plan-limits): site audits stop at about 40 pages.
 
-You sign in with email and password accounts: the first visitor creates the administrator's account, teammates join from invitation links, and MCP clients (Claude, ChatGPT, Codex, Cursor) sign in with the same accounts, with nothing to set up in Cloudflare. The most secure option is to put [Cloudflare Access](#cloudflare-access-the-most-secure-option) in front of the app instead, so Cloudflare checks every request before it reaches OpenSEO. It takes more setup.
+You sign in with email and password accounts: the first visitor creates the administrator's account, teammates join from invitation links, and MCP clients (Claude, ChatGPT, Codex, Cursor) sign in with the same accounts, with nothing to set up in Cloudflare. The most secure option is to put [Cloudflare Access](#cloudflare-access-the-most-secure-option) in front of the app instead, so Cloudflare checks every request before it reaches StarSeo. It takes more setup.
 
 Related guides:
 
@@ -13,16 +13,16 @@ Related guides:
 
 - **Node 22.6 or newer** and **pnpm** (`corepack enable` sets it up).
 - **A Cloudflare account with R2 enabled.** Activating R2 requires a payment method on file, even within its free tier — if you have never used R2, open `R2` in the Cloudflare dashboard once.
-- **A workers.dev subdomain.** A new account has none until you open `Workers & Pages` in the Cloudflare dashboard once; without it the bootstrap below fails with "You need a workers.dev subdomain". The subdomain becomes part of your OpenSEO URL.
+- **A workers.dev subdomain.** A new account has none until you open `Workers & Pages` in the Cloudflare dashboard once; without it the bootstrap below fails with "You need a workers.dev subdomain". The subdomain becomes part of your StarSeo URL.
 - **A DataForSEO account** — see [`DATAFORSEO_API_KEY.md`](./DATAFORSEO_API_KEY.md).
 
-## 1) Clone your OpenSEO repo
+## 1) Clone your StarSeo repo
 
-Fork `every-app/open-seo` on GitHub if you want a repo you control, then clone it locally:
+Fork `CanKStar0/StarSeo` on GitHub if you want a repo you control, then clone it locally:
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USER/open-seo.git
-cd open-seo
+git clone https://github.com/YOUR_GITHUB_USER/StarSeo.git
+cd StarSeo
 corepack enable
 pnpm install
 ```
@@ -30,8 +30,8 @@ pnpm install
 If you do not need a fork, clone the upstream repo instead:
 
 ```bash
-git clone https://github.com/every-app/open-seo.git
-cd open-seo
+git clone https://github.com/CanKStar0/StarSeo.git
+cd StarSeo
 corepack enable
 pnpm install
 ```
@@ -63,7 +63,7 @@ This provisions the D1 database, KV namespaces, and R2 bucket, applies the datab
 
 1. Open the Worker URL printed at the end of the deploy.
 2. Create the administrator's account. Do this right after the deploy finishes: registration closes once the first account exists, and until then anyone who finds the URL could claim the installation.
-3. OpenSEO loads with a default project. Add your website to get started.
+3. StarSeo loads with a default project. Add your website to get started.
 
 If something fails, see Troubleshooting below.
 
@@ -73,11 +73,11 @@ Invite them from Team settings. The app copies an invitation link; the invited a
 
 ## Connecting MCP clients
 
-MCP clients connect to `https://YOUR_WORKER_HOSTNAME/mcp` and sign in with your OpenSEO account, the same way they connect to the hosted service. Follow the [MCP setup guide](https://openseo.so/docs/mcp) with your Worker URL in place of the hosted one.
+MCP clients connect to `https://YOUR_WORKER_HOSTNAME/mcp` and sign in with your StarSeo account, the same way they connect to the hosted service. Follow the [MCP setup guide](https://starseo.canpolatkaya.com/docs/mcp) with your Worker URL in place of the hosted one.
 
 ## Use your own domain
 
-To serve OpenSEO on your own hostname, set `CUSTOM_DOMAIN=seo.example.com` in `.env.selfhost` and deploy. The domain must be a zone on the same Cloudflare account; the deploy attaches it to the Worker and creates the DNS record and certificate. Don't add the domain in the Cloudflare dashboard instead: each deploy removes custom domains that `CUSTOM_DOMAIN` doesn't name.
+To serve StarSeo on your own hostname, set `CUSTOM_DOMAIN=seo.example.com` in `.env.selfhost` and deploy. The domain must be a zone on the same Cloudflare account; the deploy attaches it to the Worker and creates the DNS record and certificate. Don't add the domain in the Cloudflare dashboard instead: each deploy removes custom domains that `CUSTOM_DOMAIN` doesn't name.
 
 It works with both sign-in options:
 
@@ -88,7 +88,7 @@ It works with both sign-in options:
 
 There is no email delivery, so an operator resets passwords from a terminal. See [Manage accounts](./SELF_HOSTING_CLOUDFLARE_OPERATIONS.md#manage-accounts).
 
-## Updating to the latest OpenSEO version
+## Updating to the latest StarSeo version
 
 ```bash
 git pull        # or: git fetch upstream && git merge upstream/main, if you forked
@@ -98,13 +98,13 @@ pnpm deploy:selfhost --yes
 
 ## Cloudflare Access: the most secure option
 
-With `AUTH_MODE=cloudflare_access`, Cloudflare's own login protects the Worker: every request is checked at Cloudflare's edge before it reaches OpenSEO, and only the emails you list get through. It needs an extra login scope, a Zero Trust team (usually created for you), and Zero Trust settings before MCP clients can connect, so expect more setup. Choose the sign-in mode before your first deploy; the two keep separate user records.
+With `AUTH_MODE=cloudflare_access`, Cloudflare's own login protects the Worker: every request is checked at Cloudflare's edge before it reaches StarSeo, and only the emails you list get through. It needs an extra login scope, a Zero Trust team (usually created for you), and Zero Trust settings before MCP clients can connect, so expect more setup. Choose the sign-in mode before your first deploy; the two keep separate user records.
 
 1. In `.env.selfhost`, set `AUTH_MODE=cloudflare_access` and `ACCESS_ALLOWED_EMAILS` (comma-separated).
 2. Add the `access:write` scope to your Cloudflare login: run `pnpm alchemy login deploy/alchemy/alchemy.run.ts --configure`, answer yes to "Customize OAuth scopes?", and select `access:write` alongside the defaults.
 3. Run `pnpm deploy:selfhost --yes`. The deploy creates the Cloudflare Access application protecting the Worker (allowing exactly `ACCESS_ALLOWED_EMAILS`). If the account has no Zero Trust team yet, one is created for you, named after your workers.dev subdomain. If Zero Trust has never been turned on for the account, the deploy stops instead: open [one.dash.cloudflare.com](https://one.dash.cloudflare.com), pick the Free plan (Cloudflare creates the team), and run the deploy again.
 
-Open the printed URL and sign in with Cloudflare Access. Access can take about 2 minutes to apply after the first deploy; until then the URL may load without a Cloudflare login, but OpenSEO still rejects requests that lack an Access token. To add teammates, add them to `ACCESS_ALLOWED_EMAILS` and redeploy; dashboard edits to that Access policy are overwritten on the next deploy. To manage the Access application yourself, set `TEAM_DOMAIN` (`https://your-team.cloudflareaccess.com`) and `POLICY_AUD` (the application's audience tag) instead — the deploy then provisions no Access resources. MCP clients need Managed OAuth turned on for the Access application; see [Operations](./SELF_HOSTING_CLOUDFLARE_OPERATIONS.md#through-cloudflare-access).
+Open the printed URL and sign in with Cloudflare Access. Access can take about 2 minutes to apply after the first deploy; until then the URL may load without a Cloudflare login, but StarSeo still rejects requests that lack an Access token. To add teammates, add them to `ACCESS_ALLOWED_EMAILS` and redeploy; dashboard edits to that Access policy are overwritten on the next deploy. To manage the Access application yourself, set `TEAM_DOMAIN` (`https://your-team.cloudflareaccess.com`) and `POLICY_AUD` (the application's audience tag) instead — the deploy then provisions no Access resources. MCP clients need Managed OAuth turned on for the Access application; see [Operations](./SELF_HOSTING_CLOUDFLARE_OPERATIONS.md#through-cloudflare-access).
 
 Deployments created before password accounts existed have no `AUTH_MODE` in `.env.selfhost`, which still means Cloudflare Access, so they keep working unchanged. Deployments upgraded from older versions (which gave each user a separate workspace) show a one-time dashboard banner — clicking it migrates all previous per-user work into the shared workspace.
 
@@ -120,7 +120,7 @@ A Cloudflare Workflow on the Workers Free plan can make 50 outgoing requests per
 
 - `https://<your-worker-hostname>/api/health` reports runtime configuration checks and database status.
 - Cloudflare Access login fails: re-check `ACCESS_ALLOWED_EMAILS` in `.env.selfhost` and redeploy.
-- For server errors, open the Worker `Logs` or run `pnpm exec wrangler tail`. Site audits run in a separate worker: `pnpm exec wrangler tail open-seo-selfhost-audit`.
+- For server errors, open the Worker `Logs` or run `pnpm exec wrangler tail`. Site audits run in a separate worker: `pnpm exec wrangler tail StarSeo-selfhost-audit`.
 
 ## Tearing it down
 

@@ -55,7 +55,7 @@ export async function recordExternalMcpToolCall(caller: {
 
 /**
  * Tells the onboarding emails that a user connected an agent (OAuth consent
- * or a new API key), and which chat app it runs in. Whether OpenSEO has been
+ * or a new API key), and which chat app it runs in. Whether StarSeo has been
  * used from an agent is per workspace, so connecting in a workspace that
  * already has counts as used: a teammate who joins later isn't asked to try
  * their agent. Best-effort like the milestones above.

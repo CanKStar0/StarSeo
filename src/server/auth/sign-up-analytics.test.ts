@@ -34,7 +34,7 @@ describe("captureSignUpCompleted", () => {
     await captureSignUpCompleted(user, {
       path: "/sign-up/email",
       body: {
-        callbackURL: `https://openseo.so/verify-email?redirect=${encodeURIComponent(mcpAuthorize)}`,
+        callbackURL: `https://starseo.canpolatkaya.com/verify-email?redirect=${encodeURIComponent(mcpAuthorize)}`,
       },
     });
 
@@ -47,8 +47,8 @@ describe("captureSignUpCompleted", () => {
 
   it("reads a Google sign-up's destination from the OAuth state", async () => {
     mocks.getOAuthState.mockResolvedValue({
-      callbackURL: "https://openseo.so/",
-      newUserURL: "https://openseo.so/onboarding?domain=openseo.so",
+      callbackURL: "https://starseo.canpolatkaya.com/",
+      newUserURL: "https://starseo.canpolatkaya.com/onboarding?domain=openseo.so",
     });
 
     await captureSignUpCompleted(user, { path: "/callback/google" });
@@ -83,7 +83,7 @@ describe("saveSignUpSource", () => {
     await saveSignUpSource("user_1", {
       path: "/sign-up/email",
       body: {
-        callbackURL: `https://openseo.so/verify-email?redirect=${encodeURIComponent(onboarding)}`,
+        callbackURL: `https://starseo.canpolatkaya.com/verify-email?redirect=${encodeURIComponent(onboarding)}`,
       },
     });
 

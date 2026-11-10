@@ -20,10 +20,10 @@ type AuxiliaryWorkerConfig = Exclude<
 >;
 
 /**
- * The Cloudflare Vite plugin for OpenSEO on an Every App gateway
+ * The Cloudflare Vite plugin for StarSeo on an Every App gateway
  * (AUTH_MODE=everyapp): the app's Worker from cloudflare.config.ts, and the
  * site-audit engine (src/audit-worker.ts) as its helper Worker, which keeps
- * the audits' memory spikes off the app's isolate as the open-seo-audit
+ * the audits' memory spikes off the app's isolate as the StarSeo-audit
  * Worker does elsewhere.
  */
 export function everyAppCloudflare({ mode }: { mode: string }) {
@@ -32,7 +32,7 @@ export function everyAppCloudflare({ mode }: { mode: string }) {
     viteEnvironment: { name: "ssr" },
     // Local dev never touches remote resources.
     remoteBindings: false,
-    // OpenSEO types its Env itself (src/env.d.ts).
+    // StarSeo types its Env itself (src/env.d.ts).
     types: { generate: false },
     auxiliaryWorkers: [
       {

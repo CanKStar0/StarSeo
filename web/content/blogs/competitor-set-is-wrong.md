@@ -11,7 +11,7 @@ Somebody then exports a traffic estimate for one of those companies, the number 
 
 Both halves of that fail in ways you can measure. Search ranks pages while your sales team ranks companies, so the list is built on the wrong unit. And a competitor traffic number is a model's guess at a domain's traffic, so you can correct for it once you know how it goes wrong.
 
-Each correction below has a strategy behind it in the [competitive analysis library](/library/competitive-analysis). To run them with an agent, connect [OpenSEO MCP](/docs/mcp) first so it can pull live SERP, ranking, domain, and backlink data.
+Each correction below has a strategy behind it in the [competitive analysis library](/library/competitive-analysis). To run them with an agent, connect [StarSeo MCP](/docs/mcp) first so it can pull live SERP, ranking, domain, and backlink data.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ Each correction below has a strategy behind it in the [competitive analysis libr
 - [Subtract the brand terms or you are measuring fame](#subtract-the-brand-terms-or-you-are-measuring-fame)
 - [The traffic number is a headline, not a finding](#the-traffic-number-is-a-headline-not-a-finding)
 - [Read a link profile before you copy it](#read-a-link-profile-before-you-copy-it)
-- [Do it with OpenSEO](#do-it-with-openseo)
+- [Do it with StarSeo](#do-it-with-openseo)
 - [Rebuild the set before you plan the quarter](#rebuild-the-set-before-you-plan-the-quarter)
 
 ## The competitors you name are not the ones you rank against
@@ -46,7 +46,7 @@ Ann Smarty has spent twenty years watching what happens once a brand starts to w
 
 > Being a brand is great, but no one talks about how ... you lose control over it, because stuff starts ranking for your name.
 
-Her point runs in both directions. Losing control of your own branded results is a reputation problem you have to manage. Counting somebody else's branded results as competitive strength is an analysis problem you can fix in one filter. Through OpenSEO's MCP, your agent can drop up to eight brand terms from each domain's keywords before anything gets counted. In the app, the Exclude Terms filter on a domain's Top Keywords tab does the same job. The [keyword gap strategy](/library/competitive-analysis/keyword-gap-analysis) covers what to do with the remainder.
+Her point runs in both directions. Losing control of your own branded results is a reputation problem you have to manage. Counting somebody else's branded results as competitive strength is an analysis problem you can fix in one filter. Through StarSeo's MCP, your agent can drop up to eight brand terms from each domain's keywords before anything gets counted. In the app, the Exclude Terms filter on a domain's Top Keywords tab does the same job. The [keyword gap strategy](/library/competitive-analysis/keyword-gap-analysis) covers what to do with the remainder.
 
 ## The traffic number is a headline, not a finding
 
@@ -58,13 +58,13 @@ Kristiyan Yankov of Above Apex opened his interview by refusing to be taken at h
 
 Apply that to the estimate itself. A [domain overview](/features/domain-overview) on the national restoration brand returned 3,023,467 estimated organic traffic across 49,475 keywords on 19 August. Running the identical query on 21 August returned 3,018,438 across 49,729. Two days moved the traffic estimate by five thousand visits and added two hundred and fifty keywords. Neither figure is a measurement, and quoting either one to the last digit is where the trouble starts.
 
-![OpenSEO domain overview for a national restoration brand, Top Pages tab, showing 7,587 pages against 49,729 keywords, with general, air duct, and carpet cleaning pages sitting inside the top five by traffic](/blog/competitor-set-is-wrong/restoration-competitor-top-pages-openseo.png)
+![StarSeo domain overview for a national restoration brand, Top Pages tab, showing 7,587 pages against 49,729 keywords, with general, air duct, and carpet cleaning pages sitting inside the top five by traffic](/blog/competitor-set-is-wrong/restoration-competitor-top-pages-openseo.png)
 
 The Top Pages tab is where the estimate stops flattering anyone. The single highest-traffic page is the water damage service page at 372,528, carrying 488 keywords. Beside it sit general cleaning at 338,557, air duct cleaning at 286,978, and carpet and upholstery cleaning at 269,678. Those three pages account for 895,213 of the estimate, close to thirty percent of the whole footprint, and all three serve the company's cleaning line. A restoration company that plans its content calendar against the full three million is partly planning against a carpet cleaner.
 
 Keyword counts inflate for a related reason. The same pull returned five mold-related keywords each reporting an identical 74,000 search volume and an identical 22,496 traffic estimate, four of the five resolving to the same URL.
 
-![Five mold-related keywords in an OpenSEO ranked-keyword table, each showing the same 74,000 search volume and the same 22,496 traffic estimate, four of them pointing at one mold remediation page](/library/competitive-analysis/close-variant-keyword-inflation-openseo.png)
+![Five mold-related keywords in an StarSeo ranked-keyword table, each showing the same 74,000 search volume and the same 22,496 traffic estimate, four of them pointing at one mold remediation page](/library/competitive-analysis/close-variant-keyword-inflation-openseo.png)
 
 Google reports one combined volume for close variants, so plurals and near-identical phrasings each inherit the group figure. Count them as five keywords and you have counted the same demand five times. Pages don't have this problem: the brand's 49,729 keywords sit on 7,587 pages, and each page counts once. The [competitor traffic estimates strategy](/library/competitive-analysis/competitor-traffic-estimates) covers the rest of the corrections.
 
@@ -84,9 +84,9 @@ Christopher Gimmer, who bootstrapped Snappa, has watched which sites kept their 
 
 Read together, those two comments narrow what a link gap is for. Treat it as a read on which publications, directories, and communities the market already trusts, and on which of them would have a reason to point at you. The full list of domains your competitor has collected is a different document, and a longer one. The [link profile strategy](/library/competitive-analysis/backlink-gap-analysis) covers the metrics worth reading and the ones worth ignoring.
 
-## Do it with OpenSEO
+## Do it with StarSeo
 
-OpenSEO has no report that compares two domains for you. Connect [OpenSEO MCP](/docs/mcp) to your AI agent and it pulls each domain's ranked keywords and backlink profile, then does the comparison itself. You can filter along the way, which a fixed report won't let you do, but you have to describe the comparison each time. The prompt below does that.
+StarSeo has no report that compares two domains for you. Connect [StarSeo MCP](/docs/mcp) to your AI agent and it pulls each domain's ranked keywords and backlink profile, then does the comparison itself. You can filter along the way, which a fixed report won't let you do, but you have to describe the comparison each time. The prompt below does that.
 
 ### 1. Measure the set
 
@@ -155,4 +155,4 @@ Three things to do before the next planning cycle:
 2. Rerun the keyword gap with brand excluded on both sides, and see what survives the filter
 3. Open the Top Pages tab on every competitor whose traffic number you have quoted to anyone, and check that the traffic belongs to the business you thought you were benchmarking against
 
-The [competitive analysis library](/library/competitive-analysis) has the full workflow for each of those. Running them costs money, because SEO data costs money everywhere: [OpenSEO](https://openseo.so/) is $10 a month with $10 of usage credits included, and signing up is free with $0.50 of trial credits, which covers a handful of lookups. The four-step workflow above can cost more than that.
+The [competitive analysis library](/library/competitive-analysis) has the full workflow for each of those. Running them costs money, because SEO data costs money everywhere: [StarSeo](https://starseo.canpolatkaya.com/) is $10 a month with $10 of usage credits included, and signing up is free with $0.50 of trial credits, which covers a handful of lookups. The four-step workflow above can cost more than that.

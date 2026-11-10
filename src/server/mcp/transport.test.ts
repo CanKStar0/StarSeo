@@ -40,21 +40,21 @@ vi.mock("@/middleware/ensure-user/delegated", () => ({
 }));
 
 vi.mock("@/lib/auth", () => ({
-  getHostedBaseUrl: () => "https://open-seo.test",
+  getHostedBaseUrl: () => "https://StarSeo.test",
 }));
 
 vi.mock("@/server/mcp/server", () => ({
   createOpenSeoMcpServer: (props?: unknown) => {
     selfHostedAuthMocks.createOpenSeoMcpServer(props);
     return new McpServer({
-      name: "OpenSEO MCP",
-      title: "OpenSEO",
+      name: "StarSeo MCP",
+      title: "StarSeo",
       version: "0.0.11",
       description: "SEO research tools for AI agents",
-      websiteUrl: "https://openseo.so",
+      websiteUrl: "https://starseo.canpolatkaya.com",
       icons: [
         {
-          src: "https://openseo.so/android-chrome-512x512.png",
+          src: "https://starseo.canpolatkaya.com/android-chrome-512x512.png",
           mimeType: "image/png",
           sizes: ["512x512"],
         },
@@ -80,7 +80,7 @@ const ctx: ExecutionContext = {
 };
 
 function createMcpRequest(headers?: Record<string, string>) {
-  return new Request("https://open-seo.test/mcp", {
+  return new Request("https://StarSeo.test/mcp", {
     method: "POST",
     headers: {
       Accept: "application/json, text/event-stream",
@@ -98,7 +98,7 @@ function createMcpRequest(headers?: Record<string, string>) {
 // The modern (2026-07-28) era is selected by the per-request `_meta` envelope
 // claim; without it every POST classifies as legacy traffic.
 function createModernMcpRequest(headers?: Record<string, string>) {
-  return new Request("https://open-seo.test/mcp", {
+  return new Request("https://StarSeo.test/mcp", {
     method: "POST",
     headers: {
       Accept: "application/json, text/event-stream",
@@ -124,7 +124,7 @@ function hostedProps(scopes: string[] = ["mcp"]) {
     userId: "user-1",
     userEmail: "user@example.com",
     organizationId: "org-1",
-    baseUrl: "https://open-seo.test",
+    baseUrl: "https://StarSeo.test",
     clientId: "client-1",
     scopes,
   });
@@ -182,7 +182,7 @@ describe("handleSelfHostedOpenSeoMcpRequest", () => {
       expect(selfHostedAuthMocks.createOpenSeoMcpServer).toHaveBeenCalledWith({
         [MCP_AUTH_CONTEXT_PROP]: {
           ...identity,
-          baseUrl: "https://open-seo.test",
+          baseUrl: "https://StarSeo.test",
         },
       });
       // Self-hosted must not pin Origins to the request's own Host — the
@@ -198,7 +198,7 @@ describe("handleSelfHostedOpenSeoMcpRequest", () => {
 
   it("answers OPTIONS preflight without resolving an auth context", async () => {
     const response = await handleSelfHostedOpenSeoMcpRequest(
-      new Request("https://open-seo.test/mcp", { method: "OPTIONS" }),
+      new Request("https://StarSeo.test/mcp", { method: "OPTIONS" }),
       "cloudflare_access",
       {},
       ctx,
@@ -235,7 +235,7 @@ describe("handleAuthenticatedOpenSeoMcpRequest", () => {
     expect(selfHostedAuthMocks.createMcpHandler).toHaveBeenCalledWith(
       expect.objectContaining({
         allowedOriginHostnames: [
-          "open-seo.test",
+          "StarSeo.test",
           "pghallcbnfabbgfijhbcldaapmgidnaa",
         ],
         legacy: "reject",
@@ -301,7 +301,7 @@ describe("handleAuthenticatedOpenSeoMcpRequest", () => {
       userId: "user-1",
       userEmail: "user@example.com",
       organizationId: "org-1",
-      baseUrl: "https://open-seo.test",
+      baseUrl: "https://StarSeo.test",
     });
 
     const response = await handleAuthenticatedOpenSeoMcpRequest(

@@ -11,7 +11,7 @@ I had spent a week optimising content for a door that was locked.
 
 That is the argument of this post. Getting recommended by an LLM is two problems, they run on different clocks, and most of what gets sold as a solution addresses the half you cannot move.
 
-If you want an agent to run the audits below, connect the [OpenSEO MCP](/docs/mcp) first so it can pull your live ranking and Search Console data.
+If you want an agent to run the audits below, connect the [StarSeo MCP](/docs/mcp) first so it can pull your live ranking and Search Console data.
 
 ## Table of Contents
 
@@ -104,7 +104,7 @@ You cannot be selected from a set you were never admitted to. This is the one pa
 ### Full Prompt: Build the retrieval gap list
 
 ```
-Using the OpenSEO MCP, for each of these buyer questions:
+Using the StarSeo MCP, for each of these buyer questions:
   - <question 1>
   - <question 2>
   - <question 3>
@@ -121,4 +121,4 @@ Optimising content while the crawler gets a 429 is an expensive way to feel prod
 
 ---
 
-*Sources are linked inline. First-party crawler data is from my own servers, August 2026. The panel referenced here was recorded 28 August 2026 for The Unscripted SEO Interview Podcast with [Patrick Stox](https://unscriptedseo.com/patrick-stox-on-building-in-the-geo-era/), Ben Senescu of OpenSEO, and [Ben Wills](https://unscriptedseo.com/ben-wills-one-word-prompt-llm-testing/) of OppAlerts. Every cited URL was verified on 2 September 2026.*
+*Sources are linked inline. First-party crawler data is from my own servers, August 2026. The panel referenced here was recorded 28 August 2026 for The Unscripted SEO Interview Podcast with [Patrick Stox](https://unscriptedseo.com/patrick-stox-on-building-in-the-geo-era/), Ben Senescu of StarSeo, and [Ben Wills](https://unscriptedseo.com/ben-wills-one-word-prompt-llm-testing/) of OppAlerts. Every cited URL was verified on 2 September 2026.*

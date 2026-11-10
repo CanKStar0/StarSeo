@@ -15,9 +15,9 @@ This guide is a plan for those hours. You'll come away knowing:
 - how to get onto the lists and threads you can't outrank, which is also where AI assistants look
 - a 15-minute monthly check that tells you whether it's working
 
-Each step ends with a prompt you can run on your own product. To keep it concrete, we'll work through one example with numbers from OpenSEO: Snappa, a bootstrapped design tool competing with Canva. Its founder, Christopher Gimmer, discussed what search did for the company on the Unscripted SEO podcast, including what stopped working.
+Each step ends with a prompt you can run on your own product. To keep it concrete, we'll work through one example with numbers from StarSeo: Snappa, a bootstrapped design tool competing with Canva. Its founder, Christopher Gimmer, discussed what search did for the company on the Unscripted SEO podcast, including what stopped working.
 
-[SEO for startups](/blogs/seo-for-startups) covers the fundamentals if you need them first. To run the prompts, connect [OpenSEO MCP](/docs/mcp) to your AI agent.
+[SEO for startups](/blogs/seo-for-startups) covers the fundamentals if you need them first. To run the prompts, connect [StarSeo MCP](/docs/mcp) to your AI agent.
 
 ## Table of Contents
 
@@ -57,7 +57,7 @@ Cost per click helps you rank what's left, because it's what advertisers already
 
 ```text
 I run [product], a [category] tool for [buyer]. My biggest competitor
-is [competitor]. Use OpenSEO to research keywords for "[category]
+is [competitor]. Use StarSeo to research keywords for "[category]
 software", "[competitor] alternative" and "[main job your product
 does]". Keep only searches from someone choosing a tool, such as
 alternatives, comparisons and tools for one job. Show volume,
@@ -70,7 +70,7 @@ Volume and difficulty tell you a search is worth having. The results page tells 
 
 **"Canva alternatives."** An AI Overview sits on top. The first organic result is a "7 Best Canva Alternatives" list from mockupgenerator.ai, a mockup tool that ranks itself first. ManyPixels does the same lower on the page, and Adobe ranks with its own comparison page. A YouTube video, a Reddit thread, an XDA article and a Quora answer fill in the rest. You can win this search with an honest alternatives page: say who each tool suits, and put yourself where you actually fit.
 
-**"Snappa vs canva."** Snappa's own comparison page is the first organic result, and OpenSEO's data also has it ranking first for "websites like canva," at 880 searches a month. Further down the same page, another design tool, DocHipo, ranks with "Snappa vs Canva vs DocHipo." It added itself to a comparison between two bigger names, which is a page any small tool can write.
+**"Snappa vs canva."** Snappa's own comparison page is the first organic result, and StarSeo's data also has it ranking first for "websites like canva," at 880 searches a month. Further down the same page, another design tool, DocHipo, ranks with "Snappa vs Canva vs DocHipo." It added itself to a comparison between two bigger names, which is a page any small tool can write.
 
 **"Youtube thumbnail maker."** Canva and Adobe hold the top two spots with working tools. Below them sit tool pages from four smaller companies: vidIQ, Pixlr, WayinVideo and OpusClip. None of the top results is an article. The page that wins is the tool itself, with a short explanation around it.
 
@@ -105,7 +105,7 @@ Snappa's example also shows what to put next to the tool. Snappa's early growth 
 
 The blog post was about where to find free stock photos, and the site was StockSnap, which that post spawned. That exact play is closed now: "free stock photos" gets 22,200 searches a month at a difficulty of 100, the top of the scale.
 
-Snappa's search traffic today comes from a newer version of the same idea. By OpenSEO's estimate, its biggest non-brand pages are size guides: Twitter header size at about 46,000 visits a month, YouTube thumbnail size at 16,000, Instagram story dimensions at 11,000 and Facebook cover photo size at 10,000. Each one answers the question a buyer asks just before they start designing. The answers are short, though. "Youtube thumbnail size" gets 27,100 searches a month at difficulty 10, and an AI Overview now sits above every result. The answer, 1280 by 720 pixels, fits in one line, so plenty of searchers never click. Gimmer described the same effect:
+Snappa's search traffic today comes from a newer version of the same idea. By StarSeo's estimate, its biggest non-brand pages are size guides: Twitter header size at about 46,000 visits a month, YouTube thumbnail size at 16,000, Instagram story dimensions at 11,000 and Facebook cover photo size at 10,000. Each one answers the question a buyer asks just before they start designing. The answers are short, though. "Youtube thumbnail size" gets 27,100 searches a month at difficulty 10, and an AI Overview now sits above every result. The answer, 1280 by 720 pixels, fits in one line, so plenty of searchers never click. Gimmer described the same effect:
 
 > Even though we're ranking number one for some of these keywords, the AI Overviews are answering some of those things, and so we're losing out on some of those clicks.
 
@@ -172,4 +172,4 @@ Near the end of his interview on the [Unscripted SaaS podcast](https://unscripte
 
 Four pages a quarter is a pace one person can keep for years. Next quarter, run the same research on your next-biggest competitor and the next job your product does. Sustaining it is the part that beats the funded team, because funded content programs change owners often, and the strategy usually changes with them.
 
-To run this on your own market, [OpenSEO](https://openseo.so/) is $10 a month with $10 of usage credits included, and signing up is free with $0.50 of trial credits.
+To run this on your own market, [StarSeo](https://starseo.canpolatkaya.com/) is $10 a month with $10 of usage credits included, and signing up is free with $0.50 of trial credits.

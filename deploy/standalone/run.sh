@@ -4,7 +4,7 @@ set -eu
 # kernel with larger ones, such as a Raspberry Pi 5's (denoland/celld#298).
 page_size=$(getconf PAGESIZE)
 if [ "$page_size" -gt 4096 ]; then
-  echo "This kernel uses ${page_size}-byte memory pages; the OpenSEO runtime needs 4 KiB pages. On a Raspberry Pi 5, add kernel=kernel8.img to /boot/firmware/config.txt and reboot. See docs/SELF_HOSTING_DOCKER.md#troubleshooting." >&2
+  echo "This kernel uses ${page_size}-byte memory pages; the StarSeo runtime needs 4 KiB pages. On a Raspberry Pi 5, add kernel=kernel8.img to /boot/firmware/config.txt and reboot. See docs/SELF_HOSTING_DOCKER.md#troubleshooting." >&2
   exit 1
 fi
 # SHA-256 of an empty body: RustFS requires x-amz-content-sha256 on every

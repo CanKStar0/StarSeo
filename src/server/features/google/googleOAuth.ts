@@ -427,7 +427,7 @@ export async function handleGoogleOAuthCallbackRequest(
   request: Request,
   integration: GoogleOAuthIntegration,
 ) {
-  // Behind an Every App gateway the gateway holds Google, so OpenSEO's own
+  // Behind an Every App gateway the gateway holds Google, so StarSeo's own
   // callback doesn't exist there (googleAccess.ts).
   if (await ownGoogleCallbackDisabled()) {
     return new Response("Not found", { status: 404 });

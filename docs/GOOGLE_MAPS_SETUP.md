@@ -1,6 +1,6 @@
 # Google Maps setup for Local SEO
 
-Local SEO uses Google's Map Tiles API for its basemap. OpenSEO gets
+Local SEO uses Google's Map Tiles API for its basemap. StarSeo gets
 the ranking results from DataForSEO. Viewing the map requests Google tiles;
 running a ranking scan uses DataForSEO credits separately.
 
@@ -20,13 +20,13 @@ running a ranking scan uses DataForSEO credits separately.
    fits your usage. Use separate keys for development, previews, and production
    to keep their usage separate.
 
-OpenSEO's server requests Google sessions, tiles, and viewport copyright
-information. The browser loads tiles through an authenticated OpenSEO route;
+StarSeo's server requests Google sessions, tiles, and viewport copyright
+information. The browser loads tiles through an authenticated StarSeo route;
 the Google key and session tokens stay on the server. Follow Google's
 [API-key security guidance](https://developers.google.com/maps/api-security-best-practices)
 when setting restrictions. You only need Map Tiles API for the basemap.
 
-## Configure OpenSEO
+## Configure StarSeo
 
 Add the key as `GOOGLE_MAPS_API_KEY` in the environment file for your app:
 
@@ -87,7 +87,7 @@ a drawing instead.
   project, then check server connectivity, key configuration, and quotas.
   Use the map's retry button after correcting the issue.
 
-The **Points** view remains available when maps cannot load. OpenSEO renews
+The **Points** view remains available when maps cannot load. StarSeo renews
 Google's session tokens and displays Google's attribution for the current
 viewport. It streams tiles without storing them for offline use. Browser
 caching follows Google's response headers; the proxy does not create a

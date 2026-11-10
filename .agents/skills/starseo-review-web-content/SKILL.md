@@ -1,13 +1,13 @@
 ---
-name: openseo-review-web-content
-description: Write and review content for the OpenSEO website (web/), including blog posts, guides, feature pages, FAQs. Makes sure each page delivers real value to its target reader. Use whenever adding or editing user-facing prose in web/content or web/src.
+name: starseo-review-web-content
+description: Write and review content for the StarSeo website (web/), including blog posts, guides, feature pages, FAQs. Makes sure each page delivers real value to its target reader. Use whenever adding or editing user-facing prose in web/content or web/src.
 metadata:
   internal: true
 ---
 
-# OpenSEO Web Content
+# StarSeo Web Content
 
-Every page is for a specific reader. A blog post should leave them better at SEO. A product page should help them decide whether OpenSEO solves their problem. Judge every edit by one question: is this better for that reader? We are not writing to pass a review.
+Every page is for a specific reader. A blog post should leave them better at SEO. A product page should help them decide whether StarSeo solves their problem. Judge every edit by one question: is this better for that reader? We are not writing to pass a review.
 
 ## Write for the reader
 
@@ -26,7 +26,7 @@ Every page is for a specific reader. A blog post should leave them better at SEO
 
 ## Don't make things up
 
-That's the whole accuracy bar. Product capabilities, prices, quotes, and data must be real, so check product claims against the code. Framing, figures of speech, and opinions are the writer's call. Don't ask for disclosures or a source for every number. Never call OpenSEO simply "free."
+That's the whole accuracy bar. Product capabilities, prices, quotes, and data must be real, so check product claims against the code. Framing, figures of speech, and opinions are the writer's call. Don't ask for disclosures or a source for every number. Never call StarSeo simply "free."
 
 ## Voice
 

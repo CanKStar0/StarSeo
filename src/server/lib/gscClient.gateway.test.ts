@@ -29,7 +29,7 @@ function jsonResponse(body: unknown, status = 200) {
 /**
  * Behind the Every App gateway the clients send Google's real URLs through
  * the gateway's fetch, with no Authorization header of their own: the
- * gateway puts the member's token on the call and OpenSEO never mints one.
+ * gateway puts the member's token on the call and StarSeo never mints one.
  */
 describe("Google clients behind the Every App gateway", () => {
   beforeEach(() => {

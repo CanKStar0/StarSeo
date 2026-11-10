@@ -57,11 +57,11 @@ Her episode is [on the Unscripted Small Business podcast](https://unscriptedsmal
 
 One more thing to know about the market: a lot of what is sold as an "SEO agent" is a schedule and a prompt in a wrapper. That is fine, as long as you know that is what you bought and a person still reads the output.
 
-## Putting the three layers on OpenSEO
+## Putting the three layers on StarSeo
 
 Map the product to the layers and the plan writes itself.
 
-| Layer    | In OpenSEO                                                                                                    | Who acts                             |
+| Layer    | In StarSeo                                                                                                    | Who acts                             |
 | -------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
 | Schedule | Rank tracker (daily, weekly, monthly), the connected Search Console property                                  | Nobody. It runs.                     |
 | Agent    | The MCP tools: read the tracker, read Search Console, bucket audit issues, pull competitors, draft the report | The assistant, with a person reading |
@@ -69,12 +69,12 @@ Map the product to the layers and the plan writes itself.
 
 The schedule layer costs credits per check and the app shows the price before you commit. The agent layer costs nothing for reads (Search Console, tracker results, audit results) and credits for research. The person layer costs the most, which is the reason to keep it small and to give it good inputs.
 
-## Run this with the OpenSEO MCP
+## Run this with the StarSeo MCP
 
-Connect the [OpenSEO MCP](/docs/mcp). This prompt sets up the schedule layer once and defines the agent's weekly job; the person's job is answering the questions in step 1.
+Connect the [StarSeo MCP](/docs/mcp). This prompt sets up the schedule layer once and defines the agent's weekly job; the person's job is answering the questions in step 1.
 
 ```text
-Using the OpenSEO MCP on project [name]:
+Using the StarSeo MCP on project [name]:
 
 1. Ask me three questions and wait: which 20 to 40 keywords to
    track, which device, and what day of the week I read reports.
@@ -117,7 +117,7 @@ Automation runs the same job on a schedule with no model involved, like a weekly
 
 The data collection, yes: the tracker and Search Console pulls run on their own and use no credits to read. The draft, yes, with an agent and a saved prompt. The sentence that says what it means for the business should still be written or at least read by a person before it goes out.
 
-### How much does scheduled rank tracking cost in OpenSEO?
+### How much does scheduled rank tracking cost in StarSeo?
 
 The app estimates before anything runs. As a reference, 25 keywords on mobile checking the top 40 results weekly can cost up to $1.50 a month in credits; 100 keywords up to $6. Rank checks on the hosted app need the $10/month plan.
 

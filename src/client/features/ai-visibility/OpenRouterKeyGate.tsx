@@ -48,7 +48,7 @@ export function OpenRouterKeyGate({
             </p>
             <p>
               Create a key on OpenRouter, set it as{" "}
-              <code>OPENROUTER_API_KEY</code>, restart OpenSEO, then confirm
+              <code>OPENROUTER_API_KEY</code>, restart StarSeo, then confirm
               here. The{" "}
               <Link
                 className="underline underline-offset-2 hover:text-foreground"

@@ -1,8 +1,8 @@
-# OpenSEO for Grok Bot and Cursor
+# StarSeo for Grok Bot and Cursor
 
 SEO made simple.
 
-OpenSEO gives your agent real SEO data and guided workflows, so its advice is grounded in your website instead of generic recommendations.
+StarSeo gives your agent real SEO data and guided workflows, so its advice is grounded in your website instead of generic recommendations.
 
 ## What you can do
 
@@ -14,15 +14,15 @@ OpenSEO gives your agent real SEO data and guided workflows, so its advice is gr
 - Work with Google Search Console and Analytics data
 - Research AI prompts and track brand mentions, citations, and competitors
 
-The plugin includes twelve skills that guide your agent through complete SEO workflows, plus the hosted OpenSEO MCP server for live data and project management.
+The plugin includes twelve skills that guide your agent through complete SEO workflows, plus the hosted StarSeo MCP server for live data and project management.
 
 ## Connect
 
-Install OpenSEO from the Grok Bot or Cursor marketplace. The first time your agent uses an OpenSEO tool, follow the OAuth prompt to sign in and approve the connection. There is no API key to configure.
+Install StarSeo from the Grok Bot or Cursor marketplace. The first time your agent uses an StarSeo tool, follow the OAuth prompt to sign in and approve the connection. There is no API key to configure.
 
-To check the connection without using credits, ask: "Use OpenSEO to check my connection and list my projects."
+To check the connection without using credits, ask: "Use StarSeo to check my connection and list my projects."
 
-You need an OpenSEO account. The plugin package is free and open source. Hosted OpenSEO plans and usage credits are described at [openseo.so/pricing](https://openseo.so/pricing), and OpenSEO can also be [self-hosted](https://github.com/every-app/open-seo#self-hosting).
+You need an StarSeo account. The plugin package is free and open source. Hosted StarSeo plans and usage credits are described at [openseo.so/pricing](https://starseo.canpolatkaya.com/pricing), and StarSeo can also be [self-hosted](https://github.com/CanKStar0/StarSeo#self-hosting).
 
 ## Try it
 
@@ -50,8 +50,8 @@ You need an OpenSEO account. The plugin package is free and open source. Hosted 
 
 ## Links
 
-- [OpenSEO](https://openseo.so)
-- [MCP documentation](https://openseo.so/docs/mcp)
-- [Privacy policy](https://openseo.so/privacy)
-- [Terms](https://openseo.so/terms-and-conditions)
-- [Support](https://openseo.so/support)
+- [StarSeo](https://starseo.canpolatkaya.com)
+- [MCP documentation](https://starseo.canpolatkaya.com/docs/mcp)
+- [Privacy policy](https://starseo.canpolatkaya.com/privacy)
+- [Terms](https://starseo.canpolatkaya.com/terms-and-conditions)
+- [Support](https://starseo.canpolatkaya.com/support)

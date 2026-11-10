@@ -12,7 +12,7 @@ import { SUPPORT_EMAIL } from "@/client/lib/support";
 import { pageHead } from "@/client/lib/pageHead";
 
 const DISCORD_URL = "https://discord.gg/c9uGs3cFXr";
-const GITHUB_URL = "https://github.com/every-app/open-seo";
+const GITHUB_URL = "https://github.com/CanKStar0/StarSeo";
 
 export const Route = createFileRoute("/_app/support")({
   head: () => pageHead("Help & Community"),
@@ -29,7 +29,7 @@ function SupportPage() {
           </p>
           <PageHeader
             title="We want to hear from you"
-            description="We want to talk to you! We're super open to feedback and want to learn how you work so we can make OpenSEO better."
+            description="We want to talk to you! We're super open to feedback and want to learn how you work so we can make StarSeo better."
           />
         </div>
 

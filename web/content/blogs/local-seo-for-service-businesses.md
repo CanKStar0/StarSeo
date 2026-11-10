@@ -5,13 +5,13 @@ author: "Jeremy Rivera"
 date: "2026-10-05"
 ---
 
-Google decides whether a service business shows up in the map pack by asking three questions of each search: do you do the thing, are you near the person searching, and do people vouch for you. You control two of them. This guide runs all three on a real remodeler in Cookeville, Tennessee, and gives you the prompts to run the same checks on your own business in OpenSEO.
+Google decides whether a service business shows up in the map pack by asking three questions of each search: do you do the thing, are you near the person searching, and do people vouch for you. You control two of them. This guide runs all three on a real remodeler in Cookeville, Tennessee, and gives you the prompts to run the same checks on your own business in StarSeo.
 
 H&H Construction has a 5.0 rating from ten reviews, and all ten are five stars. It has 35 photos, a claimed profile and 29 services listed, including kitchen remodeling. It passes the checklist most owners get handed.
 
 It still loses the north end of its own town for _kitchen remodeling_ to a showroom with a 4.6. The cause is one field in the profile and a review count the showroom has spent years building.
 
-If you want an agent to do the legwork, connect [OpenSEO MCP](/docs/mcp) first so it can pull live profile, map and keyword data. Each step below comes with a prompt you can paste in, and the [Local SEO skill](/docs/skills/local-seo) runs the profile, competitor and map checks together.
+If you want an agent to do the legwork, connect [StarSeo MCP](/docs/mcp) first so it can pull live profile, map and keyword data. Each step below comes with a prompt you can paste in, and the [Local SEO skill](/docs/skills/local-seo) runs the profile, competitor and map checks together.
 
 ## Table of Contents
 
@@ -35,22 +35,22 @@ The map pack is the block of three businesses with a map that sits above the reg
 
 ## Local keyword research: find the words customers use to hire you
 
-Before you touch your profile, find out what people type when they want to hire you. Your vocabulary and theirs often don't match. We ran H&H's main service, `kitchen remodeling`, through OpenSEO's [keyword research](/docs/skills/keyword-research), and this is the raw result:
+Before you touch your profile, find out what people type when they want to hire you. Your vocabulary and theirs often don't match. We ran H&H's main service, `kitchen remodeling`, through StarSeo's [keyword research](/docs/skills/keyword-research), and this is the raw result:
 
-![OpenSEO Keyword Research results for the seed kitchen remodeling in the United States, September 28, 2026. 149 keywords. Top rows: Kitchen Cabinets 246,000, High End Kitchen 201,000, Craft Street Kitchen 110,000, Kitchen Remodeling Near Me 74,000 with a difficulty score of 15, Kitchen Remodel 60,500, Preppy Kitchen 49,500.](/blog/local-seo-for-service-businesses/keyword-research-kitchen-remodeling-openseo.png)
+![StarSeo Keyword Research results for the seed kitchen remodeling in the United States, September 28, 2026. 149 keywords. Top rows: Kitchen Cabinets 246,000, High End Kitchen 201,000, Craft Street Kitchen 110,000, Kitchen Remodeling Near Me 74,000 with a difficulty score of 15, Kitchen Remodel 60,500, Preppy Kitchen 49,500.](/blog/local-seo-for-service-businesses/keyword-research-kitchen-remodeling-openseo.png)
 
 Look at what sits above the one you want. `kitchen cabinets` at 246,000 a month is people shopping for boxes. `preppy kitchen` is a cooking channel. `kitchen island ideas` is somebody on a Sunday afternoon with a Pinterest board. Those searchers aren't hiring a contractor. Ranking for them would put you in front of [the wrong half of your audience](/blogs/wrong-half-of-your-audience).
 
 The search that pays is fourth: `kitchen remodeling near me`, 74,000 a month, difficulty 15. Right behind it are `kitchen remodel` at 60,500 and `kitchen renovation` at 18,100. Those three are your customer talking. The rest of the list is noise you'll be tempted to chase because the number is bigger.
 
-Those are national estimates, so use them to learn _which words_ people use. They don't tell you how many of those people live near you. OpenSEO can pull volume for a single city or county if you give it one, at an extra credit cost per seed. For a town the size of Cookeville, expect small numbers, and don't let that scare you off. [Jonathan Schüßler](https://unscriptedseo.com/how-one-freelancer-ranks-in-50-german-towns-with-programmatic-seo/), who does SEO for service businesses in Germany, built a wedding photography business on search terms other photographers ignored for being too small:
+Those are national estimates, so use them to learn _which words_ people use. They don't tell you how many of those people live near you. StarSeo can pull volume for a single city or county if you give it one, at an extra credit cost per seed. For a town the size of Cookeville, expect small numbers, and don't let that scare you off. [Jonathan Schüßler](https://unscriptedseo.com/how-one-freelancer-ranks-in-50-german-towns-with-programmatic-seo/), who does SEO for service businesses in Germany, built a wedding photography business on search terms other photographers ignored for being too small:
 
 ![A quote card reading: Why not target the one where all the most expensive stuff is happening, but there's not many clicks. Attributed to Jonathan Schüßler, freelance SEO for service businesses, from The Unscripted SEO Interview Podcast.](/blog/local-seo-for-service-businesses/quote-not-many-clicks.png)
 
 For a remodeler, "where the expensive stuff is happening" is the kitchen and the addition. The drywall patch can wait. Pick the two or three services that carry your margin and do this step for each. The [keyword research library](/library/keyword-research) goes deeper on seeds and filtering, and the [keyword clustering skill](/docs/skills/keyword-clustering) will group what's left by service.
 
 ```text
-Use OpenSEO to research keywords for my business. I'm a [trade] in [town, state].
+Use StarSeo to research keywords for my business. I'm a [trade] in [town, state].
 Seeds: "[main service]", "[second service]", "[main service] near me".
 Keep only searches from someone who wants to hire a business like mine.
 Drop product shopping, DIY ideas, brand names, jobs and anything about a
@@ -60,7 +60,7 @@ me volume and difficulty for each group, highest-value service first.
 
 ## Google Business Profile optimization starts with your categories
 
-Now pull your own Google Business Profile (called Google My Business until 2021), and read it like a stranger would. This is H&H's profile in OpenSEO as of September 28, 2026:
+Now pull your own Google Business Profile (called Google My Business until 2021), and read it like a stranger would. This is H&H's profile in StarSeo as of September 28, 2026:
 
 | Field                     | H&H Construction                                                                |
 | ------------------------- | ------------------------------------------------------------------------------- |
@@ -77,7 +77,7 @@ Hold the second row and the fifth row side by side. H&H sells kitchens: they're 
 This is the most common gap you'll find on a trade profile, and the cheapest to close. Owners tend to pick one category at setup, the broadest one that feels true, and don't revisit it. Whoever has a free afternoon fills in the services list later, and checking that the two agree isn't anyone's job.
 
 ```text
-Use OpenSEO to pull the Google Business Profile for [business name] in
+Use StarSeo to pull the Google Business Profile for [business name] in
 [town, state]. List every service I sell, from my services list, my
 description and what my reviews talk about. For each one, tell me whether
 my primary or additional categories cover it. Flag any service I sell
@@ -103,7 +103,7 @@ Search your main service from three or four different parts of your service area
 Plenty of plumbers, cleaners and landscapers run what Google calls a service area business: no storefront, and the address hidden on the profile. The check works the same way: center the grid on your address anyway, then add a check or two from the towns you most want work from. Those are the points that tell you whether your profile reaches the jobs you're driving to.
 
 ```text
-Use OpenSEO to run a 3x3 local rank grid for "[main service]" centered on
+Use StarSeo to run a 3x3 local rank grid for "[main service]" centered on
 my business, [business name], at [address], 8 km between points, on
 mobile. Show my position at each point. For every point where I'm not #1,
 name the business that is, and tell me whether it's closer to that point
@@ -132,7 +132,7 @@ Before you blame distance, test it. We measured the straight-line distance from 
 Distance explains most of the map. Wherever the showroom is closer, it wins, and no setting will change where it's parked. But look at the two rows in bold. In the north-west the two businesses are the same distance away, and in the south-east H&H is 1.3 km _closer_. The showroom wins both. On a tie, the business whose category says "kitchen" and whose review count is 67 came out ahead, and you can change both of those.
 
 ```text
-Use OpenSEO to pull the Google Business Profile for [competitor name] in
+Use StarSeo to pull the Google Business Profile for [competitor name] in
 [town]. Put it next to mine in one table: primary category, additional
 categories, rating, review count, photos, services and attributes. Mark
 which of us wins each row. Then tell me which rows I can change this week
@@ -168,7 +168,7 @@ A grid is a snapshot of one day, so don't treat any change in the first week as 
 3. In three weeks, re-run the grid with the same keyword, center and spacing, and compare it point by point.
 
 ```text
-Use OpenSEO to re-run my local rank grid for "[main service]": same center
+Use StarSeo to re-run my local rank grid for "[main service]": same center
 ([address]), same 3x3 size, same 8 km spacing, mobile. Compare it point by
 point with my last run from [date]. Tell me which points moved, which
 business holds #1 at each point now, and whether my profile changed in
@@ -182,7 +182,7 @@ Agencies and in-house marketers get this job with an extra step: somebody else h
 Lead the local SEO report with the grid, name the one fix, and end on the date you'll check it again. The grid shows where to look, but the owner will judge the fix by calls and quote requests from the north end of town. The [SEO report skill](/docs/skills/seo-report) turns the whole run into a client-ready report.
 
 ```text
-Use OpenSEO to build a one-page local SEO report for [client], a [trade]
+Use StarSeo to build a one-page local SEO report for [client], a [trade]
 in [town]. Include: their profile audit against the services they sell,
 a 3x3 rank grid for their top two services, a side-by-side with whoever
 wins the most points they lose, and one recommended fix. Write it for the
@@ -194,4 +194,4 @@ we'll re-check.
 
 If you show up at your front door and disappear a few miles out, check Google's three questions in this order: distance, which you can't change; your business category, which takes five minutes to fix; and your Google reviews, which take months. For H&H, the gap was a category that didn't say "kitchen" and a review count 6.7 times smaller.
 
-For a second opinion on where to start, the free [competitor keyword finder](/competitor-keyword-finder) shows what the business beating you ranks for, the free [backlink checker](/backlink-checker) shows who links to it, and [OpenSEO](https://openseo.so/) runs each check on this page. It's $10 a month with $10 of usage credits included, and signing up is free with $0.50 of trial credits.
+For a second opinion on where to start, the free [competitor keyword finder](/competitor-keyword-finder) shows what the business beating you ranks for, the free [backlink checker](/backlink-checker) shows who links to it, and [StarSeo](https://starseo.canpolatkaya.com/) runs each check on this page. It's $10 a month with $10 of usage credits included, and signing up is free with $0.50 of trial credits.

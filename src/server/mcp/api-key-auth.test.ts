@@ -19,7 +19,7 @@ vi.mock("@/lib/auth", () => ({
       createOrganization: vi.fn(),
     },
   }),
-  getHostedBaseUrl: () => "https://app.openseo.so",
+  getHostedBaseUrl: () => "https://starseo.canpolatkaya.com",
 }));
 
 vi.mock("@/server/auth/repositories/AuthRepository", () => ({
@@ -48,7 +48,7 @@ const ctx: ExecutionContext = {
 };
 
 function request(headers?: HeadersInit, method = "POST") {
-  return new Request("https://app.openseo.so/mcp", { method, headers });
+  return new Request("https://starseo.canpolatkaya.com/mcp", { method, headers });
 }
 
 // What verifyApiKey returns for a key bound to org-1 at creation.
@@ -107,7 +107,7 @@ describe("handleMcpApiKeyRequest", () => {
           role: "owner",
           scopes: [...MCP_OAUTH_SCOPES],
           clientId: "api_key",
-          baseUrl: "https://app.openseo.so",
+          baseUrl: "https://starseo.canpolatkaya.com",
         },
       });
     },
@@ -195,11 +195,11 @@ describe("handleMcpApiKeyRequest", () => {
 
   it.each([
     [
-      "non-OpenSEO bearer tokens",
+      "non-StarSeo bearer tokens",
       request({ Authorization: "Bearer oauth-access-token" }),
     ],
     [
-      "non-OpenSEO x-api-key values",
+      "non-StarSeo x-api-key values",
       request({
         "x-api-key": "some-foreign-key",
         Authorization: "Bearer oauth-access-token",

@@ -114,7 +114,7 @@ describe("save_report", () => {
       "shareToken",
     );
     expect(saved.url).toBe(
-      `https://open-seo.test/p/${projectId}/reports/${saved.reportId}`,
+      `https://StarSeo.test/p/${projectId}/reports/${saved.reportId}`,
     );
     expect(textContent(result)).toContain(saved.url);
     expect(mocks.captureServerEvent).toHaveBeenCalledWith(
@@ -239,7 +239,7 @@ describe("public report sharing", () => {
     const published = await setSharing(true);
     const shareUrl = published.structuredContent.shareUrl;
     expect(shareUrl).toMatch(
-      /^https:\/\/open-seo\.test\/s\/[A-Za-z0-9_-]{32}$/,
+      /^https:\/\/StarSeo\.test\/s\/[A-Za-z0-9_-]{32}$/,
     );
     expect(textContent(published)).toContain(shareUrl!);
     expect(mocks.captureServerEvent).toHaveBeenCalledWith(

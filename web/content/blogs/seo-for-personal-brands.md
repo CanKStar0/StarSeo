@@ -1,11 +1,11 @@
 ---
 title: "SEO for Personal Brands: Turning Years of Content Into Google and ChatGPT Traffic"
-description: "Most solopreneurs and personal brands already have the content to rank. Here's how Adam Cortez's agency used OpenSEO and Claude to get a coach's podcasts and posts back into Google and cited by ChatGPT."
+description: "Most solopreneurs and personal brands already have the content to rank. Here's how Adam Cortez's agency used StarSeo and Claude to get a coach's podcasts and posts back into Google and cited by ChatGPT."
 author: "Ben Senescu"
 date: "2026-10-22"
 ---
 
-If you run a personal brand, you may already have years of podcasts, videos and posts on your site. Most of it has never been optimized, so it brings in less search traffic than it could. [Adam Cortez](https://www.linkedin.com/in/adamcortez/), founder of the San Jose agency [ARC Creative Co.](https://arccreativeco.com/), fixed this for one of his clients, a coach with years of content, using OpenSEO and Claude. After one cleanup sweep in August, Google picked the site back up. New visitors are now about double what they were a year earlier, and ChatGPT and Perplexity cite him as a resource.
+If you run a personal brand, you may already have years of podcasts, videos and posts on your site. Most of it has never been optimized, so it brings in less search traffic than it could. [Adam Cortez](https://www.linkedin.com/in/adamcortez/), founder of the San Jose agency [ARC Creative Co.](https://arccreativeco.com/), fixed this for one of his clients, a coach with years of content, using StarSeo and Claude. After one cleanup sweep in August, Google picked the site back up. New visitors are now about double what they were a year earlier, and ChatGPT and Perplexity cite him as a resource.
 
 ## Who this is for and what you'll learn
 
@@ -24,9 +24,9 @@ He had no shortage of content. He has a podcast, every episode becomes a transcr
 
 The content also competed with itself. ARC kept a huge keyword map in a spreadsheet to track which page should rank for what. Even so, when he launched his podcast, the keyword he wanted the podcast page to rank for got picked up by an older blog post instead.
 
-## Auditing years of content with OpenSEO and Search Console
+## Auditing years of content with StarSeo and Search Console
 
-Adam's team had OpenSEO analyze where every page stood, then pulled the same view from [Search Console](/google-search-console-mcp) and compared the two. Claude grouped what it found into fixes, in the order they should happen. A person looked over each batch before it went live, and then they resubmitted the pages to Search Console.
+Adam's team had StarSeo analyze where every page stood, then pulled the same view from [Search Console](/google-search-console-mcp) and compared the two. Claude grouped what it found into fixes, in the order they should happen. A person looked over each batch before it went live, and then they resubmitted the pages to Search Console.
 
 The first sweep filled in the cracks from years of publishing:
 
@@ -43,19 +43,19 @@ A personal brand gets found when people ask questions. So ARC now plans most new
 
 Self-competition matters less here. An AI answer can cite three of your pages at once, where a Google result usually shows one.
 
-The hard part is checking whether it works. ARC takes the questions they think people ask and checks whether the coach shows up in the answers, and where. Adam says there still isn't a clean way to do that. [AI visibility in OpenSEO](/blogs/ai-visibility-in-openseo) explains how we approach tracking it.
+The hard part is checking whether it works. ARC takes the questions they think people ask and checks whether the coach shows up in the answers, and where. Adam says there still isn't a clean way to do that. [AI visibility in StarSeo](/blogs/ai-visibility-in-openseo) explains how we approach tracking it.
 
 ## City pages for a business that works anywhere
 
 The coach is based in one city, but he works with clients everywhere, so ARC built about 200 city pages for him. That works for any solopreneur who serves people beyond their own town, as long as each page is actually about its city.
 
-Before writing, they pull facts about each city from Wikipedia and local databases. Then each page gets local FAQs, a map and real details about the place. OpenSEO's reports also show them what doesn't work: when a competitor publishes 100 location pages with the same generic text, Google ignores them.
+Before writing, they pull facts about each city from Wikipedia and local databases. Then each page gets local FAQs, a map and real details about the place. StarSeo's reports also show them what doesn't work: when a competitor publishes 100 location pages with the same generic text, Google ignores them.
 
 Google doesn't care that a page was written with AI or published alongside 100 others. It cares whether the page is useful for people in that place. The [Local SEO skill](/docs/skills/local-seo) checks Google and Maps rankings by location, and [local SEO for service businesses](/blogs/local-seo-for-service-businesses) walks through it on a real business.
 
 ## How ARC runs this for every client
 
-Adam built two Claude skills that use OpenSEO. The first runs on a prospect's URL and checks their keywords, local rankings, site issues, ad tracking and basics like a privacy policy and an up-to-date copyright year. The second runs once a client signs and ARC has Search Console and website access, and produces a full report of about 20 pages.
+Adam built two Claude skills that use StarSeo. The first runs on a prospect's URL and checks their keywords, local rankings, site issues, ad tracking and basics like a privacy policy and an up-to-date copyright year. The second runs once a client signs and ARC has Search Console and website access, and produces a full report of about 20 pages.
 
 ![Two documents from one audit, side by side. On the left, a short monthly SEO report for the client with Google clicks, the change from the prior month and three focus areas. On the right, a denser internal fix list for ARC's team with counts of fixes they can ship now, fixes blocked on access, fixes that need the owner's sign-off and reporting items, then a table of fixes with evidence and status.](/blog/seo-for-personal-brands/client-report-vs-fix-list.png)
 
@@ -65,7 +65,7 @@ From that report they make two lists: a short one for the client about what's wr
 
 People still review the research. Three or four months ago, about half of what the system produced needed fixing. ARC now collects better information about each client's ideal customer at onboarding, and the output is about 90% right. [Human-in-the-loop content](/library/ai-agent-seo/human-in-the-loop-content) covers where that review pays off.
 
-Getting changes onto the site is the other manual part. OpenSEO doesn't edit sites itself yet (it's planned), so ARC has Claude drive Chrome to make changes in the site builder. That works well on Elementor, but Claude locks up on Divi, and Wix and Squarespace are limited.
+Getting changes onto the site is the other manual part. StarSeo doesn't edit sites itself yet (it's planned), so ARC has Claude drive Chrome to make changes in the site builder. That works well on Elementor, but Claude locks up on Divi, and Wix and Squarespace are limited.
 
 ## Results: twice the new visitors in a year
 

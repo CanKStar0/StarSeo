@@ -155,7 +155,7 @@ export function Sidebar({
           onClick={() => setOpenMobile(false)}
           className="px-1 pb-2 text-base font-semibold text-sidebar-foreground"
         >
-          OpenSEO
+          StarSeo
         </Link>
         <ProjectSwitcher
           activeProjectId={projectId}
@@ -214,7 +214,7 @@ export function Sidebar({
 
 // Behind an Every App gateway, which owns sign-in, organizations, teams and
 // billing: the sidebar's first row links back to the gateway, and the footer
-// holds help and OpenSEO settings.
+// holds help and StarSeo settings.
 const everyApp = isEveryAppClientAuthMode();
 
 /**

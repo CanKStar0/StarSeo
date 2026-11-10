@@ -62,9 +62,9 @@ function formatDataforseoRequestPath(url: RequestInfo): string {
  * A refusal the Every App gateway made itself (the app doesn't ask for
  * DataForSEO, the gateway has no key, the call names no organization), as
  * opposed to DataForSEO's own answer
- * passed through, as OpenSEO's error; null for DataForSEO's answer.
+ * passed through, as StarSeo's error; null for DataForSEO's answer.
  *
- * A missing key gets OpenSEO's own sentence as the message: rank checks store
+ * A missing key gets StarSeo's own sentence as the message: rank checks store
  * error.message and the MCP tools answer with it, and the gateway's wording
  * is its operator's. The gateway's text stays in the details.
  */

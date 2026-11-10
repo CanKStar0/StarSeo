@@ -50,7 +50,7 @@ export function McpConnectionsSettings() {
   return (
     <section className="space-y-3">
       <SectionHeader title="Connected agents" />
-      <p className="text-sm">AI clients signed in to OpenSEO with OAuth.</p>
+      <p className="text-sm">AI clients signed in to StarSeo with OAuth.</p>
 
       <QueryState
         query={connectionsQuery}
@@ -124,7 +124,7 @@ export function McpConnectionsSettings() {
           onClose={() => setDisconnecting(null)}
           onConfirm={() => disconnectMutation.mutate(disconnecting.id)}
         >
-          It will have to sign in to OpenSEO again.
+          It will have to sign in to StarSeo again.
         </ConfirmDialog>
       ) : null}
     </section>

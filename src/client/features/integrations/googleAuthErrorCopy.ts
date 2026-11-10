@@ -21,7 +21,7 @@ export function googleAuthErrorCopy(
       return {
         title: "This account is being deleted",
         description:
-          "You asked us to delete this account, so it can't be signed in to. To keep it, email support@openseo.so before the deletion date.",
+          "You asked us to delete this account, so it can't be signed in to. To keep it, email support@canpolatkaya.com before the deletion date.",
       };
     case "state_mismatch":
       return {
@@ -38,7 +38,7 @@ export function googleAuthErrorCopy(
     case "scope_not_granted":
       return {
         title: `${what} is missing a permission`,
-        description: `OpenSEO didn't get access to your ${providerLabel ?? "Google"} data because a box on Google's permission screen wasn't checked. Try again and check every box before you continue.`,
+        description: `StarSeo didn't get access to your ${providerLabel ?? "Google"} data because a box on Google's permission screen wasn't checked. Try again and check every box before you continue.`,
       };
     case "connection_save_failed":
       return {

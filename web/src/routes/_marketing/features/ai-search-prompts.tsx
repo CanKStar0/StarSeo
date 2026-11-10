@@ -12,7 +12,7 @@ export const Route = createFileRoute("/_marketing/features/ai-search-prompts")({
         "AI Prompt Explorer: Compare ChatGPT, Claude, Gemini and Perplexity Answers to One Prompt",
       description: page.seoDescription ?? page.description,
       path: "/features/ai-search-prompts",
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
       imageAlt: page.imageAlt,
     }),
   component: () => <FeaturePageTemplate page={page} />,

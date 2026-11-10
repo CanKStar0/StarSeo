@@ -268,7 +268,7 @@ describe("sharing", () => {
     vi.mocked(usesBetterAuthServer).mockResolvedValue(false);
 
     await expect(share()).rejects.toThrow(
-      "Sharing is only available on hosted OpenSEO.",
+      "Sharing is only available on hosted StarSeo.",
     );
     expect(mocks.setShareToken).not.toHaveBeenCalled();
     expect(mocks.getReport).not.toHaveBeenCalled();

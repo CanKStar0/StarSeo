@@ -26,19 +26,19 @@ function AboutPage() {
             {frontmatter.title}
           </h1>
           <p className="mt-5 text-lg leading-8 text-[var(--color-brand-muted)]">
-            Hey, I'm Ben, the founder of OpenSEO.
+            Hey, I'm Ben, the founder of StarSeo.
           </p>
         </div>
         <figure className="w-48 sm:w-full">
           <img
             src="/images/ben-founder.jpg"
-            alt="Ben, founder of OpenSEO"
+            alt="Ben, founder of StarSeo"
             width={1226}
             height={1224}
             className="h-auto w-full rounded-2xl"
           />
           <figcaption className="mt-3 text-sm text-[var(--color-brand-muted)]">
-            Ben · Founder, OpenSEO
+            Ben · Founder, StarSeo
           </figcaption>
         </figure>
       </header>
@@ -49,7 +49,7 @@ function AboutPage() {
 
       <section className="mt-10 border-t border-[var(--color-border-subtle)] pt-8">
         <h2 className="text-xl font-semibold tracking-tight text-neutral-950">
-          Follow OpenSEO
+          Follow StarSeo
         </h2>
         <p className="mt-2 text-sm leading-6 text-[var(--color-brand-muted)]">
           Find us on YouTube, X, LinkedIn, and Instagram.
@@ -60,10 +60,10 @@ function AboutPage() {
       </section>
 
       <a
-        href="https://app.openseo.so/sign-up"
+        href="https://starseo.canpolatkaya.com/sign-up"
         className="mt-8 inline-flex h-11 items-center justify-center rounded-lg bg-neutral-950 px-5 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
       >
-        Try OpenSEO
+        Try StarSeo
       </a>
     </article>
   );

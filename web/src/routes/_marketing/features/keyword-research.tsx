@@ -12,7 +12,7 @@ export const Route = createFileRoute("/_marketing/features/keyword-research")({
         "Open Source Keyword Research Tool with Live SERPs: Volume, Difficulty and Saved Lists",
       description: page.seoDescription ?? page.description,
       path: "/features/keyword-research",
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
       imageAlt: page.imageAlt,
     }),
   component: () => <FeaturePageTemplate page={page} />,

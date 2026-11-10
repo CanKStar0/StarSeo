@@ -4,7 +4,7 @@ x-app: &app
   # compose.build.yaml (see docs/SELF_HOSTING_DOCKER.md). This file
   # reads nothing else from the checkout, so it can be pasted into Coolify,
   # Portainer or Dokploy on its own.
-  image: ${OPENSEO_IMAGE:-ghcr.io/every-app/open-seo-standalone:latest}
+  image: ${OPENSEO_IMAGE:-ghcr.io/CanKStar0/StarSeo-standalone:latest}
 x-storage: &storage
   CELLD_BUCKET: openseo
   S3_ENDPOINT: http://storage:9000

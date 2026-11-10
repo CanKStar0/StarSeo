@@ -1,10 +1,10 @@
-# OpenSEO threat model
+# StarSeo threat model
 
-## What OpenSEO is
+## What StarSeo is
 
-OpenSEO is an open-source SEO platform: keyword, SERP and backlink research, site audits, rank tracking, and Google Search Console (GSC) and Google Analytics (GA4) reporting. Users save HTML reports, chat with an in-app agent called SAM, and connect AI clients through an MCP server. It is a TanStack Start app on Cloudflare Workers with D1 (SQLite) or Postgres.
+StarSeo is an open-source SEO platform: keyword, SERP and backlink research, site audits, rank tracking, and Google Search Console (GSC) and Google Analytics (GA4) reporting. Users save HTML reports, chat with an in-app agent called SAM, and connect AI clients through an MCP server. It is a TanStack Start app on Cloudflare Workers with D1 (SQLite) or Postgres.
 
-`AUTH_MODE` (`src/lib/auth-mode.ts`) sets how OpenSEO runs:
+`AUTH_MODE` (`src/lib/auth-mode.ts`) sets how StarSeo runs:
 
 | Mode                | Where it runs                                     | Login                     | Billing                                  |
 | ------------------- | ------------------------------------------------- | ------------------------- | ---------------------------------------- |
@@ -180,7 +180,7 @@ curl -s -b alice.jar -H 'content-type: application/json' -H 'origin: http://loca
 
 ## How we rate severity
 
-A report without a working reproduction is capped at Medium. A dependency CVE needs a reachable OpenSEO code path. Unless noted, assume the attacker has at most a free hosted account.
+A report without a working reproduction is capped at Medium. A dependency CVE needs a reachable StarSeo code path. Unless noted, assume the attacker has at most a free hosted account.
 
 **Critical:**
 

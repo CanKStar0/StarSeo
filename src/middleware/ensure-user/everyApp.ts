@@ -9,18 +9,18 @@ import { AppError } from "@/server/lib/errors";
 import { ensureUserRecord } from "./delegated";
 import type { EnsuredUserContext } from "./types";
 
-// The gateway's organization roles are OpenSEO's: owners and admins manage
+// The gateway's organization roles are StarSeo's: owners and admins manage
 // projects and integrations, members research. Anything else gets the least.
 const ROLES = new Set(["owner", "admin", "member"]);
 
 // AUTH_MODE=everyapp: the Every App gateway signs in the person, checks they
-// may open OpenSEO, and signs their identity onto every request it forwards.
+// may open StarSeo, and signs their identity onto every request it forwards.
 // Like Cloudflare Access mode, everyone the gateway lets in works in one
 // shared workspace; the install is pinned to its organization
 // (EVERY_APP_ORG_ID) and a token for any other organization is refused.
 // The role comes from the signed token on this request, never from a member
 // row: when the gateway removes a member, it stops signing tokens for them
-// and nothing in OpenSEO still lets them in.
+// and nothing in StarSeo still lets them in.
 export async function resolveEveryAppContext(
   headers: Headers,
 ): Promise<EnsuredUserContext> {
@@ -35,7 +35,7 @@ export async function resolveEveryAppContext(
     if (error instanceof ConfigurationError) {
       throw new AppError(
         "AUTH_CONFIG_MISSING",
-        `${error.message} Deploy OpenSEO to the gateway with \`everyapp deploy\`, or run it locally with \`pnpm dev:everyapp\`.`,
+        `${error.message} Deploy StarSeo to the gateway with \`everyapp deploy\`, or run it locally with \`pnpm dev:everyapp\`.`,
       );
     }
     console.error("Every App identity verification failed:", error);
@@ -45,7 +45,7 @@ export async function resolveEveryAppContext(
   return resolveEveryAppUserContext(user);
 }
 
-/** The OpenSEO user and workspace for a verified gateway identity. */
+/** The StarSeo user and workspace for a verified gateway identity. */
 export async function resolveEveryAppUserContext(
   user: EveryAppUser,
 ): Promise<EnsuredUserContext> {

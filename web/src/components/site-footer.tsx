@@ -15,7 +15,7 @@ export function SiteFooter({ className }: { className?: string }) {
   return (
     <div className={className}>
       <Link to="/" className="text-sm font-semibold text-neutral-900">
-        OpenSEO
+        StarSeo
       </Link>
       <p className="mt-1">
         Part of <a href="https://everyapp.com">EveryApp</a>
@@ -38,7 +38,7 @@ export function SiteFooter({ className }: { className?: string }) {
           <div>
             <p className="font-semibold text-neutral-900">AI agents</p>
             <div className="mt-2 flex flex-col gap-1.5">
-              <Link to="/features/mcp">OpenSEO MCP</Link>
+              <Link to="/features/mcp">StarSeo MCP</Link>
               <Link to="/google-search-console-mcp">
                 Google Search Console MCP
               </Link>
@@ -48,7 +48,7 @@ export function SiteFooter({ className }: { className?: string }) {
           <div>
             <p className="font-semibold text-neutral-900">Compare</p>
             <div className="mt-2 flex flex-col gap-1.5">
-              <Link to="/openseo-vs-dataforseo">OpenSEO vs DataForSEO</Link>
+              <Link to="/starseo-vs-dataforseo">StarSeo vs DataForSEO</Link>
               <Link to="/semrush-alternative">Semrush alternative</Link>
               <Link to="/semrush-pricing">Semrush pricing</Link>
               <Link to="/ahrefs-alternative">Ahrefs alternative</Link>
@@ -88,12 +88,12 @@ export function SiteFooter({ className }: { className?: string }) {
           <p className="font-semibold text-neutral-900">Company</p>
           <div className="mt-2 flex flex-col gap-1.5">
             <Link to="/about">About</Link>
-            <Link to="/why-openseo">Why OpenSEO</Link>
+            <Link to="/why-starseo">Why StarSeo</Link>
             <Link to="/support">Support</Link>
             <Link to="/roadmap">Roadmap</Link>
             <Link to="/pricing">Pricing</Link>
             <a
-              href="https://github.com/every-app/open-seo"
+              href="https://github.com/CanKStar0/StarSeo"
               target="_blank"
               rel="noopener noreferrer"
             >

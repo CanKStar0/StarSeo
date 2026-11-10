@@ -42,7 +42,7 @@ StarSeo is a modern, self-hosted SEO & GEO (Generative Engine Optimization) inte
                     ▼                                         ▼
        ┌─────────────────────────┐               ┌─────────────────────────┐
        │   StarSeo Core App      │               │   Umay Adapter Sidecar  │
-       │ (ghcr.io/.../open-seo)  ├──────────────►│    (Node 22 Container)   │
+       │   (Docker Container)    ├──────────────►│    (Node 22 Container)   │
        │       Port: 3001        │   Port: 4000  └────────────┬────────────┘
        └────────────┬────────────┘                            │
                     │                                         │

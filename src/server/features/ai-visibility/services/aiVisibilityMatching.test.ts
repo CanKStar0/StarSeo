@@ -7,7 +7,7 @@ import {
   ownedAiDomain,
 } from "./aiVisibilityMatching";
 
-const brand = { name: "OpenSEO", domain: "openseo.so", own: true };
+const brand = { name: "StarSeo", domain: "openseo.so", own: true };
 function answer(text: string, citedHosts: string[] = []): ParsedAiAnswer {
   return {
     answerMarkdown: text,
@@ -24,12 +24,12 @@ function answer(text: string, citedHosts: string[] = []): ParsedAiAnswer {
 
 describe("brand mentions", () => {
   it.each([
-    ["OpenSEO is an open-source toolkit.", 0],
-    ["OpenSEO's MCP supports research.", 0],
+    ["StarSeo is an open-source toolkit.", 0],
+    ["StarSeo's MCP supports research.", 0],
     ["Try openseo.so for audits.", 4],
     ["OpenSEOsomething and MyOpenSEO are different names.", null],
-    ["Links: https://openseo.so/OpenSEO and www.openseo.so/OpenSEO", null],
-    ["Email OpenSEO@example.com or help@openseo.so.", null],
+    ["Links: https://starseo.canpolatkaya.com/StarSeo and www.openseo.so/StarSeo", null],
+    ["Email StarSeo@example.com or help@openseo.so.", null],
     ["An unrelated toolkit has similar features.", null],
   ])("%s", (text, firstMention) => {
     expect(matchAiBrand(answer(text), brand)).toMatchObject({
@@ -70,12 +70,12 @@ describe("brand mentions", () => {
   });
 
   it("escapes regex syntax and keeps the longest overlapping name", () => {
-    const text = "C++ Tools and Open SEO Tools";
+    const text = "C++ Tools and StarSeo Tools";
     expect(
-      aiMentionSpans(text, ["C++ Tools", "Open SEO", "Open SEO Tools"]).map(
+      aiMentionSpans(text, ["C++ Tools", "StarSeo", "StarSeo Tools"]).map(
         (s) => text.slice(s.start, s.end),
       ),
-    ).toEqual(["C++ Tools", "Open SEO Tools"]);
+    ).toEqual(["C++ Tools", "StarSeo Tools"]);
   });
 });
 
@@ -101,8 +101,8 @@ describe("brand citations", () => {
 
 describe("branded prompt cohort", () => {
   it.each([
-    "What is OpenSEO?",
-    "Review https://openseo.so",
+    "What is StarSeo?",
+    "Review https://starseo.canpolatkaya.com",
     "What does www.openseo.so offer?",
     "Review docs.openseo.so/mcp",
   ])("includes %s", (prompt) => {
@@ -110,7 +110,7 @@ describe("branded prompt cohort", () => {
   });
   it.each([
     "Best open source SEO tools?",
-    "Review https://openseo.so.evil.example",
+    "Review https://starseo.canpolatkaya.com.evil.example",
     "Review https://notopenseo.so",
   ])("excludes %s", (prompt) => {
     expect(aiPromptIsBranded(prompt, brand)).toBe(false);

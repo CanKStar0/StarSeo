@@ -4,7 +4,7 @@ umask 077
 # Same check as run.sh: init runs celld too, and its log is the one people read.
 page_size=$(getconf PAGESIZE)
 if [ "$page_size" -gt 4096 ]; then
-  echo "This kernel uses ${page_size}-byte memory pages; the OpenSEO runtime needs 4 KiB pages. On a Raspberry Pi 5, add kernel=kernel8.img to /boot/firmware/config.txt and reboot. See docs/SELF_HOSTING_DOCKER.md#troubleshooting." >&2
+  echo "This kernel uses ${page_size}-byte memory pages; the StarSeo runtime needs 4 KiB pages. On a Raspberry Pi 5, add kernel=kernel8.img to /boot/firmware/config.txt and reboot. See docs/SELF_HOSTING_DOCKER.md#troubleshooting." >&2
   exit 1
 fi
 # See run.sh: RustFS requires x-amz-content-sha256 on every SigV4 request.
@@ -38,10 +38,10 @@ done
 curl -fsS -X POST http://127.0.0.1:8081/reload >/dev/null
 for attempt in $(seq 1 90); do
   if curl -fsS http://127.0.0.1:8080/api/health >/dev/null; then
-    echo 'OpenSEO initialized and ready.'
+    echo 'StarSeo initialized and ready.'
     exit 0
   fi
   sleep 1
 done
-echo 'OpenSEO did not become ready; inspect runtime logs.' >&2
+echo 'StarSeo did not become ready; inspect runtime logs.' >&2
 exit 1

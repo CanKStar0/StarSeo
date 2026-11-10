@@ -12,7 +12,7 @@ export const Route = createFileRoute("/_marketing/features/saved-keywords")({
         "Keyword Manager: Save, Tag and Export SEO Keyword Lists with Volume and Difficulty",
       description: page.seoDescription ?? page.description,
       path: "/features/saved-keywords",
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
       imageAlt: page.imageAlt,
     }),
   component: () => <FeaturePageTemplate page={page} />,

@@ -1,6 +1,6 @@
 ---
 title: "State of Rank Tracking: November 2026"
-description: "Google made two changes this fall that affect every rank tracker. Here's what happened, and what we're changing in OpenSEO."
+description: "Google made two changes this fall that affect every rank tracker. Here's what happened, and what we're changing in StarSeo."
 author: "Carter Smith"
 date: "2026-11-04"
 ---
@@ -9,7 +9,7 @@ If your rankings have looked jumpy this fall, it’s most likely because of chan
 
 Even with these changes, we want to deliver the best possible experience to you. We’ve modified our rank tracking process, so here is what to expect from us:
 
-- OpenSEO now looks at every keyword at least three times per check.
+- StarSeo now looks at every keyword at least three times per check.
 - Positions should be much more consistent from one check to the next.
 - Checks take about an hour and cost more.
 
@@ -30,7 +30,7 @@ In October, we added extra checks for rank tracking keywords, but only for those
 Now:
 
 - Every keyword gets three checks on every device, a few minutes apart.
-- If a check misses your page, or the positions differ by more than 2 places, OpenSEO keeps looking, up to six times.
+- If a check misses your page, or the positions differ by more than 2 places, StarSeo keeps looking, up to six times.
 - The best position wins.
 
 ## What checks are like now
@@ -44,7 +44,7 @@ In order to give you more trustworthy results, the time it takes for a manual ra
 
 ### Scheduled checks
 
-Nothing changes in how you use these. They run at the time you choose, and the new positions are there the next time you open OpenSEO.
+Nothing changes in how you use these. They run at the time you choose, and the new positions are there the next time you open StarSeo.
 
 ### Cost
 
@@ -68,7 +68,7 @@ Every tracker is dealing with the same Google changes. Here's what some of the l
 ## What this won't fix
 
 - Google may change this again, and we'll keep adapting.
-- Results still vary by location, device, and time, so OpenSEO won't always match what you see in your browser.
+- Results still vary by location, device, and time, so StarSeo won't always match what you see in your browser.
 - If you are ever doubting your rankings, check [Google Search Console](/blogs/google-search-console-setup), which comes straight from Google and isn't affected by any of this.
 
 ## Do I need to do anything?

@@ -19,10 +19,10 @@ import { featurePages } from "@/lib/feature-pages";
 import { getAgentSetupPrompt } from "../../../src/client/features/ai-mcp/agentSetupPrompt";
 import "./landing-page.css";
 
-export const SIGNUP_URL = "https://app.openseo.so/sign-up";
+export const SIGNUP_URL = "https://starseo.canpolatkaya.com/sign-up";
 export const PRODUCT_HUNT_URL =
   "https://www.producthunt.com/products/openseo?launch=openseo";
-const GITHUB_URL = "https://github.com/every-app/open-seo";
+const GITHUB_URL = "https://github.com/CanKStar0/StarSeo";
 const DISCORD_URL = "https://discord.gg/c9uGs3cFXr";
 
 export type Testimonial = {
@@ -40,7 +40,7 @@ export type Testimonial = {
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "All of the value, none of the bloat. OpenSEO is a no-brainer compared to the expensive alternatives!",
+      "All of the value, none of the bloat. StarSeo is a no-brainer compared to the expensive alternatives!",
     name: "Fed",
     initial: "F",
     handle: "@foliofed",
@@ -50,7 +50,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "I've been using OpenSEO for the past 3 months, Ben keeps launching features to make it the best. I use it every day to find where my competitors are ranking.",
+      "I've been using StarSeo for the past 3 months, Ben keeps launching features to make it the best. I use it every day to find where my competitors are ranking.",
     name: "Samik",
     initial: "S",
     handle: "Subclip",
@@ -60,7 +60,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "It's so straightforward and incredibly easy to get started. OpenSEO gives you the complete setup, stripped of all the fluff that you get elsewhere.",
+      "It's so straightforward and incredibly easy to get started. StarSeo gives you the complete setup, stripped of all the fluff that you get elsewhere.",
     name: "Tom Raine",
     initial: "T",
     handle: "LinkedIn",
@@ -237,7 +237,7 @@ function Hero() {
             className="itc-subhead itc-muted itc-hero-subtitle"
             style={{ maxWidth: 640, margin: "24px auto 0" }}
           >
-            Connect your favorite AI agent in 2 minutes. OpenSEO gives the data,
+            Connect your favorite AI agent in 2 minutes. StarSeo gives the data,
             tools and integrations you need to grow your business's organic
             traffic.
           </p>
@@ -388,7 +388,7 @@ function DemoVideo() {
         playsInline
         controls={playing}
         preload="metadata"
-        aria-label="OpenSEO product demo: keyword research, backlinks, site audit, and an agent report"
+        aria-label="StarSeo product demo: keyword research, backlinks, site audit, and an agent report"
         onPlay={() => setPlaying(true)}
       >
         <source src="/demo.mp4" type="video/mp4" />
@@ -409,7 +409,7 @@ function DemoVideo() {
             });
             void video.play();
           }}
-          aria-label="Play the OpenSEO demo video"
+          aria-label="Play the StarSeo demo video"
         >
           <span className="itc-demo-play-button" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
@@ -512,7 +512,7 @@ export function SkillsList() {
   );
 }
 
-const SETUP_PROMPT = getAgentSetupPrompt("https://app.openseo.so");
+const SETUP_PROMPT = getAgentSetupPrompt("https://starseo.canpolatkaya.com");
 
 export function CopySetupPrompt({ size = "md" }: { size?: "md" | "lg" }) {
   const [toast, setToast] = useState<string | null>(null);
@@ -978,7 +978,7 @@ const BEYOND_DATA = [
   },
   {
     title: "Project Context",
-    body: "As you use the OpenSEO skills, your agent saves what it learns about your business and how you like to write. No repeating yourself every session.",
+    body: "As you use the StarSeo skills, your agent saves what it learns about your business and how you like to write. No repeating yourself every session.",
     icons: [{ name: "Saved context", Icon: IconNotebook }],
   },
   {
@@ -987,7 +987,7 @@ const BEYOND_DATA = [
     icons: [{ name: "Agent report", Icon: IconReport }],
     link: {
       label: "See an example report",
-      href: "https://app.openseo.so/s/QEZZWxoLl4TpzhKxeiNRGuM_Hj15eUzY",
+      href: "https://starseo.canpolatkaya.com/s/QEZZWxoLl4TpzhKxeiNRGuM_Hj15eUzY",
     },
   },
 ];
@@ -999,7 +999,7 @@ export function BeyondDataSection() {
         <div className="itc-narrow">
           <h2 className="itc-display-lg">Beyond data</h2>
           <p className="itc-subhead itc-muted" style={{ margin: "20px 0 0" }}>
-            An SEO tool is nothing without quality data. That&apos;s why OpenSEO
+            An SEO tool is nothing without quality data. That&apos;s why StarSeo
             uses{" "}
             <a
               href="https://dataforseo.com/?aff=255379"
@@ -1060,7 +1060,7 @@ export function OpenSourceSection() {
           <p className="itc-subhead itc-muted" style={{ margin: "20px 0 0" }}>
             People should have the option to self-host and customize their
             tools. If you ever hear someone talking about building their own
-            tool from scratch, tell them to build on top of OpenSEO.
+            tool from scratch, tell them to build on top of StarSeo.
           </p>
         </div>
 
@@ -1158,7 +1158,7 @@ export function LandingPage() {
         target="_blank"
         rel="noopener noreferrer"
         className="itc-discord"
-        aria-label="Join the OpenSEO Discord"
+        aria-label="Join the StarSeo Discord"
       >
         <IconDiscord size={18} />
         <span>Discord</span>

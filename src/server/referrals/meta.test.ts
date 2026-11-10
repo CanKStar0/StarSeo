@@ -29,7 +29,7 @@ vi.mock("@/server/lib/posthog", () => ({ captureServerError: vi.fn() }));
 const fetchMock = vi.fn<typeof fetch>();
 
 function browserRequest(headers: Record<string, string>) {
-  return new Request("https://app.openseo.so/api/auth/sign-up/email", {
+  return new Request("https://starseo.canpolatkaya.com/api/auth/sign-up/email", {
     headers: { cookie: "_fbp=fb.1.1.1", ...headers },
   });
 }

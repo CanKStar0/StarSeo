@@ -1,6 +1,6 @@
 name: Deploy website
 
-# Deploys web/ (the openseo.so marketing site, worker `open-seo-landing`).
+# Deploys web/ (the openseo.so marketing site, worker `StarSeo-landing`).
 # Maintainer setup: docs/maintainers/production-deployment.md
 on:
   push:
@@ -23,14 +23,14 @@ jobs:
     # The public mirror must not deploy. Only main may use the production
     # environment's credentials.
     if: >-
-      (github.repository == 'bensenescu/open-seo' ||
-      github.repository == 'every-app/private-open-seo') &&
+      (github.repository == 'CanKStar0/StarSeo' ||
+      github.repository == 'every-app/private-StarSeo') &&
       github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     environment:
       name: production
-      url: https://openseo.so
+      url: https://starseo.canpolatkaya.com
     defaults:
       run:
         working-directory: web

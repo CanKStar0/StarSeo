@@ -201,7 +201,7 @@ export function WebsiteTrafficCheckerTool() {
           ) : null}
           <UpsellCard tool={TOOL} cta="Explore more keywords and pages">
             The free checker shows the top 5 keywords and pages per domain.
-            OpenSEO lets you browse more keywords and pages, filter the results,
+            StarSeo lets you browse more keywords and pages, filter the results,
             and save keywords for rank tracking.
           </UpsellCard>
         </div>

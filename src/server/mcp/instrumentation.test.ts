@@ -47,7 +47,7 @@ const authContext: ToolAuthContext = {
   role: "owner",
   clientId: "client-1",
   scopes: ["mcp"],
-  baseUrl: "https://app.openseo.so",
+  baseUrl: "https://starseo.canpolatkaya.com",
 };
 
 const toolContext: ToolContext = { auth: authContext };
@@ -103,7 +103,7 @@ describe("instrumentMcpToolHandler", () => {
     });
 
     await expect(wrapped({}, toolContext)).rejects.toThrow(
-      "The organization owner can add credits at https://app.openseo.so/billing",
+      "The organization owner can add credits at https://starseo.canpolatkaya.com/billing",
     );
   });
 

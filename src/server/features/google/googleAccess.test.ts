@@ -33,7 +33,7 @@ afterEach(() => {
 });
 
 describe("Google behind an Every App gateway", () => {
-  it("uses no Google client of OpenSEO's own, even when one is set", async () => {
+  it("uses no Google client of StarSeo's own, even when one is set", async () => {
     Object.assign(workerEnv, { AUTH_MODE: "everyapp", ...GOOGLE_CLIENT });
 
     expect(await getGoogleAccessMode()).toBe("gateway");
@@ -41,7 +41,7 @@ describe("Google behind an Every App gateway", () => {
     expect(await hasGoogleOAuthConfig()).toBe(false);
   });
 
-  it("answers OpenSEO's own Search Console and Analytics callbacks with 404", async () => {
+  it("answers StarSeo's own Search Console and Analytics callbacks with 404", async () => {
     Object.assign(workerEnv, { AUTH_MODE: "everyapp", ...GOOGLE_CLIENT });
 
     for (const integration of [GSC_INTEGRATION, GA4_INTEGRATION]) {
@@ -56,7 +56,7 @@ describe("Google behind an Every App gateway", () => {
     expect(resolveUser).not.toHaveBeenCalled();
   });
 
-  it("keeps OpenSEO's own client in the other modes", async () => {
+  it("keeps StarSeo's own client in the other modes", async () => {
     Object.assign(workerEnv, {
       AUTH_MODE: "cloudflare_access",
       ...GOOGLE_CLIENT,

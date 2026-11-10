@@ -1,13 +1,13 @@
 ---
-title: "Introducing AI Visibility in OpenSEO"
-description: "OpenSEO now finds questions people ask about your market, compares answers across models, and tracks whether ChatGPT, Gemini, and Google AI Overviews mention your brand or cite your site. Tracking costs $0.002 per answer."
+title: "Introducing AI Visibility in StarSeo"
+description: "StarSeo now finds questions people ask about your market, compares answers across models, and tracks whether ChatGPT, Gemini, and Google AI Overviews mention your brand or cite your site. Tracking costs $0.002 per answer."
 author: "Carter Smith"
 date: "2026-10-05"
 ---
 
 More of your customers ask ChatGPT what to buy before they ever see a search results page. None of those conversations show up in Search Console. Unless they pay for a separate AI tracking tool, most teams type the question in themselves and hope the answer they got was typical.
 
-Today we're launching AI visibility in OpenSEO. It finds questions people ask about your market and shows you what each AI model says. It tracks whether ChatGPT, Gemini, and Google AI Overviews mention your brand or link to your site, and which competitors they recommend instead. Tracking costs $0.002 per answer, on the same $10/month plan as everything else in OpenSEO.
+Today we're launching AI visibility in StarSeo. It finds questions people ask about your market and shows you what each AI model says. It tracks whether ChatGPT, Gemini, and Google AI Overviews mention your brand or link to your site, and which competitors they recommend instead. Tracking costs $0.002 per answer, on the same $10/month plan as everything else in StarSeo.
 
 There are three new pages in your project sidebar: Prompt Research, Prompt Explorer, and Prompt Tracking. The screenshots below follow Bitwarden, the open source password manager.
 
@@ -23,7 +23,7 @@ Prompt Research covers US English for now, and each keyword costs about $0.25 to
 
 ## See what each model says
 
-Prompt Explorer runs one prompt through any mix of ChatGPT, Claude, Gemini, and Perplexity and shows the answers side by side. You get each full answer, the sources each model cited, and the related searches it ran while answering. Add your brand name and OpenSEO flags which answers mention you. We've updated Prompt Explorer to use the latest models from each provider, so the answers you compare are accurate to what those models say today.
+Prompt Explorer runs one prompt through any mix of ChatGPT, Claude, Gemini, and Perplexity and shows the answers side by side. You get each full answer, the sources each model cited, and the related searches it ran while answering. Add your brand name and StarSeo flags which answers mention you. We've updated Prompt Explorer to use the latest models from each provider, so the answers you compare are accurate to what those models say today.
 
 ![Prompt Explorer running "What's the best free password manager?" across ChatGPT, Claude, Gemini, and Perplexity with web search on and Bitwarden highlighted. The ChatGPT answer carries a Bitwarden badge and opens with "Bitwarden is the best free password manager for most people."](/blog/ai-visibility-in-openseo/prompt-explorer.png)
 
@@ -35,7 +35,7 @@ Prompt Tracking is similar to rank tracking: set up a schedule for the prompts y
 
 ![The Prompts tab in Prompt Tracking for Bitwarden: prompts grouped under "Switching and teams" and "Choosing a password manager", each checked on ChatGPT, Gemini, and Google AI Overviews. Brand mentions are near 100% while owned citations range from 33% to 67%.](/blog/ai-visibility-in-openseo/prompt-tracking.png)
 
-For every answer, OpenSEO records two things separately:
+For every answer, StarSeo records two things separately:
 
 - **Brand mention:** did the answer name you?
 - **Owned citation:** did the answer link to your website?
@@ -50,13 +50,13 @@ The **Citations** tab lists every page the latest answers cited, grouped by page
 
 ![The Citations tab grouped by domain: bitwarden.com is cited in 16 answers, followed by third-party sites allaboutcookies.org, youtube.com, and reddit.com, competitor 1password.com, then security.org, passwordmanager.com, and pcmag.com, with a per-engine breakdown for each.](/blog/ai-visibility-in-openseo/citations.png)
 
-AI answers vary from run to run. Ask the same question twice and you can get two different lists of brands, so judge your visibility by the trend over a few weeks, not by one check. When a check fails, OpenSEO marks it as failed and leaves it out of your rates instead of counting it against you.
+AI answers vary from run to run. Ask the same question twice and you can get two different lists of brands, so judge your visibility by the trend over a few weeks, not by one check. When a check fails, StarSeo marks it as failed and leaves it out of your rates instead of counting it against you.
 
 ## What it costs
 
 Each tracked answer costs $0.002. Twenty prompts checked on ChatGPT and Gemini is 40 answers, or $0.08 per check. Weekly, that's about $0.32 a month. Daily, about $2.40. Either fits inside the $10 plan's included credits with plenty left for keyword research, rank tracking, and audits.
 
-Setup research and generated prompt suggestions use a small amount of credits. On hosted OpenSEO, Prompt Research and Prompt Explorer need the paid plan; Prompt Tracking only needs credits. If you self-host, you pay [DataForSEO](https://dataforseo.com) and OpenRouter directly at their rates. The full breakdown is on the [pricing page](/pricing).
+Setup research and generated prompt suggestions use a small amount of credits. On hosted StarSeo, Prompt Research and Prompt Explorer need the paid plan; Prompt Tracking only needs credits. If you self-host, you pay [DataForSEO](https://dataforseo.com) and OpenRouter directly at their rates. The full breakdown is on the [pricing page](/pricing).
 
 ## Where the answers come from
 
@@ -64,9 +64,9 @@ Tracking collects answers from the consumer versions of ChatGPT and Gemini, the 
 
 ## Use it from your AI agent
 
-Everything above is also available through [OpenSEO MCP](/docs/mcp), so Claude, Codex, Cursor, or any other MCP client can research prompts, compare models, set up tracking, and read your results. Reading results costs nothing. Before a paid check or schedule, the agent has to get a cost quote and pass along the spending limit you approved, so it can't start paid tracking without a price attached.
+Everything above is also available through [StarSeo MCP](/docs/mcp), so Claude, Codex, Cursor, or any other MCP client can research prompts, compare models, set up tracking, and read your results. Reading results costs nothing. Before a paid check or schedule, the agent has to get a cost quote and pass along the spending limit you approved, so it can't start paid tracking without a price attached.
 
-We're also shipping two agent skills with the [OpenSEO plugin](/docs/claude-code-plugin):
+We're also shipping two agent skills with the [StarSeo plugin](/docs/claude-code-plugin):
 
 - [AI Prompt Research](/docs/skills/ai-prompt-research) finds questions people ask about your market and which sites ChatGPT's answers cite.
 - [AI Visibility Audit](/docs/skills/ai-visibility-audit) looks at why competitors appear where you don't and what to change.
@@ -74,7 +74,7 @@ We're also shipping two agent skills with the [OpenSEO plugin](/docs/claude-code
 In Claude Code:
 
 ```text
-/plugin marketplace add every-app/open-seo
+/plugin marketplace add CanKStar0/StarSeo
 /plugin install openseo@openseo
 ```
 
@@ -84,6 +84,6 @@ Then ask:
 
 ## Get started
 
-Open a project in [OpenSEO](https://app.openseo.so) and go to **Prompt Tracking**. If AI visibility isn't set up for the project yet, click **Start research**: OpenSEO researches your website, fills in any missing business overview and competitors for you to review, and drafts a few topics with starter prompts. Nothing gets checked until you click **Run now** or start a schedule.
+Open a project in [StarSeo](https://starseo.canpolatkaya.com) and go to **Prompt Tracking**. If AI visibility isn't set up for the project yet, click **Start research**: StarSeo researches your website, fills in any missing business overview and competitors for you to review, and drafts a few topics with starter prompts. Nothing gets checked until you click **Run now** or start a schedule.
 
 The [AI Visibility guide](/docs/ai-visibility) walks through every setting. If something doesn't work the way you expect, [tell us](/support).

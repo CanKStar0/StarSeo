@@ -17,10 +17,10 @@ export const UNEXPECTED_ERROR_MESSAGE = isHostedClientAuthMode()
 const STANDARD_MESSAGES: Record<ErrorCode, string> = {
   UNAUTHENTICATED: "Please sign in and try again.",
   AUTH_CONFIG_MISSING: isEveryAppClientAuthMode()
-    ? "OpenSEO can't reach your Every App gateway for this right now. An owner or admin can check its setup with pnpm everyapp status."
-    : "OpenSEO auth is not configured. Follow the README setup steps for Cloudflare Access.",
+    ? "StarSeo can't reach your Every App gateway for this right now. An owner or admin can check its setup with pnpm everyapp status."
+    : "StarSeo auth is not configured. Follow the README setup steps for Cloudflare Access.",
   PAYMENT_REQUIRED:
-    "An active hosted subscription is required before you can use OpenSEO.",
+    "An active hosted subscription is required before you can use StarSeo.",
   INSUFFICIENT_CREDITS:
     "You don't have enough credits for this. Upgrade your plan or buy more credits to keep going.",
   PAYMENT_METHOD_REQUIRED:

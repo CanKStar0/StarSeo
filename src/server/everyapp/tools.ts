@@ -21,18 +21,18 @@ import {
   type ToolSchema,
 } from "@/server/mcp/server";
 
-// OpenSEO's MCP tools, served by the Every App gateway: its one MCP
+// StarSeo's MCP tools, served by the Every App gateway: its one MCP
 // connector lists them as `openseo_<tool>` beside every other app's, and this
 // app's own host serves them under their names. The gateway signs in the
 // person, applies the connection's read-only or read-write choice, and calls
-// a tool here with a verified identity; OpenSEO never speaks MCP for it.
+// a tool here with a verified identity; StarSeo never speaks MCP for it.
 
 const INSTRUCTIONS =
-  "OpenSEO's research tools call DataForSEO, which bills this organization's DataForSEO account per request through the gateway. Start with list_projects: most tools take a projectId. Ask before planned batches of more than a few hundred keywords or pages.";
+  "StarSeo's research tools call DataForSEO, which bills this organization's DataForSEO account per request through the gateway. Start with list_projects: most tools take a projectId. Ask before planned batches of more than a few hundred keywords or pages.";
 
 /**
  * Read or write, never destructive: the gateway hides destructive tools from
- * AI clients until it has an approval step, and every OpenSEO tool should
+ * AI clients until it has an approval step, and every StarSeo tool should
  * reach them, deletes included.
  */
 function riskOf(tool: OpenSeoToolDefinition<ToolSchema>): ToolRisk {
@@ -98,7 +98,7 @@ function everyAppTool<Input extends ToolSchema>(
           );
         });
       } catch (error) {
-        // What OpenSEO's MCP server shows an agent; anything else stays a
+        // What StarSeo's MCP server shows an agent; anything else stays a
         // masked internal error with a reference.
         const appError = asAppError(error);
         if (appError) throw new ToolError(appError.message);

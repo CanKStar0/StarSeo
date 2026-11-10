@@ -12,7 +12,7 @@ import { createOpenSeoOAuthProvider } from "./oauth-provider";
 // clients before (PR #420); these tests pin the full register → authorize →
 // consent → token → use → refresh chain.
 
-const BASE = "https://app.openseo.so";
+const BASE = "https://starseo.canpolatkaya.com";
 const MCP_RESOURCE = `${BASE}/mcp`;
 
 vi.mock("cloudflare:workers", () => ({
@@ -27,7 +27,7 @@ vi.mock("cloudflare:workers", () => ({
 }));
 
 vi.mock("@/lib/auth", () => ({
-  getHostedBaseUrl: () => "https://app.openseo.so",
+  getHostedBaseUrl: () => "https://starseo.canpolatkaya.com",
 }));
 
 vi.mock("@/middleware/ensure-user/hosted", () => ({
@@ -346,7 +346,7 @@ describe("Codex-style OAuth token refresh (real workers-oauth-provider)", () => 
       .parse(await expired.json());
     expect(body.error).toBe("invalid_grant");
     expect(body.error_description).toContain(
-      "https://openseo.so/docs/agent-setup",
+      "https://starseo.canpolatkaya.com/docs/agent-setup",
     );
   });
 

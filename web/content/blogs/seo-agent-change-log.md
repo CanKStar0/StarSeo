@@ -7,11 +7,11 @@ date: "2026-10-15"
 
 If you ask [Claude Code](/blogs/how-to-prompt-claude-code-for-seo) or Codex to "analyze my site for SEO and fix things" every week, it will eventually start undoing its own work. Every run starts from zero. It doesn't know which pages it edited last week, whether those edits helped, or that the post it wants to write competes with a page you already have.
 
-[Moazzan Ishfaq](https://moazzanishfaq.com) ran into all of this as CTO of [Importivity](https://importivity.com), an Austin company that helps US businesses move their supply chains to China, Vietnam and Mexico. He [forked OpenSEO and built an SEO engine on top of it](/blogs/replace-seo-agency-with-ai), and grew the site's organic clicks about 7x in six months. Along the way, Importivity fired the SEO agency it had been paying $3,000 a month.
+[Moazzan Ishfaq](https://moazzanishfaq.com) ran into all of this as CTO of [Importivity](https://importivity.com), an Austin company that helps US businesses move their supply chains to China, Vietnam and Mexico. He [forked StarSeo and built an SEO engine on top of it](/blogs/replace-seo-agency-with-ai), and grew the site's organic clicks about 7x in six months. Along the way, Importivity fired the SEO agency it had been paying $3,000 a month.
 
 His engine runs on five rules. You can set up most of them today without forking anything, using the change-log format and the two prompts below.
 
-The prompts assume [OpenSEO MCP](/docs/mcp) is connected, so your agent can read Search Console and save reports. The [Claude Code](/docs/claude-code-plugin) and [Codex](/docs/codex-plugin) plugins set it up with all 12 skills.
+The prompts assume [StarSeo MCP](/docs/mcp) is connected, so your agent can read Search Console and save reports. The [Claude Code](/docs/claude-code-plugin) and [Codex](/docs/codex-plugin) plugins set it up with all 12 skills.
 
 ## Why does my SEO agent keep redoing its own work?
 
@@ -38,11 +38,11 @@ The other rules depend on this one. Every time Moazzan's agent changes the site,
 
 "Now I'm only targeting the pages that are not touched in the previous update, so everything has gotten really consistent," he said. Before, the AI "was just randomly auditing my site every week and making updates." He says it now works like an employee who checks the relevant pages every week.
 
-We built OpenSEO's [project context](/docs/skills/seo-project-setup) for this exact problem. It stores your business, goals, competitors, key pages and a log of research already done, and agents read it before they start. When I showed it to Moazzan, he said, "It's exactly the same problem I was in." Giving an agent a memory it reads every run is one of the habits in [Skills, memory and the trace](/library/ai-agent-seo/skills-memory-and-the-trace).
+We built StarSeo's [project context](/docs/skills/seo-project-setup) for this exact problem. It stores your business, goals, competitors, key pages and a log of research already done, and agents read it before they start. When I showed it to Moazzan, he said, "It's exactly the same problem I was in." Giving an agent a memory it reads every run is one of the habits in [Skills, memory and the trace](/library/ai-agent-seo/skills-memory-and-the-trace).
 
-But a research log entry is a one-line summary, and a change log needs baselines and check results. I told Moazzan he's on the right track: reports are the better home for this, and his report-per-change approach is where I want OpenSEO's reports to go.
+But a research log entry is a one-line summary, and a change log needs baselines and check results. I told Moazzan he's on the right track: reports are the better home for this, and his report-per-change approach is where I want StarSeo's reports to go.
 
-Your agent saves a [report](/docs/skills/seo-report) to your OpenSEO project in one tool call, and the next run reads the summaries before it touches anything. Have each entry record what changed, why, a 28-day baseline, how to undo it and when the page unlocks. Reports don't have tags yet (I want to add them), so start every title with "Change log" and the date. Saving over a report replaces it with no version history, so have each run save a new one.
+Your agent saves a [report](/docs/skills/seo-report) to your StarSeo project in one tool call, and the next run reads the summaries before it touches anything. Have each entry record what changed, why, a 28-day baseline, how to undo it and when the page unlocks. Reports don't have tags yet (I want to add them), so start every title with "Change log" and the date. Saving over a report replaces it with no version history, so have each run save a new one.
 
 ## 2. Lock a page for 30 days after it changes
 
@@ -50,7 +50,7 @@ Once Moazzan's system edits a page, that page is locked for 30 days. "If you mak
 
 Google has to recrawl and re-rank a page before anything moves in Search Console, so a page your agent rewrites every Monday never gets a clean read.
 
-OpenSEO doesn't lock pages, and it doesn't natively edit your site yet. Your agent makes the edits through your CMS or repo, so the lock is a rule in your project context, and your change logs tell it which pages are off limits.
+StarSeo doesn't lock pages, and it doesn't natively edit your site yet. Your agent makes the edits through your CMS or repo, so the lock is a rule in your project context, and your change logs tell it which pages are off limits.
 
 If your site lives in a git repo, give the agent a check it can't misremember. `git log --since="30 days ago" -- path/to/page` shows whether that page's file changed in the last 30 days.
 
@@ -72,22 +72,22 @@ Weak rankings count, and two pages chasing the same query is [keyword cannibaliz
 
 Search Console shows the queries your pages get impressions for, even at position 50. [Mining your own Search Console](/library/keyword-research/gsc-programmatic-discovery) covers how to find these. Before your agent proposes a page, have it pull the queries for the topic and the pages that show up for them. If one of your pages shows up, improve it instead, or wait if it's locked.
 
-OpenSEO's ranked keywords tool gives a second view from DataForSEO's data, and the [Keyword Clustering skill](/docs/skills/keyword-clustering) maps keywords to existing or proposed pages.
+StarSeo's ranked keywords tool gives a second view from DataForSEO's data, and the [Keyword Clustering skill](/docs/skills/keyword-clustering) maps keywords to existing or proposed pages.
 
 ## 5. Pull in current facts before writing
 
 Moazzan's engine pulls the latest news on a topic before it writes. For a post about tariffs or duties, "we pull the latest news about it and feed them in."
 
-OpenSEO doesn't write posts, so this rule lives in your project context with the others. Claude Code and Codex can search the web themselves, and the rule tells them to cite what they find. You still review the draft; [Human in the loop content](/library/ai-agent-seo/human-in-the-loop-content) covers what that review should catch.
+StarSeo doesn't write posts, so this rule lives in your project context with the others. Claude Code and Codex can search the web themselves, and the rule tells them to cite what they find. You still review the draft; [Human in the loop content](/library/ai-agent-seo/human-in-the-loop-content) covers what that review should catch.
 
-## How to set this up in OpenSEO
+## How to set this up in StarSeo
 
-Connect Search Console first. On hosted OpenSEO, click Connect Search Console and pick your property ([how the Search Console MCP works](/google-search-console-mcp)).
+Connect Search Console first. On hosted StarSeo, click Connect Search Console and pick your property ([how the Search Console MCP works](/google-search-console-mcp)).
 
 Then paste this into Claude Code or Codex once:
 
 ```
-Add a custom section called "Change rules" to this project's OpenSEO context with this text:
+Add a custom section called "Change rules" to this project's StarSeo context with this text:
 
 1. Before changing anything, read every report titled "Change log" from the last 45 days.
 2. Don't edit any page changed in the last 30 days.
@@ -109,7 +109,7 @@ Checks due:
 Then run this each week:
 
 ```
-Weekly SEO run for this project, using OpenSEO.
+Weekly SEO run for this project, using StarSeo.
 
 1. Read the project context and follow the "Change rules" section.
 2. Read the change logs from the last 45 days. List the locked pages and the changes due for a check.
@@ -122,9 +122,9 @@ Approving reverts and changes yourself is deliberate: [What to automate and what
 
 Keep batches small. A report summary holds 2,500 characters, and with fewer changes it's clearer which one worked.
 
-## Want a hard lock and automatic reverts? Fork OpenSEO
+## Want a hard lock and automatic reverts? Fork StarSeo
 
-The setup above relies on your agent following rules. If you want pages that can't be edited and changes that revert on their own, build them the way Moazzan did. OpenSEO is [open source](https://github.com/every-app/open-seo) under the MIT license.
+The setup above relies on your agent following rules. If you want pages that can't be edited and changes that revert on their own, build them the way Moazzan did. StarSeo is [open source](https://github.com/CanKStar0/StarSeo) under the MIT license.
 
 Moazzan had tried building an SEO tool from scratch before, at the agency he worked for in late 2023. Two developers spent three months on it, and "it just ended miserably." With the fork, he only had to build what Importivity needed: "Anytime I felt that I needed something, I just built it." [Our other post on Importivity](/blogs/replace-seo-agency-with-ai) covers the rest of what he built.
 
@@ -134,9 +134,9 @@ If you build something better on your fork, tell us.
 
 ## FAQ
 
-### Does OpenSEO lock pages or revert changes?
+### Does StarSeo lock pages or revert changes?
 
-No. OpenSEO doesn't natively edit your site yet (it's planned). Your own agent makes the changes, for example through the [WordPress MCP adapter](https://github.com/WordPress/mcp-adapter) or your site's repo, and the lock and revert are rules it reads from project context. To enforce them in code, fork OpenSEO.
+No. StarSeo doesn't natively edit your site yet (it's planned). Your own agent makes the changes, for example through the [WordPress MCP adapter](https://github.com/WordPress/mcp-adapter) or your site's repo, and the lock and revert are rules it reads from project context. To enforce them in code, fork StarSeo.
 
 ### Does this weekly loop use credits?
 

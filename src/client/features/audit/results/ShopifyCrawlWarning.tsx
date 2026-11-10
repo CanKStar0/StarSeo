@@ -189,7 +189,7 @@ export function ShopifyCrawlWarning({
               Shopify rate-limits crawlers it hasn't authorized, so parts of
               this report are missing.
               {canStoreCrawlerAccess
-                ? " If you own this store, authorizing OpenSEO takes about a minute."
+                ? " If you own this store, authorizing StarSeo takes about a minute."
                 : null}
             </p>
           </>

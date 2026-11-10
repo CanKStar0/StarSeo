@@ -163,7 +163,7 @@ export async function eraseAccountStorage(
     await samChat.get(samChat.idFromName(sessionId)).destroyForErasure();
   }
   for (const auditId of payload.auditIds) {
-    // The scratchpad DO lives in the open-seo-audit worker; destroy is the
+    // The scratchpad DO lives in the StarSeo-audit worker; destroy is the
     // same full wipe destroyForErasure performs.
     await env.AUDIT_ENGINE.destroyScratchpad(auditId);
     await env.KV.delete(`audit-progress:${auditId}`);

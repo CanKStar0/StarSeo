@@ -88,7 +88,7 @@ export async function displayWidgetResult(
     );
   }
   const result = mcpResponse({
-    text: "Showing the saved OpenSEO results.",
+    text: "Showing the saved StarSeo results.",
     meta: { projectId: args.projectId },
     structuredContent: { displayed: true, resultId: args.resultId },
   });

@@ -23,7 +23,7 @@ export function SamSetupGate({
         <>
           {isEveryAppClientAuthMode() ? (
             <p>
-              SAM, OpenSEO&apos;s in-app AI agent, uses OpenRouter through your
+              SAM, StarSeo&apos;s in-app AI agent, uses OpenRouter through your
               Every App gateway. An admin creates a key on OpenRouter and sets
               it on the gateway with{" "}
               <code>pnpm everyapp secret set OPENROUTER_API_KEY</code>, then
@@ -31,10 +31,10 @@ export function SamSetupGate({
             </p>
           ) : (
             <p>
-              SAM, OpenSEO&apos;s in-app AI agent, needs an OpenRouter API key.
+              SAM, StarSeo&apos;s in-app AI agent, needs an OpenRouter API key.
               Create a key on OpenRouter, set it as the{" "}
               <code>OPENROUTER_API_KEY</code> environment variable, restart
-              OpenSEO, then confirm here.
+              StarSeo, then confirm here.
             </p>
           )}
           <p className="text-xs">

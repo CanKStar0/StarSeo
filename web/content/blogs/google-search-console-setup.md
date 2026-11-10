@@ -1,11 +1,11 @@
 ---
 title: "How to Set Up Google Search Console"
-description: "What Google Search Console is, why it matters for SEO, and how to set it up and connect it to OpenSEO."
-author: "OpenSEO Team"
+description: "What Google Search Console is, why it matters for SEO, and how to set it up and connect it to StarSeo."
+author: "StarSeo Team"
 date: "2026-10-11"
 ---
 
-Google Search Console is a free tool from Google that shows how your website performs in Google Search. This guide explains what it tells you, then walks you through setting it up and connecting it to OpenSEO.
+Google Search Console is a free tool from Google that shows how your website performs in Google Search. This guide explains what it tells you, then walks you through setting it up and connecting it to StarSeo.
 
 ## What Search Console tells you
 
@@ -19,15 +19,15 @@ Search Console shows Google's own data about your site:
 
 SEO tools estimate traffic from outside your site. Search Console reports what actually happened. [Google's overview](https://support.google.com/webmasters/answer/9128668) covers every report.
 
-## Why connect it to OpenSEO
+## Why connect it to StarSeo
 
-Keyword research tells you what to go after. Search Console tells you whether it worked. Once it's connected, your OpenSEO dashboard shows:
+Keyword research tells you what to go after. Search Console tells you whether it worked. Once it's connected, your StarSeo dashboard shows:
 
 - **New keywords** your site has just started appearing for.
 - **Top keywords** that bring you the most clicks.
 - **Striking distance:** queries where you sit at positions 5–20, close enough that a better page can move you up.
 
-Your AI agent can read the same data through OpenSEO, so you can ask it what's working and what to fix next.
+Your AI agent can read the same data through StarSeo, so you can ask it what's working and what to fix next.
 
 Connecting is optional. Keyword research and competitor research work without it.
 
@@ -60,9 +60,9 @@ If your site isn't in Search Console yet:
 
 Google's guides: [add a property](https://support.google.com/webmasters/answer/34592) and [verify ownership](https://support.google.com/webmasters/answer/9008080).
 
-## Step 3: Connect it to OpenSEO
+## Step 3: Connect it to StarSeo
 
-1. Start the connection in OpenSEO. You'll find it during signup, on the Search Console card on your dashboard, or under **Project settings → Integrations**.
+1. Start the connection in StarSeo. You'll find it during signup, on the Search Console card on your dashboard, or under **Project settings → Integrations**.
 2. Sign in with the Google account that has access to your site.
 3. Choose your website from the list and save.
 
@@ -74,4 +74,4 @@ Google's guides: [add a property](https://support.google.com/webmasters/answer/3
 
 ## When you'll see data
 
-A newly added site can take a few days to show data in Search Console. You can keep using OpenSEO while you wait.
+A newly added site can take a few days to show data in Search Console. You can keep using StarSeo while you wait.

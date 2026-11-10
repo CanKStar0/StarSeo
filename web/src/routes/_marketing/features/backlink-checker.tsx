@@ -12,7 +12,7 @@ export const Route = createFileRoute("/_marketing/features/backlink-checker")({
         "Backlink Analysis Tool: Referring Domains, Anchors, Spam and Lost Links for Any Domain",
       description: page.seoDescription ?? page.description,
       path: "/features/backlink-checker",
-      titleSuffix: "OpenSEO",
+      titleSuffix: "StarSeo",
       imageAlt: page.imageAlt,
     }),
   component: () => <FeaturePageTemplate page={page} />,

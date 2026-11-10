@@ -2,7 +2,7 @@ name: Release
 # Builds the app as `pnpm everyapp release` does and attaches
 # everyapp-release.tar.gz to the GitHub release: the asset
 # `pnpm everyapp install https://github.com/<owner>/<repo>` fetches from the
-# repository's latest release. OpenSEO's releases themselves are published by
+# repository's latest release. StarSeo's releases themselves are published by
 # `pnpm release:publish` (scripts/publish-release.mjs), which creates the
 # v<version> release with its notes; this workflow only adds the asset, so the
 # two never race for a tag.

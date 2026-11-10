@@ -30,7 +30,7 @@ import { formatCount } from "@/lib/free-tools/metric-grid";
 import { useToolRun } from "@/lib/free-tools/use-tool-run";
 
 const EXAMPLE_REPORT_URL =
-  "https://app.openseo.so/s/QEZZWxoLl4TpzhKxeiNRGuM_Hj15eUzY";
+  "https://starseo.canpolatkaya.com/s/QEZZWxoLl4TpzhKxeiNRGuM_Hj15eUzY";
 
 // ─── Shared pieces ───────────────────────────────────────────────────
 
@@ -38,7 +38,7 @@ function CampaignNav() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 pt-6 sm:px-6 md:pt-8">
       <nav className="itc-campaign-nav mx-auto flex min-h-14 max-w-5xl items-center justify-between gap-3 rounded-full border border-[var(--color-border-subtle)] bg-white/90 py-2 pl-5 pr-2 shadow-sm shadow-neutral-900/5">
-        <span className="text-sm font-semibold">OpenSEO</span>
+        <span className="text-sm font-semibold">StarSeo</span>
         <a
           href={SIGNUP_URL}
           className="inline-flex h-9 items-center rounded-full bg-neutral-950 px-4 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
@@ -116,7 +116,7 @@ function PriceCompare({
         <div className="itc-price-compare">
           <div className="itc-card itc-price-card">
             <p className="itc-body-sm" style={{ margin: 0, fontWeight: 500 }}>
-              OpenSEO
+              StarSeo
             </p>
             <p className="itc-price">
               {openSeo.price}
@@ -194,7 +194,7 @@ function Closing({
 
 const SELF_HOST_ANSWER = (
   <>
-    Yes. OpenSEO is open source. Run it on your own server with your own
+    Yes. StarSeo is open source. Run it on your own server with your own
     DataForSEO key.{" "}
     <a href="/docs/self-hosting" className="itc-inline-link">
       Self-hosting guide
@@ -209,7 +209,7 @@ const BILLING_ANSWER =
 
 export const GABE_TESTIMONIAL: Testimonial = {
   quote:
-    "Our agency killed $2,000 in Semrush and $1,000 in Ahrefs costs because of OpenSEO & DataForSEO. We went from $3,000 a month to $30 in API calls to DataForSEO.",
+    "Our agency killed $2,000 in Semrush and $1,000 in Ahrefs costs because of StarSeo & DataForSEO. We went from $3,000 a month to $30 in API calls to DataForSEO.",
   name: "Gabe Fletcher",
   role: "NannerAds",
   initial: "G",
@@ -250,7 +250,7 @@ const AGENCY_FAQ: FaqItem[] = [
       "Yes. Add each client site as its own project, with its own saved keywords and rank tracking.",
   },
   {
-    question: "Do I need an AI agent to use OpenSEO?",
+    question: "Do I need an AI agent to use StarSeo?",
     answer:
       "No. Everything works in the web app. You can also connect Claude, Codex, or another MCP client and let an agent run the research for you.",
   },

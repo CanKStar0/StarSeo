@@ -17,7 +17,7 @@ import {
 import { autumn } from "@/server/billing/autumn";
 import { FeatureFlag, isFeatureFlagOn } from "@/server/lib/featureFlags";
 
-// Someone connecting an AI agent over MCP without an OpenSEO session gets a
+// Someone connecting an AI agent over MCP without an StarSeo session gets a
 // guest account instead of a sign-up form: a user with a placeholder email and
 // its own organization, which starts on the free plan like any new account.
 // The connect page leaves a claim cookie in the browser, and the next sign-up

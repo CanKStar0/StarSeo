@@ -44,14 +44,14 @@ describe("normalizeBacklinksTarget", () => {
       },
     },
     {
-      input: "https://github.com/every-app/open-seo/",
+      input: "https://github.com/CanKStar0/StarSeo/",
       options: undefined,
       expected: {
         apiTarget: "github.com",
-        displayTarget: "github.com/every-app/open-seo",
+        displayTarget: "github.com/CanKStar0/StarSeo",
         scope: "subfolder",
         includeSubdomains: false,
-        path: "/every-app/open-seo",
+        path: "/CanKStar0/StarSeo",
       },
     },
     {
