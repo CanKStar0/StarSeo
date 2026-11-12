@@ -13,7 +13,11 @@ echo 'StarSeo sends an anonymous usage heartbeat (counts only). Disable: OPENSEO
 # in seconds with the exact fix instead of after a multi-minute build.
 pnpm exec tsx scripts/selfhost-preflight.ts
 
-pnpm run db:migrate:local
+if [ "$DATABASE_PROVIDER" = "postgres" ]; then
+  pnpm run db:migrate:pg
+else
+  pnpm run db:migrate:local
+fi
 
 FP_FILE="dist/.openseo-build-env"
 
