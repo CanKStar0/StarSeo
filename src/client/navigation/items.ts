@@ -1,4 +1,5 @@
 import {
+  Bell,
   Bookmark,
   Bot,
   Brain,
@@ -101,11 +102,17 @@ const aiNavItem = linkOptions({
   icon: Bot,
 });
 
+const briefingsNavItem = linkOptions({
+  to: "/briefings" as const,
+  label: "Weekly Briefings",
+  icon: Bell,
+});
+
 // Shown only when no project is selected; with a project, Agent setup lives in
 // the "AI Tools" group below.
 export const connectNavGroup = {
-  label: "AI Tools",
-  items: [aiNavItem],
+  label: "Overview",
+  items: [briefingsNavItem, aiNavItem],
 };
 
 function getProjectNavItems(projectId: string) {
@@ -128,7 +135,7 @@ export function getProjectNavGroups(projectId: string) {
   return [
     {
       label: "Overview",
-      items: [byPath("/p/$projectId")],
+      items: [byPath("/p/$projectId"), briefingsNavItem],
     },
     {
       label: "Research",

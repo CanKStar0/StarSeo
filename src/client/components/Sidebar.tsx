@@ -34,6 +34,7 @@ import {
   isHostedClientAuthMode,
 } from "@/lib/auth-mode";
 import { everyAppAccountQueryOptions } from "@/client/features/every-app/everyAppAccountQueries";
+import { unreadBriefingCountQueryOptions } from "@/client/features/weekly-briefings/weeklyBriefingQueries";
 import { BILLING_ROUTE } from "@/shared/billing";
 import {
   Sidebar as UiSidebar,
@@ -67,12 +68,14 @@ function SidebarNavLink({
   label,
   linkProps,
   placeholder = false,
+  badgeCount,
 }: {
   icon: ComponentType<{ className?: string }>;
   label: string;
   linkProps: LinkOptions;
   /** Show the row without its link, while its project is still unknown. */
   placeholder?: boolean;
+  badgeCount?: number;
 }) {
   const { setOpenMobile } = useSidebar();
   const matchRoute = useMatchRoute();
@@ -92,7 +95,12 @@ function SidebarNavLink({
       className={navButtonClass}
     >
       <Icon className="size-4" />
-      <span>{label}</span>
+      <span className="flex-1 truncate">{label}</span>
+      {badgeCount && badgeCount > 0 ? (
+        <span className="ml-auto rounded-full bg-primary px-1.5 py-0.5 text-[10px] font-semibold leading-none text-primary-foreground">
+          {badgeCount}
+        </span>
+      ) : null}
     </SidebarMenuButton>
   );
   return (
@@ -140,6 +148,11 @@ export function Sidebar({
       : [connectNavGroup];
   const { pathname } = useLocation();
   const { setOpenMobile } = useSidebar();
+  const unreadBriefingsQuery = useQuery({
+    ...unreadBriefingCountQueryOptions(),
+    enabled: ready,
+  });
+  const unreadBriefingCount = unreadBriefingsQuery.data?.unreadCount ?? 0;
   // SAM is hidden from navigation: the chat route is only reachable by URL,
   // and while it is open its chat list takes the nav's place.
   const onSamRoute = pathname.includes("/sam");
@@ -197,6 +210,11 @@ export function Sidebar({
                           label={label}
                           linkProps={linkProps}
                           placeholder={navPlaceholder}
+                          badgeCount={
+                            linkProps.to === "/briefings"
+                              ? unreadBriefingCount
+                              : undefined
+                          }
                         />
                       );
                     })}

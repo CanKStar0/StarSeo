@@ -331,6 +331,11 @@ export default {
           await import("@/server/features/ai-visibility/services/scheduledAiVisibility");
         await runScheduledAiVisibility();
       }),
+      withPgClient(async () => {
+        const { WeeklyBriefingService } =
+          await import("@/server/features/weekly-briefings/services/WeeklyBriefingService");
+        await WeeklyBriefingService.runScheduledWeeklyBriefings();
+      }),
       withPgClient(() => sendFirstAuditEmails()),
     ]);
     for (const result of checks)

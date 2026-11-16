@@ -22,6 +22,7 @@ import { Route as Char91DotwellKnownChar93OpenaiAppsChallengeRouteImport } from 
 import { Route as AppIndexRouteImport } from './routes/_app/index'
 import { Route as AppAiRouteImport } from './routes/_app/ai'
 import { Route as AppBillingRouteImport } from './routes/_app/billing'
+import { Route as AppBriefingsRouteImport } from './routes/_app/briefings'
 import { Route as AppProjectsRouteImport } from './routes/_app/projects'
 import { Route as AppSettingsRouteImport } from './routes/_app/settings'
 import { Route as AppSupportRouteImport } from './routes/_app/support'
@@ -144,6 +145,11 @@ const AppAiRoute = AppAiRouteImport.update({
 const AppBillingRoute = AppBillingRouteImport.update({
   id: '/billing',
   path: '/billing',
+  getParentRoute: () => AppRouteRoute,
+} as any)
+const AppBriefingsRoute = AppBriefingsRouteImport.update({
+  id: '/briefings',
+  path: '/briefings',
   getParentRoute: () => AppRouteRoute,
 } as any)
 const AppProjectsRoute = AppProjectsRouteImport.update({
@@ -475,6 +481,7 @@ export interface FileRoutesByFullPath {
   '/.well-known/openai-apps-challenge': typeof Char91DotwellKnownChar93OpenaiAppsChallengeRoute
   '/ai': typeof AppAiRoute
   '/billing': typeof AppBillingRoute
+  '/briefings': typeof AppBriefingsRoute
   '/projects': typeof AppProjectsRoute
   '/settings': typeof AppSettingsRouteWithChildren
   '/support': typeof AppSupportRoute
@@ -546,6 +553,7 @@ export interface FileRoutesByTo {
   '/.well-known/openai-apps-challenge': typeof Char91DotwellKnownChar93OpenaiAppsChallengeRoute
   '/ai': typeof AppAiRoute
   '/billing': typeof AppBillingRoute
+  '/briefings': typeof AppBriefingsRoute
   '/projects': typeof AppProjectsRoute
   '/support': typeof AppSupportRoute
   '/sign-in': typeof AuthSignInRoute
@@ -614,6 +622,7 @@ export interface FileRoutesById {
   '/.well-known/openai-apps-challenge': typeof Char91DotwellKnownChar93OpenaiAppsChallengeRoute
   '/_app/ai': typeof AppAiRoute
   '/_app/billing': typeof AppBillingRoute
+  '/_app/briefings': typeof AppBriefingsRoute
   '/_app/projects': typeof AppProjectsRoute
   '/_app/settings': typeof AppSettingsRouteWithChildren
   '/_app/support': typeof AppSupportRoute
@@ -688,6 +697,7 @@ export interface FileRouteTypes {
     | '/.well-known/openai-apps-challenge'
     | '/ai'
     | '/billing'
+    | '/briefings'
     | '/projects'
     | '/settings'
     | '/support'
@@ -759,6 +769,7 @@ export interface FileRouteTypes {
     | '/.well-known/openai-apps-challenge'
     | '/ai'
     | '/billing'
+    | '/briefings'
     | '/projects'
     | '/support'
     | '/sign-in'
@@ -826,6 +837,7 @@ export interface FileRouteTypes {
     | '/.well-known/openai-apps-challenge'
     | '/_app/ai'
     | '/_app/billing'
+    | '/_app/briefings'
     | '/_app/projects'
     | '/_app/settings'
     | '/_app/support'
@@ -1007,6 +1019,13 @@ declare module '@tanstack/react-router' {
       path: '/billing'
       fullPath: '/billing'
       preLoaderRoute: typeof AppBillingRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
+    '/_app/briefings': {
+      id: '/_app/briefings'
+      path: '/briefings'
+      fullPath: '/briefings'
+      preLoaderRoute: typeof AppBriefingsRouteImport
       parentRoute: typeof AppRouteRoute
     }
     '/_app/projects': {
@@ -1559,6 +1578,7 @@ const AppPProjectIdRouteRouteWithChildren =
 interface AppRouteRouteChildren {
   AppAiRoute: typeof AppAiRoute
   AppBillingRoute: typeof AppBillingRoute
+  AppBriefingsRoute: typeof AppBriefingsRoute
   AppProjectsRoute: typeof AppProjectsRoute
   AppSettingsRoute: typeof AppSettingsRouteWithChildren
   AppSupportRoute: typeof AppSupportRoute
@@ -1572,6 +1592,7 @@ interface AppRouteRouteChildren {
 const AppRouteRouteChildren: AppRouteRouteChildren = {
   AppAiRoute: AppAiRoute,
   AppBillingRoute: AppBillingRoute,
+  AppBriefingsRoute: AppBriefingsRoute,
   AppProjectsRoute: AppProjectsRoute,
   AppSettingsRoute: AppSettingsRouteWithChildren,
   AppSupportRoute: AppSupportRoute,
